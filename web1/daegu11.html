@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>대구트립로드</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=0, maximum-scale=1">
+    <meta name="title" content="대구관광안내 DAEGU TOURIST INFORMATION">
+    <meta name="keyword" content="대구관광문화, 대구관광안내, 대구트립로드, 대구여행정보, 대구여행">
+    <meta name="description" content="대구트립로드 홈페이지">
+    <link rel="shortcut icon" href="./favicon/favicon_16.ico">
+    <link rel="shortcut icon" href="./favicon/favicon_24.ico">
+    <link rel="shortcut icon" href="./favicon/favicon_32.ico">
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./clear.css">
+    <link rel="stylesheet" href="./common.css">
+    
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lte IE 9]>
+    <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K66C4ENDC4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K66C4ENDC4');
+    </script>
+   
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/slider.js"></script>
+
+<!--    검색-->
+    <script>
+    $(document).ready(function(){
+        $(".cur_lang").click(function(){
+            $(".lang_box").toggleClass("on");
+        });
+        $(window).scroll(function(){
+            var par = parseInt($(this).scrollTop()); 
+            var chk = $("#find_open_btn").prop("checked");
+             if(par>=200){
+                 $("#find_open_btn").removeProp("checked");
+             }
+        });
+    });
+    </script>
+<!--    푸터-->
+    <script>    
+    $(document).ready(function(){
+        $(".fnb li").attr("data-count", 0);
+        $(".fnb li").click(function(){
+           $(".fnb li").removeClass("on");
+           $(this).attr("data-count", parseInt($(this).attr("data-count"))+1); 
+            var cnt = parseInt($(this).attr("data-count"));
+           if(cnt % 2 == 1) {       
+               $(this).addClass("on"); 
+           } else {
+               $(this).removeClass("on"); 
+           }
+        });
+    });    
+    </script>
+    
+<!--    서브공통-->
+    <style>
+        body, html {background-color: #fff;}
+        .container {clear: both;}
+        .container:after {content: ""; display: block; clear: both;}
+        .hd {position: fixed; z-index: 999; left: 0; top: 0; background-color: #fff; }
+        .content {padding-bottom: 2em; background-color: #fff; clear: both; position: static;}
+        .content:after { content: ""; display: block; clear: both; }
+        .vs {margin-top: 7.8em; clear: both; width: 100%; height: 200px; background-image: url("./img/sub1/p_tit_bg.jpg"); background-repeat: no-repeat; background-position: center center;}
+        .page_tit1 { font-size: 2em; text-align: center; font-weight: bold; padding-top: 1.2em; line-height: 1.5em; color: #fff;}
+        .page_com1 {font-size: 1em; text-align: center; font-weight:500; line-height: 2em; color: #fff;}
+        
+        .page_container {width: 1280px; margin: 0 auto; margin-top: -3em; height: auto;}
+        .page_container:after {content: ""; display: block; clear: both; overflow: auto;}
+        .page_header {clear: both; width: 1280px; margin: 0 auto;}
+        .page_tit2 {width: 15%; height: 100px; line-height: 100px; text-align: center; color: #fff; background-color: #4579bd; float: left; font-size: 1.2em; font-weight: bold;}
+        .breadcrumb_box { width: 85%; float: right; background-color: #fff; height: 100px; box-sizing: border-box; border: 1px solid #4579bd; }
+        .cate_tit1 {padding-left: 2em; font-size: 1.2em; font-weight: bold; line-height: 3; color: #4579bd; }
+        .bread {clear: both;}
+        .bread_lst { clear: both; float: left; padding-left: 2.2em;}
+        .bread_lst li {float: left; text-align: center; }
+        .bread_lst li + li:before {content: ">"; display: block; float: left; color: #777; padding: 0 0.5em; }
+        .bread_lst li + li { min-width:180px; }
+        .bread_lst li a, .bread_lst li span {display: block; color: #777; line-height: 1em; }
+        .home a { background-image: url("./icon/sub/home.png"); background-repeat: no-repeat; padding-left: 1em; height: 2em;}
+        .device_lst {float: right;}
+        .device_lst li {float: left;}
+        .device_lst li a {display: block; background-repeat: no-repeat; color:#666;  }
+        .link {background-image: url("./icon/sub/link.png"); width: 20px; height: 20px; background-position: center; margin-right: 1em; margin-top: 0.3em;}
+        .print {background-image: url("./icon/sub/print.png"); width: 20px; height: 20px; background-position: center; margin-right: 1em; margin-top: 0.3em;}
+        .edit {padding: 5px; text-align: center; border: 1px solid #555; margin-right: 1em; border-radius: 50px; color: #555;}
+        .page_content {width: 1280px; margin: 0 auto; background-color: #fff;}
+        .left_bar {width: 15%; float: left; }
+        .lnb { clear: both; min-height: 900px; background-color: #fff; }
+        .lnb_item { clear: both; margin-top: 1em;}
+        .sub_lnb {height: 2.5em; overflow: hidden; position: relative;}
+        .sub_lnb_tit {line-height: 2.5em; padding-left: 0.6em; background-color: #4579bd; border: 1px solid #ddf; color: #fff; font-weight: 500; }
+        .sub_lnb li a {line-height: 2.2em; padding-left: 0.6em; color: #333; font-weight: 500; }
+        .sub_lnb.on { height: auto;}
+        .sub_lnb li a:hover { color: #4579bd;}
+        .sub_lnb_tit:before { content: ""; display: block; background-image: url("./icon/sub/arrow_set_9x12.png"); width: 9px; height: 12px; background-position: 29px 0px; position: absolute; right: 1em; top: 0.8em;}
+        .sub_lnb.on .sub_lnb_tit:before {background-position: 0px 0px;}
+        .right_bar {width: 80%; float: right; margin: 30px;
+        position:relative; }
+        #page1 .sub_img_wrap {padding: 0.5em;background-color: #e6fbff; background-image: url("./img/sub1/p_com_bg.png"); background-repeat: no-repeat; background-position: 95%; }
+        .sub_img {margin-left: 2em; margin-top: 1em;}
+        .sub_img_com {font-size: 18px; font-weight: bold; line-height: 30px;}
+        .thumb_box { margin: 2em; line-height: 23px;}
+        .ft {width: 1200px; margin: 0 auto;}
+    </style>
+    <script>
+    $(document).ready(function(){
+        $(".sub_lnb_tit").click(function(){
+            $(this).parents(".sub_lnb").toggleClass("on");
+        });
+    });    
+    </script>
+<!--서브#페이지-->
+    <style>
+        .tour_lst {width: 100%; position: relative; padding-top: 2em; clear:both; min-height: 700px; }
+        .tour_lst:before { content:""; clear:both; display:block; height: 10px; }
+        .tour_lst li { position:static; height:auto; }
+        .tour_lst li:before { content:""; clear:both; display:block; height: 10px; }
+        .thumb_tit1 {font-size: 17px; text-align: center; line-height: 150px; font-weight: bold;}
+        .off_box { display:block; width: 193px; height: 150px; background-color:#0a2f5c; left:10px; top:0px;  position:absolute; color:#fff; 
+        font-size:18px; }
+        .on_box { display: block; width: 193px; height: 150px; background-color: #4579bd; position:absolute; top:150px; left: 10px;  transition:0.5s; opacity:0; }
+        .thumb_tit2 { font-size: 18px; color: #fff; padding: 1em; text-align: center; font-weight: bold;}
+        .thumb_tit3 {text-align: center; color: #fff; }
+        .detail { display: block;  text-align: center; color: #fff; border: 1px solid #fff; width: 100px; margin: 0.5em auto; line-height: 30px; margin-top: 1.5em;}
+        .tour_lst li.item1 .off_box { left:10px; } 
+        .tour_lst li.item2 .off_box { left:213px; }
+        .tour_lst li.item3 .off_box { left:416px; }
+        .tour_lst li.item4 .off_box { left:619px; }
+        .tour_lst li.item5 .off_box { left:822px; }
+        .tour_lst li.item1 .on_box { left:10px; } 
+        .tour_lst li.item2 .on_box { left:213px; }
+        .tour_lst li.item3 .on_box { left:416px; }
+        .tour_lst li.item4 .on_box { left:619px; }
+        .tour_lst li.item5 .on_box { left:822px; }
+        .tour_lst li:hover .on_box { top: 0; opacity:1; }
+        .map { position:absolute;  left: 0; top: 160px; display:none; }
+        .map img {display: block; width: 100%;}
+        .tour_lst li:hover .map {display: block;}
+        .abs_map { position:absolute;  left: 0; top: 453px; }
+        .abs_map img {display: block; width: 100%;}
+        .research_box {clear: both; margin: 2em auto;  border: 1px solid #bbb; background-color: #f1f1f1}
+        .research_box:after { content:""; clear:both; display:block; }
+        .research_box p {padding: 1em;}
+        .research_box p span {display: block; float: left; color: #555; padding-left: 2em; line-height: 30px; background-repeat: no-repeat; background-position: 0px center; padding-right: 1em; font-size: 14px;}
+        .res1 { background-image: url("./icon/content/f-in-1.png");}
+        .res2 {background-image: url("./icon/content/f-in-2.png");}
+        .res3 {background-image: url("./icon/content/f-in-3.png");}
+        .research_frm {clear: both; font-size: 14px; }
+        .radio_group {padding: 1em; padding-top: 1.5em;}
+        .radio_group label {font-size: 14px; color: #555;}
+        .research_txt_box {clear: both; padding: 1em; }
+        .input_box {border: 1px solid #ddd; line-height: 30px; text-indent: 1em; width: 500px;}
+        .input_btn { width: 100px; line-height: 30px; color:#fff; background-color: #0a2f5c; border: 1px solid #0a2f5c;}
+        .sub_p2 img {width: 100%;}
+        
+        #page1:target .cate1 a { color:#4579bd; }
+        #page2:target .cate2 a { color:#4579bd; }    
+        #page3:target .cate3 a { color:#4579bd; }
+        #page4:target .cate4 a { color:#4579bd; }
+        #page5:target .cate5 a { color:#4579bd; }
+    </style>
+    <script>
+    $(document).ready(function(){
+        $("#main").css("display","block");
+        $(".content .lnb_item .sub_lnb li").click(function(){
+           $("#main").css("display","none"); 
+        });
+    });    
+    </script>
+</head>
+<body>
+<div class="container">
+    <header class="hd">
+        <div class="hd_wrap">
+            <nav class="tnb">
+                <ul class="t_left">
+                    <li><a href="daegu_login.html">로그인</a></li>
+                    <li><a href="daegu_join.html">회원가입</a></li>
+                    <li><a href="daegu_map.html">관광지도</a></li>
+                </ul>
+                <input type="checkbox" id="find_open_btn">
+                <div class="find_window">
+                    <form action="" id="find_form" name="find_form" class="frm">
+                        <input type="text" id="keyword" class="find_input" placeholder="검색어 입력"> 
+                        <input type="submit" id="find_btn" class="find_btn">
+                    </form>
+                </div>
+                <ul class="t_right">
+                    <li class="lang">
+                        <div class="lang_box">
+                            <span class="cur_lang">한국어</span>
+                            <a href="">English</a>
+                            <a href="">中文</a>
+                            <a href="">日文</a>
+                        </div>
+                    </li>
+                    <li class="ls">
+                        <a href=""></a>
+                    </li>
+                    <li class="find">
+                        <label for="find_open_btn" class="find_open"></label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hd_wrap">
+            <a href="index.html" class="logo">
+                    <img src="./img/logo_h58.png" alt="">
+                </a>
+            <nav class="gnb">
+                    <ul>
+                        <li class="main">
+                            <a href="sub11.html">명품관광코스</a>
+                            <div class="sub">
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">대표관광코스</li>
+                                    <li><a href="daegu11.html#page1">대구명품코스5</a></li>
+                                    <li><a href="daegu11.html#page2">팔공산힐링코스</a></li>
+                                    <li><a href="daegu11.html#page3">모노레일도심관광</a></li>
+                                    <li><a href="daegu11.html#page4">광역관광코스</a></li>
+                                    <li><a href="daegu11.html#page5">근교권투어</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">나만의 맞춤관광</li>
+                                    <li><a href="">맞춤관광코스 설정</a></li>
+                                    <li><a href="">베스트 맞춤관광코스</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">근대로의 여행</li>
+                                    <li><a href="">경상감영달성길</a></li>
+                                    <li><a href="">근대문화골목길</a></li>
+                                    <li><a href="">패션한방길</a></li>
+                                    <li><a href="">삼덕봉산문화길</a></li>
+                                    <li><a href="">남산100년향수길</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">테마여행</li>
+                                    <li><a href="">야간관광</a></li>
+                                    <li><a href="">올레길/둘레길걷기</a></li>
+                                    <li><a href="">자전거투어</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="main">
+                            <a href="sub21.html">대구관광명소</a>
+                            <div class="sub">
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">대구12경</li>
+                                    <li><a href="sub21.html#page5">대구12경</a></li>
+                                    <li><a href="sub21.html#page1">비슬산</a></li>
+                                    <li><a href="sub21.html#page2">강정고령보</a></li>
+                                    <li><a href="sub21.html#page3">팔공산</a></li>
+                                    <li><a href="sub21.html#page4">수성못</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">대표관광명소</li>
+                                    <li><a href="">근대골목</a></li>
+                                    <li><a href="">약령시</a></li>
+                                    <li><a href="">이월드/83타워</a></li>
+                                    <li><a href="">갓바위</a></li>
+                                    <li><a href="">앞산전망대</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">관광명소 검색</li>
+                                    <li><a href="">문화관광</a></li>
+                                    <li><a href="">역사유적</a></li>
+                                    <li><a href="">쇼핑/거리</a></li>
+                                    <li><a href="">자연/공원</a></li>
+                                    <li><a href="">테마/체험</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">내주변관광지</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="main">
+                            <a href="">대구관광안내</a>
+                            <div class="sub">
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">관광서비스</li>
+                                    <li><a href="">시티투어버스</a></li>
+                                    <li><a href="">관광안내1330</a></li>
+                                    <li><a href="">관광불편신고센터</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">여행도우미</li>
+                                    <li><a href="">관광안내소</a></li>
+                                    <li><a href="">문화관광해설사 안내</a></li>
+                                    <li><a href="">스템프트레일</a></li>
+                                    <li><a href="">관광안내지도/책자 </a></li>
+                                    <li><a href="">관련사이트</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">여행소식</li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">여행뉴스</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">교통</li>
+                                    <li><a href="">공항/역/터미널</a></li>
+                                    <li><a href="">시내대중교통 안내</a></li>
+                                    <li><a href="">주차안내</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">문의 및 건의</li>
+                                    <li><a href="">자주 묻는 질문</a></li>
+                                    <li><a href="">문의 및 건의</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="main">
+                            <a href="">축제</a>
+                            <div class="sub">
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">축제캘린더</li>
+                                    <li><a href="">축제캘린더</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">대구대표축제</li>
+                                    <li><a href="">대구컬러풀페스티벌</a></li>
+                                    <li><a href="">달구벌관등놀이</a></li>
+                                    <li><a href="">동성로축제</a></li>
+                                    <li><a href="">팔공산 승시</a></li>
+                                    <li><a href="">대구치맥페스티벌</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">공연전시정보</li>
+                                    <li><a href="">공연캘린더</a></li>
+                                    <li><a href="">전시캘린더</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="main">
+                            <a href="">맛집/숙박/쇼핑</a>
+                            <div class="sub">
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">맛집</li>
+                                    <li><a href="">대구10미</a></li>
+                                    <li><a href="">추천맛집</a></li>
+                                    <li><a href="">명품음식 골목</a></li>
+                                    <li><a href="">외국인관광전담지정식당</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">숙박</li>
+                                    <li><a href="">관광호텔</a></li>
+                                    <li><a href="">자연휴양림</a></li>
+                                    <li><a href="">수련원/야영장</a></li>
+                                    <li><a href="">한옥체험</a></li>
+                                    <li><a href="">게스트하우스</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">쇼핑</li>
+                                    <li><a href="">쇼핑</a></li>
+                                    <li><a href="">대구관광 기념품</a></li>
+                                    <li><a href="">친절여행상점</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="main">
+                            <a href="">어울림대구</a>
+                            <div class="sub">
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">미리보는 대구</li>
+                                    <li><a href="">항공VR</a></li>
+                                    <li><a href="">관광VR</a></li>
+                                    <li><a href="">대구영상</a></li>
+                                    <li><a href="">대구사진</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">아카이브</li>
+                                    <li><a href="">주요관광지사진</a></li>
+                                    <li><a href="">대구화보</a></li>
+                                </ul>
+                                <ul class="sub_cate">
+                                    <li class="sub_cate_tit">여행후기</li>
+                                    <li><a href="">여행후기</a></li>
+                                    <li><a href="">여행사진</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <main class="content" id="page1">
+        <div class="sub_main">
+            <figure class="vs">
+                <h2 class="page_tit1">명품관광코스</h2>
+                <p class="page_com1">아름다운 도시&#33; 대구</p>
+            </figure>
+            <section class="page_container">
+                <div class="page_header">
+                    <h2 class="page_tit2">명품관광코스</h2>
+                    <div class="breadcrumb_box">
+                        <h2 class="cate_tit1">대구명품코스5</h2>
+                        <div class="bread">
+                            <ul class="bread_lst">
+                                <li class="home"><a href="index.html">홈</a></li>
+                                <li><a href="">명품관광코스</a></li>
+                                <li class="sub_cate_tit"><a href="">대표관광코스</a></li>
+                                <li><span class="cur_page">대구명품코스5</span></li>
+                            </ul>
+                            <ul class="device_lst">
+                                <li class="link"><a href=""></a></li>
+                                <li class="print"><a href=""></a></li>
+                                <li class="edit"><a href="">정보수정요청</a></li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+                <div class="page_content">
+                    <aside class="left_bar">
+                        <nav class="lnb">
+                            <div class="lnb_item">
+                                <ul class="sub_lnb on">
+                                    <li class="sub_lnb_tit">대표관광코스</li>
+                                    <li class="cate1"><a href="daegu11.html#page1">대구명품코스5</a></li>
+                                    <li class="cate2"><a href="daegu11.html#page2">팔공산힐링코스</a></li>
+                                    <li class="cate3"><a href="daegu11.html#page3">모노레일도심관광</a></li>
+                                    <li class="cate4"><a href="daegu11.html#page4">광역관광코스</a></li>
+                                    <li class="cate5"><a href="daegu11.html#page5">근교권투어</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">나만의 맞춤관광</li>
+                                    <li><a href="">맞춤관광코스 설정</a></li>
+                                    <li><a href="">베스트 맞춤관광코스</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">근대로의 여행</li>
+                                    <li><a href="">경상감영달성길</a></li>
+                                    <li><a href="">근대문화골목길</a></li>
+                                    <li><a href="">패션한방길</a></li>
+                                    <li><a href="">삼덕봉산문화길</a></li>
+                                    <li><a href="">남산100년향수길</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">테마여행</li>
+                                    <li><a href="">야간관광</a></li>
+                                    <li><a href="">올레길/둘레길걷기</a></li>
+                                    <li><a href="">자전거투어</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </aside>
+                    <div class="right_bar">
+                        <div class="sub_img_wrap">
+                            <figure class="sub_img">
+                                <img src="./img/sub1/p1_tit.png" alt="아름다운도시!대구">
+                                <p class="sub_img_com">"다채로운 도시 대구를 만나보세요."</p>
+                            </figure>
+                            <div class="thumb_box">
+                                <p class="thumb_com">인구 250만의 대도시이자 영남지역의 중심 도시인 대구는<br>옛신라와 가야의 찬란한 문화를 이어 받은 유서 깊은 고장이다.<br>다양한 전통과 문화가 공존하는 관광거점 도시 대구에서<br>명품관광, 맛집탐방,힐링체험 등 다이나믹한 여행의 재미를 만끽해 보자.</p>
+                            </div>
+                        </div>
+                        <div class="abs_map">
+                            <img class="abs_map_img" src="./img/map/besttour_1.jpg" alt="">
+                        </div>
+                        <br>
+                        <ul class="tour_lst">
+                            <li class="item1">
+                                <div class="off_box">
+                                    <h3 class="thumb_tit1">대구 Best of Best</h3>
+                                </div>
+                                <a href="" class="on_box">
+                                    <h4 class="thumb_tit2">전역코스</h4>
+                                    <h3 class="thumb_tit3">대구 Best of Best</h3>
+                                    <span class="detail">자세히보기</span>
+                                </a>
+                                <div class="map">
+                                    <img class="map_img" src="./img/map/besttour_1.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="item2">
+                                <div class="off_box">
+                                    <h3 class="thumb_tit1">대구 속 시간여행</h3>
+                                </div>
+                                <a href="" class="on_box">
+                                    <h4 class="thumb_tit2">1코스</h4>
+                                    <h3 class="thumb_tit3">대구 속 시간여행</h3>
+                                    <span class="detail">자세히보기</span>
+                                </a>
+                                <div class="map">
+                                    <img class="map_img" src="./img/map/besttour_2.jpg" alt="">
+                                </div>   
+                            </li>
+                            <li class="item3">
+                                <div class="off_box">
+                                    <h3 class="thumb_tit1">이렇게 좋을 수가</h3>
+                                </div>
+                                <a href="" class="on_box">
+                                    <h4 class="thumb_tit2">2코스</h4>
+                                    <h3 class="thumb_tit3">이렇게 좋을 수가</h3>
+                                    <span class="detail">자세히보기</span>
+                                </a>
+                                <div class="map">
+                                    <img class="map_img" src="./img/map/besttour_3.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="item4">
+                                <div class="off_box">
+                                    <h3 class="thumb_tit1">금수강산 느림보코스</h3>
+                                </div>
+                                <a href="" class="on_box">
+                                    <h4 class="thumb_tit2">3코스</h4>
+                                    <h3 class="thumb_tit3">금수강산 느림보코스</h3>
+                                    <span class="detail">자세히보기</span>
+                                </a>
+                                <div class="map">
+                                    <img class="map_img" src="./img/map/besttour_4.jpg" alt="">
+                                </div>
+                            </li>
+                            <li class="item5">
+                                <div class="off_box">
+                                    <h3 class="thumb_tit1">팔공산 힐링코스</h3>
+                                </div>
+                                <a href="" class="on_box">
+                                    <h4 class="thumb_tit2">4코스</h4>
+                                    <h3 class="thumb_tit3">팔공산 힐링코스</h3>
+                                    <span class="detail">자세히보기</span>
+                                </a>
+                                <div class="map">
+                                    <img class="map_img" src="./img/map/besttour_5.jpg" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="research_box">
+                            <p>
+                                <span class="res1">담당부서:관광국 관광과 관광마케팅팀</span>
+                                <span class="res2">담당자: 박대구</span>
+                                <span class="res3">연락처: 053-803-3881</span>
+                                <span class="res4">최종수정일: 2021-02-01</span>
+                            </p>
+                            <form action="" class="research_frm" id="research_frm2" name="research_frm2">
+                                <h3></h3>
+                                <div class="radio_group">
+                                    <input type="radio" name="research2" class="research_ra" id="research21">
+                                    <label for="research21">매우만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research22">
+                                    <label for="research22">만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research23">
+                                    <label for="research23">보통</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research24">
+                                    <label for="research24">불만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research25">
+                                    <label for="research25">매우불만족</label>
+                                </div>
+                                <div class="research_txt_box">
+                                    <input type="text" placeholder="여러분의 소중한 의견을 주시기 바랍니다." class="input_box">
+                                    <input type="submit" class="input_btn" value="입력">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <main class="content" id="page2">
+        <div class="sub_main">
+            <figure class="vs">
+                <h2 class="page_tit1">명품관광코스</h2>
+                <p class="page_com1">아름다운 도시&#33; 대구</p>
+            </figure>
+            <section class="page_container">
+                <div class="page_header">
+                    <h2 class="page_tit2">명품관광코스</h2>
+                    <div class="breadcrumb_box">
+                        <h2 class="cate_tit1">팔공산힐링코스</h2>
+                        <div class="bread">
+                            <ul class="bread_lst">
+                                <li class="home"><a href="index.html">홈</a></li>
+                                <li><a href="">명품관광코스</a></li>
+                                <li class="sub_cate_tit"><a href="">대표관광코스</a></li>
+                                <li><span class="cur_page">팔공산힐링코스</span></li>
+                            </ul>
+                            <ul class="device_lst">
+                                <li class="link"><a href=""></a></li>
+                                <li class="print"><a href=""></a></li>
+                                <li class="edit"><a href="">정보수정요청</a></li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+                <div class="page_content">
+                    <aside class="left_bar">
+                        <nav class="lnb">
+                            <div class="lnb_item">
+                                <ul class="sub_lnb on">
+                                    <li class="sub_lnb_tit">대표관광코스</li>
+                                    <li class="cate1"><a href="daegu11.html#page1">대구명품코스5</a></li>
+                                    <li class="cate2"><a href="daegu11.html#page2">팔공산힐링코스</a></li>
+                                    <li class="cate3"><a href="daegu11.html#page3">모노레일도심관광</a></li>
+                                    <li class="cate4"><a href="daegu11.html#page4">광역관광코스</a></li>
+                                    <li class="cate5"><a href="daegu11.html#page5">근교권투어</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">나만의 맞춤관광</li>
+                                    <li><a href="">맞춤관광코스 설정</a></li>
+                                    <li><a href="">베스트 맞춤관광코스</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">근대로의 여행</li>
+                                    <li><a href="">경상감영달성길</a></li>
+                                    <li><a href="">근대문화골목길</a></li>
+                                    <li><a href="">패션한방길</a></li>
+                                    <li><a href="">삼덕봉산문화길</a></li>
+                                    <li><a href="">남산100년향수길</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">테마여행</li>
+                                    <li><a href="">야간관광</a></li>
+                                    <li><a href="">올레길/둘레길걷기</a></li>
+                                    <li><a href="">자전거투어</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </aside>
+                    <div class="right_bar">
+                        <div class="sub_img_wrap">
+                            <figure class="sub_p2">
+                                <img src="./img/sub1/p2_content.jpg" alt="아름다운도시!대구">
+                            </figure>
+                            <div class="research_box">
+                            <p>
+                                <span class="res1">담당부서:관광국 관광과 관광마케팅팀</span>
+                                <span class="res2">담당자: 박대구</span>
+                                <span class="res3">연락처: 053-803-3881</span>
+                                <span class="res4">최종수정일: 2021-02-01</span>
+                            </p>
+                            <form action="" class="research_frm" id="research_frm2" name="research_frm2">
+                                <h3></h3>
+                                <div class="radio_group">
+                                    <input type="radio" name="research2" class="research_ra" id="research21">
+                                    <label for="research21">매우만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research22">
+                                    <label for="research22">만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research23">
+                                    <label for="research23">보통</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research24">
+                                    <label for="research24">불만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research25">
+                                    <label for="research25">매우불만족</label>
+                                </div>
+                                <div class="research_txt_box">
+                                    <input type="text" placeholder="여러분의 소중한 의견을 주시기 바랍니다." class="input_box">
+                                    <input type="submit" class="input_btn" value="입력">
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <main class="content" id="page3">
+        <div class="sub_main">
+            <figure class="vs">
+                <h2 class="page_tit1">명품관광코스</h2>
+                <p class="page_com1">아름다운 도시&#33; 대구</p>
+            </figure>
+            <section class="page_container">
+                <div class="page_header">
+                    <h2 class="page_tit2">명품관광코스</h2>
+                    <div class="breadcrumb_box">
+                        <h2 class="cate_tit1">모노레일도심관광</h2>
+                        <div class="bread">
+                            <ul class="bread_lst">
+                                <li class="home"><a href="index.html">홈</a></li>
+                                <li><a href="">명품관광코스</a></li>
+                                <li class="sub_cate_tit"><a href="">대표관광코스</a></li>
+                                <li><span class="cur_page">모노레일도심관광</span></li>
+                            </ul>
+                            <ul class="device_lst">
+                                <li class="link"><a href=""></a></li>
+                                <li class="print"><a href=""></a></li>
+                                <li class="edit"><a href="">정보수정요청</a></li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+                <div class="page_content">
+                    <aside class="left_bar">
+                        <nav class="lnb">
+                            <div class="lnb_item">
+                                <ul class="sub_lnb on">
+                                    <li class="sub_lnb_tit">대표관광코스</li>
+                                    <li class="cate1"><a href="daegu11.html#page1">대구명품코스5</a></li>
+                                    <li class="cate2"><a href="daegu11.html#page2">팔공산힐링코스</a></li>
+                                    <li class="cate3"><a href="daegu11.html#page3">모노레일도심관광</a></li>
+                                    <li class="cate4"><a href="daegu11.html#page4">광역관광코스</a></li>
+                                    <li class="cate5"><a href="daegu11.html#page5">근교권투어</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">나만의 맞춤관광</li>
+                                    <li><a href="">맞춤관광코스 설정</a></li>
+                                    <li><a href="">베스트 맞춤관광코스</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">근대로의 여행</li>
+                                    <li><a href="">경상감영달성길</a></li>
+                                    <li><a href="">근대문화골목길</a></li>
+                                    <li><a href="">패션한방길</a></li>
+                                    <li><a href="">삼덕봉산문화길</a></li>
+                                    <li><a href="">남산100년향수길</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">테마여행</li>
+                                    <li><a href="">야간관광</a></li>
+                                    <li><a href="">올레길/둘레길걷기</a></li>
+                                    <li><a href="">자전거투어</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </aside>
+                    <div class="right_bar">
+                        <div class="sub_img_wrap">
+                            <figure class="sub_p2">
+                                <img src="./img/sub1/p3_content.jpg" alt="모노레일도심관광">
+                            </figure>
+                            <div class="research_box">
+                            <p>
+                                <span class="res1">담당부서:관광국 관광과 관광마케팅팀</span>
+                                <span class="res2">담당자: 박대구</span>
+                                <span class="res3">연락처: 053-803-3881</span>
+                                <span class="res4">최종수정일: 2021-02-01</span>
+                            </p>
+                            <form action="" class="research_frm" id="research_frm2" name="research_frm2">
+                                <h3></h3>
+                                <div class="radio_group">
+                                    <input type="radio" name="research2" class="research_ra" id="research21">
+                                    <label for="research21">매우만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research22">
+                                    <label for="research22">만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research23">
+                                    <label for="research23">보통</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research24">
+                                    <label for="research24">불만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research25">
+                                    <label for="research25">매우불만족</label>
+                                </div>
+                                <div class="research_txt_box">
+                                    <input type="text" placeholder="여러분의 소중한 의견을 주시기 바랍니다." class="input_box">
+                                    <input type="submit" class="input_btn" value="입력">
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <main class="content" id="page4">
+        <div class="sub_main">
+            <figure class="vs">
+                <h2 class="page_tit1">명품관광코스</h2>
+                <p class="page_com1">아름다운 도시&#33; 대구</p>
+            </figure>
+            <section class="page_container">
+                <div class="page_header">
+                    <h2 class="page_tit2">명품관광코스</h2>
+                    <div class="breadcrumb_box">
+                        <h2 class="cate_tit1">광역관광코스</h2>
+                        <div class="bread">
+                            <ul class="bread_lst">
+                                <li class="home"><a href="index.html">홈</a></li>
+                                <li><a href="">명품관광코스</a></li>
+                                <li class="sub_cate_tit"><a href="">대표관광코스</a></li>
+                                <li><span class="cur_page">광역관광코스</span></li>
+                            </ul>
+                            <ul class="device_lst">
+                                <li class="link"><a href=""></a></li>
+                                <li class="print"><a href=""></a></li>
+                                <li class="edit"><a href="">정보수정요청</a></li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+                <div class="page_content">
+                    <aside class="left_bar">
+                        <nav class="lnb">
+                            <div class="lnb_item">
+                                <ul class="sub_lnb on">
+                                    <li class="sub_lnb_tit">대표관광코스</li>
+                                    <li class="cate1"><a href="daegu11.html#page1">대구명품코스5</a></li>
+                                    <li class="cate2"><a href="daegu11.html#page2">팔공산힐링코스</a></li>
+                                    <li class="cate3"><a href="daegu11.html#page3">모노레일도심관광</a></li>
+                                    <li class="cate4"><a href="daegu11.html#page4">광역관광코스</a></li>
+                                    <li class="cate5"><a href="daegu11.html#page5">근교권투어</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">나만의 맞춤관광</li>
+                                    <li><a href="">맞춤관광코스 설정</a></li>
+                                    <li><a href="">베스트 맞춤관광코스</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">근대로의 여행</li>
+                                    <li><a href="">경상감영달성길</a></li>
+                                    <li><a href="">근대문화골목길</a></li>
+                                    <li><a href="">패션한방길</a></li>
+                                    <li><a href="">삼덕봉산문화길</a></li>
+                                    <li><a href="">남산100년향수길</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">테마여행</li>
+                                    <li><a href="">야간관광</a></li>
+                                    <li><a href="">올레길/둘레길걷기</a></li>
+                                    <li><a href="">자전거투어</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </aside>
+                    <div class="right_bar">
+                        <div class="sub_img_wrap">
+                            <figure class="sub_p2">
+                                <img src="./img/sub1/p4_content.jpg" alt="광역관광코스">
+                            </figure>
+                            <div class="research_box">
+                            <p>
+                                <span class="res1">담당부서:관광국 관광과 관광마케팅팀</span>
+                                <span class="res2">담당자: 박대구</span>
+                                <span class="res3">연락처: 053-803-3881</span>
+                                <span class="res4">최종수정일: 2021-02-01</span>
+                            </p>
+                            <form action="" class="research_frm" id="research_frm2" name="research_frm2">
+                                <h3></h3>
+                                <div class="radio_group">
+                                    <input type="radio" name="research2" class="research_ra" id="research21">
+                                    <label for="research21">매우만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research22">
+                                    <label for="research22">만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research23">
+                                    <label for="research23">보통</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research24">
+                                    <label for="research24">불만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research25">
+                                    <label for="research25">매우불만족</label>
+                                </div>
+                                <div class="research_txt_box">
+                                    <input type="text" placeholder="여러분의 소중한 의견을 주시기 바랍니다." class="input_box">
+                                    <input type="submit" class="input_btn" value="입력">
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <main class="content" id="page5">
+        <div class="sub_main">
+            <figure class="vs">
+                <h2 class="page_tit1">명품관광코스</h2>
+                <p class="page_com1">아름다운 도시&#33; 대구</p>
+            </figure>
+            <section class="page_container">
+                <div class="page_header">
+                    <h2 class="page_tit2">명품관광코스</h2>
+                    <div class="breadcrumb_box">
+                        <h2 class="cate_tit1">광역관광코스</h2>
+                        <div class="bread">
+                            <ul class="bread_lst">
+                                <li class="home"><a href="index.html">홈</a></li>
+                                <li><a href="">명품관광코스</a></li>
+                                <li class="sub_cate_tit"><a href="">대표관광코스</a></li>
+                                <li><span class="cur_page">광역관광코스</span></li>
+                            </ul>
+                            <ul class="device_lst">
+                                <li class="link"><a href=""></a></li>
+                                <li class="print"><a href=""></a></li>
+                                <li class="edit"><a href="">정보수정요청</a></li>
+                            </ul>
+                        </div>
+                    </div>  
+                </div>
+                <div class="page_content">
+                    <aside class="left_bar">
+                        <nav class="lnb">
+                            <div class="lnb_item">
+                                <ul class="sub_lnb on">
+                                    <li class="sub_lnb_tit">대표관광코스</li>
+                                    <li class="cate1"><a href="daegu11.html#page1">대구명품코스5</a></li>
+                                    <li class="cate2"><a href="daegu11.html#page2">팔공산힐링코스</a></li>
+                                    <li class="cate3"><a href="daegu11.html#page3">모노레일도심관광</a></li>
+                                    <li class="cate4"><a href="daegu11.html#page4">광역관광코스</a></li>
+                                    <li class="cate5"><a href="daegu11.html#page5">근교권투어</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">나만의 맞춤관광</li>
+                                    <li><a href="">맞춤관광코스 설정</a></li>
+                                    <li><a href="">베스트 맞춤관광코스</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">근대로의 여행</li>
+                                    <li><a href="">경상감영달성길</a></li>
+                                    <li><a href="">근대문화골목길</a></li>
+                                    <li><a href="">패션한방길</a></li>
+                                    <li><a href="">삼덕봉산문화길</a></li>
+                                    <li><a href="">남산100년향수길</a></li>
+                                </ul>
+                                <ul class="sub_lnb">
+                                    <li class="sub_lnb_tit">테마여행</li>
+                                    <li><a href="">야간관광</a></li>
+                                    <li><a href="">올레길/둘레길걷기</a></li>
+                                    <li><a href="">자전거투어</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </aside>
+                    <div class="right_bar">
+                        <div class="sub_img_wrap">
+                            <figure class="sub_p2">
+                                <img src="./img/sub1/p5_bg.jpg" alt="근교권투어">
+                            </figure>
+                            <div class="research_box">
+                            <p>
+                                <span class="res1">담당부서:관광국 관광과 관광마케팅팀</span>
+                                <span class="res2">담당자: 박대구</span>
+                                <span class="res3">연락처: 053-803-3881</span>
+                                <span class="res4">최종수정일: 2021-02-01</span>
+                            </p>
+                            <form action="" class="research_frm" id="research_frm2" name="research_frm2">
+                                <h3></h3>
+                                <div class="radio_group">
+                                    <input type="radio" name="research2" class="research_ra" id="research21">
+                                    <label for="research21">매우만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research22">
+                                    <label for="research22">만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research23">
+                                    <label for="research23">보통</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research24">
+                                    <label for="research24">불만족</label>
+                                    <input type="radio" name="research2" class="research_ra" id="research25">
+                                    <label for="research25">매우불만족</label>
+                                </div>
+                                <div class="research_txt_box">
+                                    <input type="text" placeholder="여러분의 소중한 의견을 주시기 바랍니다." class="input_box">
+                                    <input type="submit" class="input_btn" value="입력">
+                                </div>
+                            </form>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="ft">
+        <div class="ft_wrap1 col1200">
+            <nav class="fnb">
+                <input type="checkbox" class="ck" id="ck1">
+                <input type="checkbox" class="ck" id="ck2">
+                <input type="checkbox" class="ck" id="ck3">
+                <input type="checkbox" class="ck" id="ck4">
+                <ul class="popm" id="popm">
+                    <li class="pop1">
+                        <label for="ck1">관련사이트</label>
+                        <ul class="popup">
+                            <li><a href="http://www.daegu.go.kr/index.do" target="_blank" title="대구시청 새창열림">대구시청</a></li>
+                            <li><a href="http://kto.visitkorea.or.kr/kor.kto" target="_blank" title="한국관광공사 새창열림">한국관광공사</a></li>
+                            <li><a href="http://www.dtb.or.kr/pages/main/" target="_blank" title="대구관광뷰로 새창열림">대구관광뷰로</a></li>
+                        </ul>
+                    </li>
+                    <li class="pop2">
+                        <label for="ck2">대구행정구역</label>
+                        <ul class="popup">
+                            <li><a href="https://www.buk.daegu.kr/index.do" target="_blank" title="대구북구청 새창열림">북구</a></li>
+                            <li><a href="https://www.dong.daegu.kr/main/main.htm" target="_blank" title="대구동구청 새창열림">동구</a></li>
+                            <li><a href="https://www.dgs.go.kr/dgs/" target="_blank" title="대구서구청 새창열림">서구</a></li>
+                            <li><a href="https://www.jung.daegu.kr/new/pages/main/" target="_blank" title="대구중구청 새창열림">중구</a></li>
+                            <li><a href="https://dalseo.daegu.kr/index.do" target="_blank" title="대구달서구청 새창열림">달서구</a></li>
+                            <li><a href="http://www.suseong.kr/index.do" target="_blank" title="대구수성구청 새창열림">수성구</a></li>
+                            <li><a href="http://www.suseong.kr/index.do" target="_blank" title="대구남구청 새창열림">남구</a></li>
+                            <li><a href="http://www.suseong.kr/index.do" target="_blank" title="대구달성군청 새창열림">달성군</a></li>
+                        </ul>
+                    </li>
+                    <li class="pop3">
+                        <label for="ck3">대구SNS</label>
+                        <ul class="popup">
+                            <li><a href="https://blog.naver.com/daeguvisit" target="_blank" title="대구블로그 새창열림">네이버블로그</a></li>
+                            <li><a href="https://www.facebook.com/daegutour/" target="_blank" title="대구페이스북 새창열림">페이스북</a></li>
+                            <li><a href="https://www.instagram.com/daeguvisit/" target="_blank" title="대구인스타그램 새창열림">인스타그램</a></li>
+                            <li><a href="https://www.youtube.com/user/dgdachaeum" target="_blank" title="대구유튜브 새창열림">유튜브</a></li>
+                        </ul>
+                    </li>
+                    <li class="pop4">
+                        <label for="ck4">패밀리사이트</label>
+                        <ul class="popup">
+                            <li><a href="http://daegufestival.com/" target="_blank" title="축제닷컴 새창열림">대구축제닷컴</a></li>
+                            <li><a href="http://info.daegu.go.kr/newshome/mtnmain.php" target="_blank" title="컬러풀뉴스룸 새창열림">컬러풀뉴스룸</a></li>
+                            <li><a href="https://www.daegufood.go.kr/kor/" target="_blank" title="대구푸드 새창열림">대구푸드</a></li>
+                            <li><a href="https://thegoodnight.daegu.go.kr/kr/" target="_blank" title="더굿나잇 새창열림">더굿나잇</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="ft_wrap2 col1200">
+            <ul class="ft_banner">
+                <li><a href=""><img src="./img/footer/footbn00.png" alt="하단슬라이더배너이미지1"></a></li>
+                <li><a href=""><img src="./img/footer/footbn01.png" alt="하단슬라이더배너이미지2"></a></li>
+                <li><a href=""><img src="./img/footer/footbn02.png" alt="하단슬라이더배너이미지3"></a></li>
+                <li><a href=""><img src="./img/footer/footbn03.png" alt="하단슬라이더배너이미지4"></a></li>
+                <li><a href=""><img src="./img/footer/footbn04.png" alt="하단슬라이더배너이미지5"></a></li>
+                <li><a href=""><img src="./img/footer/footbn05.png" alt="하단슬라이더배너이미지6"></a></li>
+                <li><a href=""><img src="./img/footer/footbn06.png" alt="하단슬라이더배너이미지7"></a></li>
+                <li><a href=""><img src="./img/footer/footbn07.png" alt="하단슬라이더배너이미지8"></a></li>
+                <li><a href=""><img src="./img/footer/footbn08.png" alt="하단슬라이더배너이미지9"></a></li>
+                <li><a href=""><img src="./img/footer/footbn09.png" alt="하단슬라이더배너이미지10"></a></li>
+            </ul>
+        </div>
+        <script>
+        $(document).ready(function(){
+           $(".ft_banner").sliding({spd:500, intv:4500, chd:"li"}); 
+        });
+        </script>
+        <div class="ft_wrap2 col1200">
+            <nav class="ft_link">
+                <ul>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">행정헌장서비스</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                    <li><a href="">홈페이지 의견접수</a></li>
+                    <li><a href="">사이트맵</a></li>
+                </ul>
+            </nav>
+            <div class="copyright">
+                <p class="copy_p">(41911) 대구광역시 중구 공평로 88 (동인동1가) | 전화 : 053.803.3881~3886</p>
+                <p class="copy_p">Copyright(c) <span>DAEGU METROPOLITAN CITY</span>. All rights reserved.</p>
+            </div>
+            <a href="" class="wamark">
+                <img src="./img/bg/img_wa.png" alt="WA인증">
+            </a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

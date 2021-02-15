@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*메인페이지 quick */
+    .quick {position: fixed; right: 0; top: 45%; z-index: 999; width: 200px; height: 250px;}
+    .quick li { clear: both; margin: 14px; height: 70px; width: 120px; transition: 0.6s; position: relative; }
+    .quick li.on {width: 200px;}
+    .quick li a {display: block;}
+    .quick li a span {display: block; clear: both; line-height: 20px;}
+    .quick li a span.q_txt {padding-right: 15px; opacity: 0; transition: 0.3s; font-size: 0.8em; padding-top: 5em; text-align: left;}
+    .quick li.on a span.q_txt {opacity: 1;}
+    .quick li.item1.on a span.q_txt {color: #77bd43;}
+    .quick li.item2.on a span.q_txt {color: #4678bd;}
+    .quick li.item3.on a span.q_txt {color: #f0483f;}
+    .quick li a span.q_icon {width: 60px; height: 60px; background-repeat: no-repeat; background-position: center center; background-color: transparent; border: 2px solid #fff; border-radius: 50%; transition: 0.3s; position: absolute; top: 0; right: 0px;}
+    .quick li.on a span.q_icon {right: 8.6em;}
+    .quick li.item1 a span.q_icon { background-image: url("./icon/quick/qF1.png");}
+    .quick li.item2 a span.q_icon { background-image: url("./icon/quick/qF2.png");}
+    .quick li.item3 a span.q_icon { background-image: url("./icon/quick/qF3.png");}
+    .quick li.item1.on a span.q_icon {border: 2px solid #77bd43; background-color: #77bd43;}
+    .quick li.item2.on a span.q_icon {border: 2px solid #4678bd; background-color: #4678bd;}
+    .quick li.item3.on a span.q_icon {border: 2px solid #f0483f; background-color: #f0483f;}
+    .quick li a:after {content: ""; display: block; float: right; width: 0;height: 2px; position: absolute; top: 2em; right: 0; transition: 0.3s;}
+    .quick li.on a:after {width: 9em;}
+    .quick li.item1 a:after { background-color: #77bd43;}
+    .quick li.item2 a:after { background-color: #4678bd;}
+    .quick li.item3 a:after { background-color: #f0483f;}

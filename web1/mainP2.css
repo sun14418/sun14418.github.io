@@ -1,0 +1,47 @@
+@charset "utf-8";
+/*메인페이지 content page2 */
+    #page2 {width: 100%; background-image: url("./img/bg/main_bg2.jpg");}
+    #page2 .grd_item.left {overflow: hidden;}
+    #sl2 {margin-left: 0; transition: 0.6s;}
+    #rd1:checked ~ #sl2 {margin-left: 0;}
+    #rd2:checked ~ #sl2 {margin-left: -100%;}
+    #rd3:checked ~ #sl2 {margin-left: -200%;}
+    #rd4:checked ~ #sl2 {margin-left: -300%;}
+        
+    .sl_btn_box2 li {display: none;}
+        
+    #rd1:checked ~ .sl_btn_box2 .food1 {display: block;}
+    #rd2:checked ~ .sl_btn_box2 .food2 {display: block;}
+    #rd3:checked ~ .sl_btn_box2 .food3 {display: block;}
+    #rd4:checked ~ .sl_btn_box2 .food4 {display: block;}
+    
+    .slider2 {width: 400%; height: 554px;}
+    .slider2 li {float: left; position: relative; width: 25%;}
+    .sl_tit_box span {display: block; clear: both;}
+    .btxt {font-family: 'GodoB'; font-size: 40px; line-height: 50px;}
+    .gtxt {font-family: 'GodoB'; font-size: 30px; line-height: 40px;}
+    .sl_com2 {width: 350px; padding-top: 28px;}
+    
+    .sl_btn_box2 {position: absolute; right: 0; bottom: 0; background-color: #2a5a98; overflow: hidden;}
+    .sl_btn_box2 li {width: 300px; height: 277px;}
+    .sl_btn_box2 li.food1 .thum {background-image: url("./img/grd_box/grd6-1t.jpg");}
+    .sl_btn_box2 li.food2 .thum {background-image: url("./img/grd_box/grd6-2t.jpg");}
+    .sl_btn_box2 li.food3 .thum {background-image: url("./img/grd_box/grd6-3t.jpg");}
+    .sl_btn_box2 li.food4 .thum {background-image: url("./img/grd_box/grd6-4t.jpg");}
+    .sl_btn_box2 li .thum {width: 145px; height: 145px; margin-left: 75px; border: 2px solid #fff; border-radius: 140px; margin-top: 20px;}
+    .sl_btn_box2 li label { display: block; width: 20px; height: 32px; position: absolute; background-repeat: no-repeat; background-position: center center; top: 55%;}
+    .sl_btn_box2 li label.left_btn {background-image: url("./icon/content/prev.png"); left: 20px; cursor: pointer;}
+    .sl_btn_box2 li label.right_btn {background-image: url("./icon/content/next.png"); right: 20px; cursor: pointer;}
+        
+    #page2 .grd_item.right .item1 {background-image: url("./img/grd_box/grd7.jpg");}
+    #page2 .grd_item.right .item2 {background-image: url("./img/grd_box/grd8.jpg");}
+    #page2 .grd_item.right .item3 {background-image: url("./img/grd_box/grd9.jpg");}
+    #page2 .grd_item.right .item4 {background-color: #fff; }
+    
+    .item1 .c0rg {font-size: 28px; color: coral; }
+    .grd10_ico {margin-top: 74px; display: block; }
+    .grd10_ico .ico1 {background-image: url("./icon/content/grd10_ico1.png"); }
+    .grd10_ico .ico2 {background-image: url("./icon/content/grd10_ico2.png");}
+    .grd10_ico .ico3 {background-image: url("./icon/content/grd10_ico3.png");}
+    .grd10_ico .ico4 {background-image: url("./icon/content/grd10_ico4.png");}
+    .icotxt {display: block; float: left; width: 150px; height: 60px; border: 1px solid #ddd; box-sizing: border-box; text-align: right; line-height: 60px; padding-right: 15px; background-color: #4579bd; color: #fff; background-repeat: no-repeat; background-position: 10px center;}    
