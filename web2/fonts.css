@@ -1,0 +1,151 @@
+@charset "UTF-8"
+    /* Fonts */
+@font-face {
+    font-family: 'ngR';
+    src: local('※'), url('../fonts/NanumGothic-Regular.woff2') format('woff2'), url('../fonts/NanumGothic-Regular.woff') format('woff'), 
+    url('../fonts/NanumGothic-Regular.ttf') format('truetype'),
+    url('../fonts/NanumGothic-Regular.otf') format('opentype'), 
+    url('../fonts/NanumGothic-Regular.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'ngB';
+    src: local(※), url('../fonts/NanumGothic-Bold.woff2') format('woff2'),
+     url('../fonts/NanumGothic-Bold.woff') format('woff'),
+     url('../fonts/NanumGothic-Bold.ttf') format('truetype'),
+     url('../fonts/NanumGothic-Bold.otf') format('opentype'),
+     url('../fonts/NanumGothic-Bold.eot') format('embedded-opentype');    
+}
+@font-face {
+    font-family: 'ngEB';
+    src: local(※), url('../fonts/NanumGothic-ExtraBold.woff2') format('woff2'),
+     url('../fonts/NanumGothic-ExtraBold.woff') format('woff'),
+     url('../fonts/NanumGothic-ExtraBold.ttf') format('truetype'),
+     url('../fonts/NanumGothic-ExtraBold.otf') format('opentype'),
+     url('../fonts/NanumGothic-ExtraBold.eot') format('embedded-opentype');    
+}
+@font-face {
+    font-family: 'AritaBuriHL';
+    src: local('※'), url('../fonts/AritaBuriHL.woff2') format('woff2'), url('../fonts/AritaBuriHL.woff') format('woff'), 
+    url('../fonts/AritaBuriHL.ttf') format('truetype'),
+    url('../fonts/AritaBuriHL.otf') format('opentype'), 
+    url('../fonts/AritaBuriHL.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'AritaBuriB';
+    src: local('※'), url('../fonts/AritaBuriB.woff2') format('woff2'), url('../fonts/AritaBuriB.woff') format('woff'), 
+    url('../fonts/AritaBuriB.ttf') format('truetype'),
+    url('../fonts/AritaBuriB.otf') format('opentype'), 
+    url('../fonts/AritaBuriB.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'AritaBuriL';
+    src: local('※'), url('../fonts/AritaBuriL.woff2') format('woff2'), url('../fonts/AritaBuriL.woff') format('woff'), 
+    url('../fonts/AritaBuriL.ttf') format('truetype'),
+    url('../fonts/AritaBuriL.otf') format('opentype'), 
+    url('../fonts/AritaBuriL.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'AritaBuriM';
+    src: local('※'), url('../fonts/AritaBuriM.woff2') format('woff2'), url('../fonts/AritaBuriM.woff') format('woff'), 
+    url('../fonts/AritaBuriM.ttf') format('truetype'),
+    url('../fonts/AritaBuriM.otf') format('opentype'), 
+    url('../fonts/AritaBuriM.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'AritaBuriSB';
+    src: local('※'), url('../fonts/AritaBuriSB.woff2') format('woff2'), url('../fonts/AritaBuriSB.woff') format('woff'), 
+    url('../fonts/AritaBuriSB.ttf') format('truetype'),
+    url('../fonts/AritaBuriSB.otf') format('opentype'), 
+    url('../fonts/AritaBuriSB.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'AritaDotumBold';
+    src: local('※'), url('../fonts/AritaDotumBold.woff2') format('woff2'), url('../fonts/AritaDotumBold.woff') format('woff'), 
+    url('../fonts/AritaDotumBold.ttf') format('truetype'),
+    url('../fonts/AritaDotumBold.otf') format('opentype'), 
+    url('../fonts/AritaDotumBold.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'AritaDotumLight';
+    src: local('※'), url('../fonts/AritaDotumLight.woff2') format('woff2'), url('../fonts/AritaDotumLight.woff') format('woff'), 
+    url('../fonts/AritaDotumLight.ttf') format('truetype'),
+    url('../fonts/AritaDotumLight.otf') format('opentype'), 
+    url('../fonts/AritaDotumLight.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'AritaDotumMedium';
+    src: local('※'), url('../fonts/AritaDotumMedium.woff2') format('woff2'), url('../fonts/AritaDotumMedium.woff') format('woff'), 
+    url('../fonts/AritaDotumMedium.ttf') format('truetype'),
+    url('../fonts/AritaDotumMedium.otf') format('opentype'), 
+    url('../fonts/AritaDotumMedium.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'AritaDotumSemiBold';
+    src: local('※'), url('../fonts/AritaDotumSemiBold.woff2') format('woff2'), url('../fonts/AritaDotumSemiBold.woff') format('woff'), 
+    url('../fonts/AritaDotumSemiBold.ttf') format('truetype'),
+    url('../fonts/AritaDotumSemiBold.otf') format('opentype'), 
+    url('../fonts/AritaDotumSemiBold.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'AritaDotumThin';
+    src: local('※'), url('../fonts/AritaDotumThin.woff2') format('woff2'), url('../fonts/AritaDotumThin.woff') format('woff'), 
+    url('../fonts/AritaDotumThin.ttf') format('truetype'),
+    url('../fonts/AritaDotumThin.otf') format('opentype'), 
+    url('../fonts/AritaDotumThin.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'DaumR';
+    src: local('※'), url('../fonts/DaumR.woff2') format('woff2'), 
+    url('../fonts/DaumR.woff') format('woff'), 
+    url('../fonts/DaumR.ttf') format('truetype'),
+    url('../fonts/DaumR.otf') format('opentype'), 
+    url('../fonts/DaumR.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'DaumSB';
+    src: local('※'), url('../fonts/DaumSB.woff2') format('woff2'), 
+    url('../fonts/DaumSB.woff') format('woff'), 
+    url('../fonts/DaumSB.ttf') format('truetype'),
+    url('../fonts/DaumSB.otf') format('opentype'), 
+    url('../fonts/DaumSB.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'DoHyeon';
+    src: local('※'), url('../fonts/DoHyeon.woff2') format('woff2'), 
+    url('../fonts/DoHyeon.woff') format('woff'), 
+    url('../fonts/DoHyeon.ttf') format('truetype'),
+    url('../fonts/DoHyeon.otf') format('opentype'), 
+    url('../fonts/DoHyeon.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'GodoB';
+    src: local('※'), url('../fonts/GodoB.woff2') format('woff2'),
+    url('../fonts/GodoB.woff') format('woff'), 
+    url('../fonts/GodoB.ttf') format('truetype'),
+    url('../fonts/GodoB.otf') format('opentype'), 
+    url('../fonts/GodoB.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'GodoM';
+    src: local('※'), url('../fonts/GodoM.woff2') format('woff2'), 
+    url('../fonts/GodoM.woff') format('woff'), 
+    url('../fonts/GodoM.ttf') format('truetype'),
+    url('../fonts/GodoM.otf') format('opentype'), 
+    url('../fonts/GodoM.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'GodoMaum';
+    src: local('※'), url('../fonts/GodoMaum.woff2') format('woff2'), 
+    url('../fonts/GodoMaum.woff') format('woff'), 
+    url('../fonts/GodoMaum.ttf') format('truetype'),
+    url('../fonts/GodoMaum.otf') format('opentype'), 
+    url('../fonts/GodoMaum.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'HanNa11';
+    src: local('※'), url('../fonts/HanNa11.woff2') format('woff2'), 
+    url('../fonts/HanNa11.woff') format('woff'), 
+    url('../fonts/HanNa11.ttf') format('truetype'),
+    url('../fonts/HanNa11.otf') format('opentype'), 
+    url('../fonts/HanNa11.eot') format('embedded-opentype');        
+}

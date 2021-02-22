@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.hd {position: relative; height: 150px; background-color: #241}
+.content { display: block; width: 100%; min-height: 100vh;}
+.breadcrumbs { width: 1440px; margin: 0 auto; padding-top: 40px; height: 48px;}
+.brd_list li { float: left; margin-right: 20px;}
+.icon_home {display: block; width: 40px;height: 40px; 
+background-image: url("icon/main_info/home_23.png");
+background-repeat: no-repeat; background-position: center center;}
+.main_menu, .sub_menu { height: 40px; border: 1px solid #333; transition: 0.5s; overflow-y: hidden;}
+.main_menu.on, .sub_menu.on { height: 200px;}
+.main_menu li, .sub_menu li { height: 40px;line-height: 40px;}
+.main_menu .main_cur:after { content: "▽"; margin-left: 10px;}
+.main_menu.on .main_cur:after { content: "△"; }
+.sub_menu .sub_cur:after { content: "▽"; margin-left: 10px;}
+.sub_menu.on .sub_cur:after { content: "△"; }
+.main_menu a, .sub_menu a {display: block; color: #333; font-weight: bold; font-size: 16px;}
+.main_cur, .sub_cur { display: block; padding: 0 16px; line-height: 40px; font-weight: bold; font-size: 16px;}
+.main_menu li, .sub_menu li {clear: both; padding: 0 16px; line-height: 40px;}
+
+.page { clear: both; width: 1140px; margin: 0 auto;}
+.page_com {text-align: center; font-size: 20px; margin-top: 50px;}
+.page_tit {text-align: center; font-size: 40px; line-height: 2; ;}
+#page2 img { display: block;  margin: 30px auto;}
+.sub_tit { text-align: left; float: left; }
+.page_wrap1 p { width: 700px; padding-left: 300px; margin: 30px 0;}
