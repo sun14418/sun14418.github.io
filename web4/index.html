@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>아모레퍼시픽</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1">
+    <meta name="title" content="아모레퍼시픽 AMORE PACIFIC">
+    <meta name="keywords" content="아모레퍼시픽, 아모레퍼시픽화장품, amorepacific, 아시안뷰티">
+    <meta name="description" content="아모레퍼시픽그룹 홈페이지">
+    <meta http-equiv="refresh" content="180">
+    <link rel="shortcut icon" href="./favicon/favicon-16.ico">
+    <link rel="shortcut icon" href="./favicon/favicon-32.ico">
+    <link rel="shortcut icon" href="./favicon/favicon-72.ico">
+    <meta property="og:title" content="아모레퍼시픽">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="아모레퍼시픽">
+    <meta property="og:image" content="./img/ci/amore.jpg">
+    <meta property="og:url" content="https://www.amorepacific.com/kr/ko/index.html">
+    <meta property="og:site_name" content="아모레퍼시픽AMOREPACIFIC">
+    <meta property="fb:admins" content="@AMOREPACIFIC.flagshipbrand">
+    <meta property="fb:app_id" content="@AMOREPACIFIC.flagshipbrand">
+
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/device.js"></script>
+    <script>
+    $(document).ready(function(){
+        deviceCheck2(); 
+    });
+    </script>
+
+    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./clear.css">
+    
+    <style>
+        *{margin: 0; padding: 0;}
+        html, body {width: 100%; font-family: 'NanumaBarunGothic';}
+        ul {list-style: none;}
+        a {text-decoration: none;}
+        button, input {border: 0; outline: 0; background: none;}
+    </style>
+    
+    
+    <link rel="stylesheet" href="./owl/owl.carousel.css">
+    <style></style>
+    <script src="./owl/owl.carousel.js"></script>
+    
+    <link rel="stylesheet" href="./slick/slick.css">
+    <style></style>
+    <script src="./slick/slick.js"></script>
+    
+    <link rel="stylesheet" href="./bx/bxslider.css">
+    <style></style>
+    <script src="./bx/bxslider.js"></script>
+    
+    <link rel="stylesheet" href="./common.css">
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var pageTop = $(window).scrollTop();
+                if(pageTop>=350) {
+                    $(".hd").addClass("active");
+                } else {
+                    $(".hd").removeClass("active");
+                }
+            });
+        });    
+    </script>
+    <style>
+        .main {clear: both;}
+        .vs { clear: both; width: 100%; height: auto; top: 8.8em;}
+        .owl-nav {background-repeat: no-repeat; }
+        .owl-prev {background-image: url("./icon/prev.png"); background-repeat: no-repeat; position: absolute; top: 50%; margin-top: -50px; left: 2%; width: 30px; height: 70px; text-indent: -9999px;}
+        .owl-next {background-image: url("./icon/next.png"); background-repeat: no-repeat; position: absolute; top: 50%; margin-top: -50px; right: 2%; width: 30px; height: 70px; text-indent: -9999px;}
+        .owl-dots { position: absolute; clear: both; width: 130px; height: 15px; bottom: 3em; left: 50%; margin-left: -75px;}
+        #vs1 .owl-dots .owl-dot {float: left; width: 10px; height: 10px; padding: 0.5em;}
+        #vs1 .owl-dots .owl-dot span { content: ""; display: block; width: 8px; height: 8px; background-color: transparent; border: 2px solid #fff;; border-radius: 50%; }
+        #vs1 .owl-dots .owl-dot.active span { background-color: #fff;}
+        .page1 { clear: both;}
+        #utb_page {width: 100%; clear: both;}
+        #utb_page .slider button {background-repeat: no-repeat; text-indent: -9999px; top: 50%; margin-top: -50px;width: 30px; height: 70px; position: absolute; z-index: 99;}
+        #utb_page button.slick-prev {background-image: url("./icon/prevB.png"); left: 2%;}
+        #utb_page button.slick-next {background-image: url("./icon/nextB.png"); right: 2%;}
+        .utb_box {position: absolute; z-index: 100; top: 27%; margin-left: 55em;}
+        .slick-dots { clear: both; display: block; margin-left: 76em;}
+        .slick-dots li {float: left; width: 10px; height: 10px;margin: 0 0.5em;}
+        .slick-dots li #slick-slide-control00, .slick-dots li #slick-slide-control01, .slick-dots li #slick-slide-control02 { content: ""; display: block; width: 8px; height: 8px; background-color: transparent; border: 2px solid #877448; top: 85%; border-radius: 50%; box-sizing: content-box}
+        .slick-dots li.slick-active #slick-slide-control00, .slick-dots li.slick-active #slick-slide-control01, .slick-dots li.slick-active #slick-slide-control02 {background-color: #877448;}
+        
+        .b_story {background-image: url(./img/sub/absolutea_clip.gif); width: 100%;}
+        .b_story img {display: block; width: 100%; height: auto;}
+        .bs_slide{clear: both; width: 100%; height: auto; background-color: #f6f6f6; height: 900px;}
+        .bs_slide .bs { width: 33.2%; float: left; }
+        .bs_slide .bs .item {border-left: 1px solid #d5d5d5;}
+        .bs_slide .bs .item img {width: 70%; height: auto; margin: 2em 6em; }
+        .best_item {height: 8em; padding: 5em 3em; padding-bottom: 0;margin-left: 3em; }
+        .mini_tit {color: #877448; line-height: 1.5em;}
+        .item_tit {padding-bottom: 0.5em; line-height: 1.5em;}
+        .item_com {color: #666; line-height: 1.5em;}
+        
+        #bs1 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager {position: absolute; height: 100px; width: 432px; bottom: -7em; margin-left: -16em;}
+        #bs1 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div a { width: 100px; height: 100px;}
+        #bs1 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(1) a {background-image: url("./img/index/bc1_thum.png"); }
+        #bs1 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(2) a {background-image: url("./img/index/bc2_thum.png"); }
+        #bs1 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(3) a {background-image: url("./img/index/bc3_thum.png"); }#bs1 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(4) a {background-image: url("./img/index/bc4_thum.png"); }
+        
+        #bs2 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager {position: absolute; height: 100px; width: 432px; bottom: -7em; margin-left: -15em;}
+        #bs2 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div a { width: 100px; height: 100px;}
+        #bs2 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(1) a {background-image: url("./img/index/tr1_thum.png"); }
+        #bs2 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(2) a {background-image: url("./img/index/tr2_thum.png"); }
+        #bs2 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(3) a {background-image: url("./img/index/tr3_thum.png"); }
+        #bs2 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(4) a {background-image: url("./img/index/tr4_thum.png"); }
+        
+        #bs3 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager {position: absolute; height: 100px; width: 432px; bottom: -7em; margin-left: -16em;}
+        #bs3 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div a { width: 100px; height: 100px;}
+        #bs3 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(1) a {background-image: url("./img/index/mc1_thum.png"); }
+        #bs3 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(2) a {background-image: url("./img/index/mc2_thum.png"); }
+        #bs3 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(3) a {background-image: url("./img/index/mc3_thum.png"); }
+        #bs3 div.bx-wrapper div.bx-controls.bx-has-pager.bx-has-controls-direction.bx-has-controls-auto div.bx-pager.bx-default-pager div:nth-child(4) a {background-image: url("./img/index/mc4_thum.png"); }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="hd">
+            <div class="hd_wrap con1440">
+                <nav class="tnb clrfx">
+                    <ul class="top_nb clrfx">
+                        <li><a href="join.html">JOIN</a></li>
+                        <li><a href="login.html">LOGIN</a></li>
+                        <li><a href="cart.html">CART&#40;<span class="cart_num">0</span>&#41;</a></li>
+                        <li><a href="mypage.html">MY PAGE</a></li>
+                        <li><a href="https://www.amorepacificmall.com/kr/ko/main">APmall</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hd_wrap con1440">
+                <a href="index.html" class="logo"></a>
+                <nav class="gnb">
+                    <ul class="main_nb clrfx">
+                        <li><a href="editorial.html">EDITORIAL</a></li>
+                        <li><a href="brand.html">BRAND STORY</a></li>
+                        <li><a href="timeResponse.html">TIME RESPONSE</a></li>
+                        <li><a href="poducts.html">PRODUCTS</a></li>
+                        <li><a href="news.html">NEWS</a></li>
+                    </ul>
+                </nav>
+                <a href="index.html" class="logo2"></a>
+            </div>
+        </header>
+        <div class="main">
+            <ficure class="vs">
+                <div class="vs_wrap" id="vs1">
+                    <ul class="owl-carousel clrfx">
+                        <li class="item">
+                            <img src="./img/index/vs1.jpg" alt="트리트먼트 엔자임 필 클렌징 파우더" title="트리트먼트 엔자임 필 클렌징 파우더">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/vs2.jpg" alt="타임 레스폰스 인텐시브 리뉴얼 앰플" title="타임 레스폰스 인텐시브 리뉴얼 앰플">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/vs3.jpg" alt="프라임 리저브 에픽다이나믹 액티베이팅 프로그램" title="프라임 리저브 에픽다이나믹 액티베이팅 프로그램">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/vs4.jpg" alt="타임 레스폰스 컴플릿 파운데이션" title="타임 레스폰스 컴플릿 파운데이션">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/vs5.jpg" alt="빈티지 싱글 익스트렉트 에센스" title="빈티지 싱글 익스트렉트 에센스">
+                        </li>
+                    </ul>
+                </div>
+                <script src="./owl/owl.carousel.js"></script>
+                <script>
+                    $(document).ready(function() {
+                        $('.owl-carousel').owlCarousel({
+                                autoplay: true, //자동 실행
+                                loop: true, //순환 구조
+                                margin: 0, //아이템간 여백
+                                nav: true, //제어바 추가
+                                mouseDrag: true, //마우스 드래그 허용
+                                dots: true, //번호별 버튼 추가
+                            });
+                        });
+                </script>
+            </ficure>
+            <div class="page1">
+                <div class="utb_page" id="utb_page">
+                    <div class="slider utb-slider">
+                        <div class="item">
+                            <img src="./img/index/utb_bg1.jpg" title="홍보영상1" alt="홍보영상1">
+                            <div class="utb_box">
+                               <iframe width="761" height="428" src="https://www.youtube.com/embed/jTjZxzdMHIk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="./img/index/utb_bg2.jpg" title="홍보영상2" alt="홍보영상2">
+                            <div class="utb_box">
+                                <iframe width="761" height="428" src="https://www.youtube.com/embed/tZhSVVChqyo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="./img/index/utb_bg3.jpg" title="홍보영상3" alt="홍보영상3">
+                            <div class="utb_box">
+                                <iframe width="761" height="428" src="https://www.youtube.com/embed/1C20bx1qHhw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    $('.utb-slider').slick({
+                        dots: true,
+                        arrows: true,
+                        infinite: true,
+                        speed: 300,
+                        autoplay: false,
+                    });
+                });
+            </script>
+            <div class="page2 clrfx">
+                <ul class="b_story">
+                    <li class="story"><img src="./img/index/brand_story2.png" alt="AbsoluTea" title="AbsoluTea"></li>
+                </ul>
+            </div>
+            <div class="bs_slide">
+                <div class="bs" id="bs1">
+                    <div class="best_item">
+                        <p class="mini_tit">BALANCE CARE</p>
+                        <h2 class="item_tit">밸런스 케어</h2>
+                        <p class="item_com">피부에 편안한 보태니컬 성분으로<br>완벽한 유수분 균형을 되찾아<br>매일 더 건강한 피부로 가꿔줍니다.</p>
+                    </div>
+                    <ul class="best_p clrfx">
+                        <li class="item">
+                            <img src="./img/index/bc1.jpg" title="보태니컬 수딩 토너" alt="보태니컬 수딩 토너">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/bc2.jpg" title="보태니컬 하이드레이팅 플루이드" alt="보태니컬 하이드레이팅 플루이드">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/bc3.jpg" title="트리트먼트 엔자임 클렌징폼" alt="트리트먼트 엔자임 클렌징폼">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/bc4.jpg" title="트리트먼트 클렌징오일" alt="트리트먼트 클렌징오일">
+                        </li>
+                    </ul>
+                </div>
+                <div class="bs" id="bs2">
+                    <div class="best_item">
+                        <p class="mini_tit">TIME RESPONSE</p>
+                        <h2 class="item_tit">타임 레스폰스</h2>
+                        <p class="item_com">차로부터 탄생한 생명력의 정수 AbsoluTea™가<br>타고난 피부의 한계를 넘어서는 아름다움을 선사합니다. </p>
+                    </div>
+                    <ul class="best_p clrfx">
+                        <li class="item">
+                            <img src="./img/index/tr1.jpg" title="타임레스폰스인텐시브리뷰얼앰플" alt="타임레스폰스인텐시브리뷰얼앰플">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/tr2.jpg" title="타임레스폰스스킨리저브크림" alt="타임레스폰스스킨리저브크림">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/tr3.jpg" title="타임레스폰스스킨리저브세럼" alt="타임레스폰스스킨리저브세럼">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/tr4.jpg" title="타임레스폰스스킨리저브데이디펜스" alt="타임레스폰스스킨리저브데이디펜스">
+                        </li>
+                    </ul>
+                </div>
+                <div class="bs" id="bs3">
+                    <div class="best_item">
+                        <p class="mini_tit">MOISTURE PLUMPING</p>
+                        <h2 class="item_tit">모이스춰 플럼핑</h2>
+                        <p class="item_com">왕대나무 수액과 진액을 블렌딩한 뱀부 넥타의 힘으로<br>건조함으로 무너진 탄력을 케어하여<br>촉촉 탄탄하게 차오른 플럼핑 피부를 완성합니다.</p>
+                    </div>
+                    <ul class="best_p clrfx">
+                        <li class="item">
+                            <img src="./img/index/mc1.jpg" title="모이스처플럼핑듀이미스트" alt="모이스처플럼핑듀이미스트">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/mc2.jpg" title="모이스처플럼핑넥타크림" alt="모이스처플럼핑넥타크림">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/mc3.jpg" title="모이스처플럼핑컨센트레이트앰플" alt="모이스처플럼핑컨센트레이트앰플1">
+                        </li>
+                        <li class="item">
+                            <img src="./img/index/mc4.jpg" title="모이스처바운드루미너스쿠션" alt="모이스처바운드루미너스쿠션">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <script>
+                $(document).ready(function() {
+                    $('.best_p').bxSlider({
+                        auto: true, //자동 슬라이딩
+                        speed: 500, //슬라이딩 시간
+                        pause: 4000, //슬라이딩 주기
+                        mode: 'fade', //슬라이딩 효과(fade, horizontal, vertical)
+                        autoControls: true, //시작/중지 버튼 활성화/비활성화
+                        pager: true, //페이지 바로가기 버튼
+                        captions: false, //이미지의 캡션 보이기(img 요소에 title 속성이 있어야 함)
+                    });
+                });
+            </script>
+            <div class="under_bn">
+                <img src="./img/index/under_bg.jpg" alt="브랜드배너" title="브랜드배너">
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="ft con1440 clrfx">
+                <li class="ft_col ft1">
+                    <div>
+                        <a href="https://www.beautypoint.co.kr/footer/agreement.do" class="ft_link">서비스이용약관</a>
+                        <a href="https://www.beautypoint.co.kr/footer/privacy.do" class="ft_link">개인정보처리방침</a>
+                        <a href="https://www.apgroup.com/int/ko/misc/cctv-policies-and-procedures/cctv-policies-and-procedures.html" class="ft_link">영상정보처리방침</a>
+                        <a href="https://www.beautypoint.co.kr/beautypoint/about.do" class="ft_link">BEAUTY POINT</a>
+                        <a href="sitemap.html" class="ft_link">SITEMAP</a>
+                        <span class="copy1">고객상담팀(수신자요금부담) 080-023-5454<br>월 &#126; 금 : AM 9:00 - PM 6:00</span>
+                        <span class="copy2">© AMOREPACIFIC CORPORATION. All rights reserved.</span>
+                    </div>
+                </li>
+                <li class="ft_col ft2">
+                    <a href="https://www.facebook.com/AMOREPACIFIC.flagshipbrand/" class="sns_wrap">
+                        <div class="sns_icon facebook">
+                            <img src="./icon/facebook.png" alt="facebook" title="facebook">
+                            <img src="./icon/facebook_over.png" alt="facebook" title="facebook" class="icon_over">
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/amorepacific.official/" class="sns_wrap">
+                        <div class="sns_icon insta">
+                            <img src="./icon/insta.png" alt="insta" title="insta">
+                            <img src="./icon/insta_over.png" alt="insta" title="insta" class="icon_over">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
