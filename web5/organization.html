@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>organization</title>
+    
+    <style>
+        * {margin: 0; padding: 0;}
+        body, html {width: 100%;}
+        ul {list-style: none;}
+        a {text-decoration: none; display: block; color: #333; box-shadow: 2px 2px 3px #bbb}
+        .clrfx:after {content: ""; display: block; clear: both;}
+        
+        .organization {width: 800px; margin: 50px auto; border: 1px solid #ddd; padding: 30px; background-color: #eee; position: relative;}
+        .organization a {text-align: center;}
+        .ceo {width: 140px; height: 140px; border-radius: 50%; font-size: 19px; font-weight: 400; color: #fff; background-color: #f37321; padding-top: 58px; box-sizing: border-box; background-repeat: no-repeat; background-position: center 20px; background-size: 30px; background-image: url(./img/sub/icon/user.png); margin: 0 auto;}
+        .ceo span {font-weight: 600;}
+        .support {font-size: 17px; width: 150px; height: 40px; line-height: 40px; background-color: #fff; border: 1px solid #ddd; margin: 30px auto;}
+        
+        .support:before, .support:after,.orga_cate:before, .orga_cate > li:before, .team:before, .control:before {content: ""; display: block; width: 100px; height: 30px; position: absolute; border-left: 2px dotted #fbb584; top: 170px; left: 50%;}
+        .support:after {top: 244px; height: 28px;}
+        .orga_cate:before {content: ""; display: block; width: 600px; height: 30px; position: absolute; border-left: 0; border-top: 2px dotted #fbb584; left: 50%; margin-left: -299px; top: 270px; }
+        .orga_cate > li:before {top: 270px; height: 32px;}
+        .team:before {top: 433px; height: 24px;}
+        .control:before { top: 500px; height: 60px;}
+        .orga_cate li:first-child:before, .orga_cate li:first-child .team:before , .orga_cate li:first-child .team li.control:before{left: 128px;}
+        .orga_cate li:nth-child(2):before, .orga_cate li:nth-child(2) .team:before, .orga_cate li:nth-child(2) .team li.control:before {left: 330px;}
+        .orga_cate li:nth-child(3):before, .orga_cate li:nth-child(3) .team:before, .orga_cate li:nth-child(3) .team li.control:before {left: 526px;}
+        .orga_cate li:last-child:before, .orga_cate li:last-child .team:before, .orga_cate li:last-child .team li.control:before {left: 729px;}
+        
+        .orga_cate li {float: left; width: 130px; margin: 0 35px;}
+        .orga_main {width: 130px; height: 130px; border-radius: 50%; border: 3px solid #f37321; background-color: #fff; line-height: 130px; font-weight: 600; margin-top: 30px; box-sizing: border-box;}
+        .team li {width: 130px; height: 40px; line-height: 40px; margin: 25px auto; border: 1px solid #ddd; background-color: #fff; font-weight: 500;}
+        .team li.control {font-size: 13px; margin-top: 35px; }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="organization clrfx">
+        <a href="#" class="ceo">이사회<br><span>대표이사</span></a>
+        <a href="#" class="support">준법지원인</a>
+        <ul class="orga_cate">
+            <li>
+                <a href="#" class="orga_main">재경본부</a>
+                <ul class="team">
+                    <li><a href="">법무팀</a></li>
+                    <li class="control"><a href="" >준법통제담당자</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="orga_main">화약/방산부문</a>
+                <ul class="team">
+                    <li><a href="">법무팀</a></li>
+                    <li class="control"><a href="">준법통제담당자</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="orga_main">무역부문</a>
+                <ul class="team">
+                    <li><a href="">법무팀</a></li>
+                    <li class="control"><a href="">준법통제담당자</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="" class="orga_main">기계부문</a>
+                <ul class="team">
+                    <li><a href="">법무팀</a></li>
+                    <li class="control"><a href="">준법통제담당자</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
