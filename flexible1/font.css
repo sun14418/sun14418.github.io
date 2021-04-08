@@ -1,0 +1,49 @@
+@charset "UTF-8";
+    /* Fonts */
+@font-face {
+    font-family: 'ngR';
+    src: local('※'), url('../fonts/NanumGothic-Regular.woff2') format('woff2'), url('../fonts/NanumGothic-Regular.woff') format('woff'), 
+    url('../fonts/NanumGothic-Regular.ttf') format('truetype'),
+    url('../fonts/NanumGothic-Regular.otf') format('opentype'), 
+    url('../fonts/NanumGothic-Regular.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'ngB';
+    src: local(※), url('../fonts/NanumGothic-Bold.woff2') format('woff2'),
+     url('../fonts/NanumGothic-Bold.woff') format('woff'),
+     url('../fonts/NanumGothic-Bold.ttf') format('truetype'),
+     url('../fonts/NanumGothic-Bold.otf') format('opentype'),
+     url('../fonts/NanumGothic-Bold.eot') format('embedded-opentype');    
+}
+@font-face {
+    font-family: 'ngEB';
+    src: local(※), url('../fonts/NanumGothic-ExtraBold.woff2') format('woff2'),
+     url('../fonts/NanumGothic-ExtraBold.woff') format('woff'),
+     url('../fonts/NanumGothic-ExtraBold.ttf') format('truetype'),
+     url('../fonts/NanumGothic-ExtraBold.otf') format('opentype'),
+     url('../fonts/NanumGothic-ExtraBold.eot') format('embedded-opentype'); 
+}
+@font-face {
+    font-family: 'tvnB';
+    src: local(※), url('../fonts/tvnEnjoyStoriesBold.woff2') format('woff2'),
+     url('../fonts/tvnEnjoyStoriesBold.woff') format('woff'),
+     url('../fonts/tvnEnjoyStoriesBold.ttf') format('truetype'),
+     url('../fonts/tvnEnjoyStoriesBold.otf') format('opentype'),
+     url('../fonts/tvnEnjoyStoriesBold.eot') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'tvnM';
+    src: local(※), url('../fonts/tvnEnjoyStoriesMedium.woff2') format('woff2'),
+     url('../fonts/tvnEnjoyStoriesMedium.woff') format('woff'),
+     url('../fonts/tvnEnjoyStoriesMedium.ttf') format('truetype'),
+     url('../fonts/tvnEnjoyStoriesMedium.otf') format('opentype'),
+     url('../fonts/tvnEnjoyStoriesMedium.eot') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'tvnL';
+    src: local(※), url('../fonts/tvnEnjoyStoriesLight.woff2') format('woff2'),
+     url('../fonts/tvnEnjoyStoriesLight.woff') format('woff'),
+     url('../fonts/tvnEnjoyStoriesLight.ttf') format('truetype'),
+     url('../fonts/tvnEnjoyStoriesLight.otf') format('opentype'),
+     url('../fonts/tvnEnjoyStoriesLight.eot') format('embedded-opentype');
+}
