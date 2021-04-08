@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대전경찰청</title>
+    <meta name="title" content="대전경찰청 Daejeon Metropolitan Police Agency">
+    <meta name="keywords" content="대전경찰청 대전경찰 경찰청 DaejeonPolice">
+    <meta name="description" content="대전경찰청 홈페이지">
+    <meta http-equiv="refresh" content="180">
+    <link rel="shortcut icon" href="./img/favicon_32.ico" type="image/x-icon" sizes="32x32">
+    <link rel="shortcut icon" href="./img/favicon_72.ico" type="image/x-icon" sizes="72x72">
+    <link rel="shortcut icon" href="./img/favicon_96.ico" type="image/x-icon" sizes="96x96">
+    <link rel="shortcut icon" href="./img/favicon_192.ico" type="image/x-icon" sizes="192x192">
+    <link rel="apple-touch-icon" href="./img/favicon_144.ico" type="img/x-icon" sizes="144x144">
+    <meta property="og:title" content="대전경찰청">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="대전경찰청">
+    <meta property="og:image" content="./img/ci/amore.jpg">
+    <meta property="og:url" content="https://www">
+    <meta property="og:site_name" content="대전경찰청">
+    <meta property="fb:admins" content="@poldaejeon">
+    <meta property="fb:app_id" content="@poldaejeon">
+    <link rel="stylesheet" href="./fonts.css">    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            width: 100%;
+            font-family: 'nanumSquareR', 'nanumSquareL', 'nanumSquareB', 'nanumSquareEB', sans-serif;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .clrfx::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .wrap {
+            width: 98%;
+            margin: 0 auto;
+            overflow-x: hidden;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        /* header */
+        .hd {
+            width: 100%;
+            height: 10vh;
+            position: fixed;
+            background-color: #fff;
+            top: 0;
+            left: 0;
+            z-index: 200;
+        }
+        .hd > * {
+            float: left;
+        }
+        
+        .logo {
+            display: block;
+            height: 8vh;
+            width: 50%;
+            margin-top: 1vh;
+            margin-left: 27vw;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            background-image: url(./img/t_logo.jpg);
+        }
+        /* gnb */
+        .gnb_btn {
+            display: block;
+            width: 8vw;
+            height: 4vh;
+            margin: 3vh 6vw;
+            position: absolute;
+            z-index: 500;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        .bar {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 0.5vh;
+            background-color: #32638e;
+            margin-top: 0.75vh;
+            transition: 0.4s;
+        }
+        .bar:nth-child(2) {
+            margin-top: 2vh;
+        }
+        .bar:last-child {
+            margin-top: 3.25vh;
+        }
+        .gnb_btn.on {
+            margin-left: 85vw;
+        }
+        .gnb_btn.on .bar {
+            background-color: #fff;
+            margin-top: 1.3vh;
+            margin-left: -0.5vw;
+            width: 120%;
+        }
+        .gnb_btn.on .bar:first-child {
+            transform: rotate(45deg);
+        }
+        .gnb_btn.on .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .gnb_btn.on .bar:last-child {
+            transform: rotate(-45deg);
+        }
+        .gnb {
+            position: absolute;
+            background-color: #fff;
+            width: 100vw;
+            height: 100vh;
+            margin-left: -100vw;
+            transition: 0.4s;
+        }
+        .gnb.on {
+            margin-left: 0vw;
+        }
+        .gnb_tit {
+            width: 94vw;
+            height: 10vh;
+            background-color: #32638e;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: 500;
+            line-height: 10vh;
+            padding-left: 6vw;
+        }
+        .member_btn {
+            width: 100%;
+            height: 10vh;
+            background-color: #edf0f5;
+        }
+        .m_bth {
+            display: block;
+            float: left;
+            width: 30vw;
+            height:4vh;
+            line-height: 4vh;
+            margin: 3vh 5vw;
+            text-align: center;
+            color: #333;
+            font-size: 0.8em;
+            background-color: #fff;
+            border: 1px solid #bbb;
+            box-sizing: border-box;
+        }
+        .login {
+            margin-left: 15vw;
+        }
+        .gnb_lst {
+            height: 80vh;
+            width: 100%;
+            position: relative;
+            background-image: url(./img/gnb_bg.jpg);
+        }
+        .gnb_menu {
+            width: 40%;
+            height: 12vh;
+            box-sizing: border-box;
+            border-bottom: 1px solid #abc;
+        }
+        .gnb_m_tit {
+            display: block;
+            color: #fff;
+            line-height: 12vh;
+            text-align: center;
+            font-size: 1.2em;
+            text-shadow: 2px 2px 2px #666;
+            transition: 0.5s;
+        }
+        .gnb_m_tit.click {
+            background-color: rgba(255,255,255,0.6);
+        }
+        .gnb_sub_lst {
+            position: absolute;
+            top: 0;
+            left: 40vw;
+            width: 60vw;
+            height: 80vh;
+            padding-top: 2vh;
+            background-color: #fff;
+            opacity: 0;
+            background-repeat: no-repeat;
+            background-image: url(./img/police_character.jpg);
+            background-size: contain;
+            background-position: center 97%;
+        }
+        .gnb_menu:first-child .gnb_sub_lst {
+            opacity: 1;
+        }
+        .gnb_sub_lst li {
+            height: 9vh;
+            width: 50vw;
+            margin: 0 auto;
+        }
+        .gnb_sub_lst li a {
+            display: block;
+            color: #333;
+            font-size: 1.1em;
+            line-height: 3em;
+            padding-left: 2vw;
+            border-bottom: 1px solid #ddd;
+            font-family: 'nanumSquareB';
+        }
+        /* search */
+        .search {
+            display: block;
+            width: 8vw;
+            height: 5vh;
+            margin-top: 2.6vh;
+            margin-left: 10vw;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: url(./img/icon_search.png);
+            transition: 0.3s;
+        }
+        .search.search_on {
+            background-image: url(./img/icon_search_x.png);
+        }
+        .search_frm {
+            width: 100%;
+            height: 91vh;
+            background-color: rgba(10,55,99,0.5);
+            margin-left: 100vw;
+            transition: 0.4s;
+        }
+        .search_frm.frm_on {
+            margin-left: 0vw;
+        }
+        .search_box {
+            width: 100%;
+            height: 18vh;
+            background-color: #edf0f5;
+        }
+        .search_box input {
+            float: left;
+            margin-top: 5vh;
+        }
+        .search_input {
+            display: block;
+            width: 70vw;
+            height: 5vh;
+            background-color: #fff;
+            margin-left: 10vw;
+            border: 1px solid #999;
+        }
+        .search_btn {
+            width: 10vw;
+            height: 5.3vh;
+            background-color: #32638e;
+            border: 1px solid #999;
+            text-indent: -9999px;
+            background-image: url(./img/icon_search_w.png);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60%;
+        }
+        /* 비주얼배너 */
+        .vs {
+            padding-top: 10vh;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .vs_box {
+            width: 100%;
+            height: auto;
+        }
+        .vs_lst {
+            width: 300%;
+        }
+        .vs_lst li {
+            float: left;
+            width: 33.3333%;
+        }
+        .vs_item {
+            display: block;
+            position: relative;
+        }
+        .vs_item img {
+            width: 100%;
+        }
+        .vs_tit, .vs_com, .vs_btn {
+            position: absolute;
+            color: #fff;
+            font-size: 4.5vw;
+            left: 5%;
+        }
+        .vs_tit1 {
+            top: 45%;
+            text-shadow: 2px 2px 2px #555;
+        }
+        /* 청장과의 대화 - 모바일에서는 vs_tit2 display-none */
+        .vs_tit2 {
+            display: none;
+            /* top: 20%;
+            font-size: 5vw;
+            color: #32638e; */
+        }
+        .vs_com1 {
+            top: 20%;
+            font-size: 3.5vw;
+            font-weight: 600;
+            text-shadow: 2px 2px 2px #fff;
+            color: #32638e;
+        }
+        .vs_btn {
+            top: 67%;
+            font-size: 3.5vw;
+            font-weight: 500;
+            padding: 1vw;
+            border: 1px solid #fff;
+        }
+        .vs_tit3 {
+            display: none;
+            /* top: 10%;
+            left: 35%;
+            font-size: 3vw;
+            font-weight: 500; */
+        }
+        .vs_com2 {
+            top: 20%;
+            left: 40%;
+            font-size: 4vw;
+            text-align: right;
+        }
+        .vs_span {
+            color: #03469d;
+            text-shadow: 1px 1px 1px #eee, -1px -1px 1px #eee, 1px -1px 1px #eee, -1px 1px 1px #eee;
+            font-size: 5vw;
+            font-weight: 600;
+            margin-left: 1vw;
+            font-family: 'nanumSquareEB';
+        }
+        /* contents */
+        .hidden {
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+        .contents {
+            width: 100%;
+        }
+        .menu_box {
+            width: 100%;
+        }
+        .menu {
+            width: 98%;
+            height: 15vh;
+            margin: 1% auto;
+            background-color: #edf0f5;
+            background-repeat: no-repeat;
+            background-size: 30%;
+            background-position: 85% center;
+            transition: 0.4s;
+        }
+        .menu_tit {
+            user-select: none;
+            display: block;
+            color: #32638e;
+            font-size: 5.2vw;
+            font-weight: 600;
+            padding: 7% 10%;
+        }
+        .menu1 {
+            background-image: url(./img/icon_menu1.png);
+        }
+        .menu2 {
+            background-image: url(./img/icon_menu2.png);
+            background-size: 27%;
+        }
+        .menu3 {
+            background-image: url(./img/icon_menu3.png);
+        }
+        .sub_menu_lst {
+            display: none;
+        }
+        /* click - .menu에 addClass('down') 다른 .menu click하면 이전의 .down removeClass하고 새로 click한 .menu에 addClass */
+        .menu.down .sub_menu_lst {
+            display: block;
+            padding-left: 10%;
+            padding-bottom: 7%;
+            padding-top: 10%;
+        }
+        .menu.down {
+            height: auto;
+            background-color: #32638e;
+            background-position: 85% 5%;
+        }
+        .menu1.down {
+            background-image: url(./img/icon_menu1_1.png);
+        }
+        .menu2.down {
+            background-image: url(./img/icon_menu2_1.png);
+            background-size: 27%;
+        }
+        .menu3.down {
+            background-image: url(./img/icon_menu3_1.png);
+        }
+        .menu.down .menu_tit {
+            color: #fff;
+        }
+        .menu.down .sub_menu {
+            width: 90%;
+            padding: 1% 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu.down .sub_menu a {
+            display: block;
+            color: #fff;
+        }
+        .menu.down .sub_menu a:before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 4px;
+            background-color: #fff;
+            float: left;
+            margin: 4% 4% 0% 2%;
+        }
+        .q_menu {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            padding-bottom: 3vh;
+        }
+        .q_menu_tit {
+            text-align: center;
+            line-height: 3em;
+        }
+        .q_box {
+            width: 90%;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+        .q_menu_lst {
+            width: 200%;
+        }
+        .q_menu_lst li {
+            width: 15%;
+            margin: 0.8%;
+            float: left;
+        }
+        .q_icon {
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 3.5vw;
+            color: #32638e;
+        }
+        .q_icon img {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .btn {
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 15px;
+            height: 25px;
+            float: left;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: transparent;
+            border: transparent;
+        }
+        .left {
+            margin-left: 2%;
+            background-image: url(./img/icon_q_btn_l.png);
+        }
+        .right {
+            background-image: url(./img/icon_q_btn_r.png);
+            margin-left: 93%;
+        }
+        /* footer */
+        .ft {
+            width: 100%;
+            background-color: #555;
+            padding: 4vh 0;
+        }
+        .copy {
+            width: 85%;
+            margin: 0 auto;
+        }
+        .copy p {
+            color: #fff;
+            font-size: 0.9em;
+        }
+        .add {
+            font-weight: 300;
+        }
+        .copyright {
+            padding-top: 2%;
+        }
+    </style>
+    <script src="./js/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function(){
+            //header
+            $(".gnb_btn").click(function() {
+                $(this).toggleClass("on");
+                $(".gnb").toggleClass("on");
+            });
+            $(".gnb_menu").click(function() {
+                $(".gnb_m_tit").removeClass("click");
+                $(this).find(".gnb_m_tit").addClass("click");
+                $(".gnb_sub_lst").css("opacity","0");
+                $(this).find(".gnb_sub_lst").css("opacity","1");
+            });
+            $(".search").click(function() {
+                $(this).toggleClass("search_on");
+                $(".search_frm").toggleClass("frm_on");
+            });
+            // vs
+            //contents-menu
+            $(".menu").click(function() {
+                $(".menu").removeClass("down");
+                $(this).addClass("down");
+            });
+            //content-q_menu
+
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap clrfx">
+        <header class="hd clrfx">
+            <span class="gnb_btn">
+                <i class="bar"></i>
+                <i class="bar"></i>
+                <i class="bar"></i>
+            </span>
+            <nav class="gnb">
+                <h4 class="gnb_tit">전체 메뉴보기</h4>
+                <div class="member_btn">
+                    <a href="" class="m_bth login">로그인</a>
+                    <a href="" class="m_bth join">회원가입</a>
+                </div>
+                <ul class="clrfx gnb_lst">
+                    <li class="gnb_menu">
+                        <a href="javascript:;" class="gnb_m_tit click">대전경찰소개</a>
+                        <ul class="gnb_sub_lst">
+                            <li><a href="">열린청사실</a></li>
+                            <li><a href="">대전경찰역사</a></li>
+                            <li><a href="">대전경찰안내</a></li>
+                            <li><a href="">경찰협력단체</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb_menu">
+                        <a href="javascript:;" class="gnb_m_tit">알림마당</a>
+                        <ul class="gnb_sub_lst">
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">오늘의 주요집회</a></li>
+                            <li><a href="">교통정보</a></li>
+                            <li><a href="">채용공고</a></li>
+                            <li><a href="">입찰공고</a></li>
+                            <li><a href="">법령자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb_menu">
+                        <a href="javascript:;" class="gnb_m_tit">홍보마당</a>
+                        <ul class="gnb_sub_lst">
+                            <li><a href="">보도자료</a></li>
+                            <li><a href="">대전경찰갤러리</a></li>
+                            <li><a href="">시민안전행동요령</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb_menu">
+                        <a href="javascript:;" class="gnb_m_tit">인권마당</a>
+                        <ul class="gnb_sub_lst">
+                            <li><a href="">인권보호</a></li>
+                            <li><a href="">피해자보호</a></li>
+                            <li><a href="">범죄피해자 지원정보</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb_menu">
+                        <a href="javascript:;" class="gnb_m_tit">정보공개</a>
+                        <ul class="gnb_sub_lst">
+                            <li><a href="">정보공개안내</a></li>
+                            <li><a href="">사전정보공표</a></li>
+                            <li><a href="">정보옥록(원문)</a></li>
+                            <li><a href="">정보공개청구</a></li>
+                            <li><a href="">공공데이터 개방</a></li>
+                            <li><a href="">경찰통계자료실</a></li>
+                        </ul>
+                    </li>
+                    <li class="gnb_menu">
+                        <a href="javascript:;" class="gnb_m_tit">민원창구</a>
+                        <ul class="gnb_sub_lst">
+                            <li><a href="">민원안내</a></li>
+                            <li><a href="">게시판</a></li>
+                            <li><a href="">탄력순찰</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <a href="" class="logo"></a>
+            <span class="search"></span>
+            <form action="" class="search_frm" id="search_form" name="find_form">
+                <div class="search_box">
+                    <input class="search_input" id="keyword" placeholder=" 검색어입력">
+                    <input type="submit" class="search_btn" id="search_btn">
+                    <!-- bgimg로 돋보기아이콘 -->
+                </div>
+            </form>
+        </header>
+        <figure class="vs clrfx">
+            <div class="vs_box">
+                <ul class="vs_lst clrfx">
+                    <li>
+                        <a href="" class="vs_item">
+                            <img src="./img/m_vs1.jpg" alt="">
+                            <h3 class="vs_tit vs_tit1">가장 안전한 대전<br>존경과 사랑받는<span class="vs_span">대전경찰</span></h3>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="vs_item">
+                            <img src="./img/m_vs2.jpg" alt="">
+                            <h3 class="vs_tit vs_tit2">청장과의 대화</h3>
+                            <p class="vs_com vs_com1">언제나 열린 마음으로 대전시민의 <br>고충해결에 앞장서겠습니다.</p>
+                            <h5 class="vs_btn">청장에게 글쓰기 ▶</h5>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="vs_item">
+                            <img src="./img/m_vs3.jpg" alt="">
+                            <h3 class="vs_tit vs_tit3">주민참여형 치안 탄력순찰</h3>
+                            <p class="vs_com vs_com2">주민과 경찰이 함께<br>만드는 <span class="vs_span">탄력순찰</span>로<br> 대전시민을 지키겠습니다.</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </figure>
+        <section class="contents clrfx">
+            <h1 class="hidden">contents menu</h1>
+            <div class="menu_box">
+                <ul class="clrfx menu_lst clrfx">
+                    <li class="menu menu1" id="con_menu">
+                        <a href="javascript:;" class="menu_tit">민원안내</a>
+                        <div class="q_box"></div>
+                        <ul class="sub_menu_lst">
+                            <li class="sub_menu"><a href="">일반 | 청원경찰관련</a></li>
+                            <li class="sub_menu"><a href="">일반 | 경비업무관련</a></li>
+                            <li class="sub_menu"><a href="">일반 | 옥외집회신고</a></li>
+                            <li class="sub_menu"><a href="">수사 | 고소/고발 처리안내</a></li>
+                            <li class="sub_menu"><a href="">수사 | 범죄피해 회복제도 안내</a></li>
+                            <li class="sub_menu"><a href="">수사 | 형사사건 처리 및 이의신청</a></li>
+                            <li class="sub_menu"><a href="">교통 | 교통사고 처리 관련 민원 </a></li>
+                            <li class="sub_menu"><a href="">교통 | 운전면허 관련 민원</a></li>
+                            <li class="sub_menu"><a href="">교통 | 교통범칙금 인터넷납부</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu menu2" id="con_menu">
+                        <a href="javascript:;" class="menu_tit">공지사항</a>
+                        <ul class="sub_menu_lst">
+                            <li class="sub_menu"><a href="">공지사항</a></li>
+                            <li class="sub_menu"><a href="">보도자료</a></li>
+                            <li class="sub_menu"><a href="">채용공고</a></li>
+                            <li class="sub_menu"><a href="">입찰공고</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu menu3" id="con_menu">
+                        <a href="javascript:;" class="menu_tit">탄력순찰</a>
+                        <ul class="sub_menu_lst">
+                            <li class="sub_menu"><a href="">탄력순찰 안내</a></li>
+                            <li class="sub_menu"><a href="">탄력순찰 신청하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="q_menu">
+                <h3 class="q_menu_tit">자주 찾는 서비스</h3>
+                <div class="q_box">
+                    <ul class="q_menu_lst">
+                        <li><a href="" class="q_icon"><img src="./img/icon_q_menu1.png" alt="">경찰관서찾기</a></li>
+                        <li><a href="" class="q_icon"><img src="./img/icon_q_menu2.png" alt="">교통알림e</a></li>
+                        <li><a href="" class="q_icon"><img src="./img/icon_q_menu3.png" alt="">유실물찾기</a></li>
+                        <li><a href="" class="q_icon"><img src="./img/icon_q_menu4.png" alt="">민원서식</a></li>
+                        <li><a href="" class="q_icon"><img src="./img/icon_q_menu5.png" alt="">부서별연락처</a></li>
+                        <li><a href="" class="q_icon"><img src="./img/icon_q_menu6.png" alt="">모범경찰추천</a></li>
+                    </ul>
+                </div>
+                <button class="left btn"></button>
+                <button class="right btn"></button>
+            </div>
+        </section>
+        <footer class="ft">
+            <div class="copy">
+                <p class="add">
+                    [35238] 대전광역시 서구 둔산중로 77<br>경찰민원 콜센터 : 182 (유료)</p>
+                <p class="copyright">copyright&copy;2016 Daejeon Metropolitan Police Agency, All RIGHT RESERVED.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
