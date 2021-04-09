@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <title>(주)한화</title>
+    <title>㈜한화</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1">
     <meta name="title" content="&#40;주&#41;한화, Hanwha Corporation">
     <meta name="keywords" content="&#40;주&#41;한화, 한화그룹, 한화코퍼레이션, Hanwha Corporation">
@@ -11,198 +12,597 @@
     <link rel="shortcut icon" href="./img/favicon/favicon_16.png">
     <link rel="shortcut icon" href="./img/favicon/favicon_32.png">
     <link rel="shortcut icon" href="./img/favicon/favicon_72.png">
-    <meta property="og:title" content="아모레퍼시픽">
+    <meta property="og:title" content="한화">
     <meta property="og:type" content="article">
-    <meta property="og:description" content="(주)한화">
+    <meta property="og:description" content="㈜한화">
     <meta property="og:image" content="./img/ci/og_img.jpg">
     <meta property="og:url" content="https://www.hanwhacorp.co.kr/">
-    <meta property="og:site_name" content="&#40;주&#41;한화Hanwha Corporation">
+    <meta property="og:site_name" content="㈜한화Hanwha Corporation">
 
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <link rel="stylesheet" href="./css/reset.css">
-    
+
     <style>
-        .clrfx:after {content: ""; display: block; clear: both;}
-        .wrap {width: 100%; clear: both;}
-        .hd {width: 1700px; height: 150px; clear: both; position: fixed; left: 50%; margin-left: -850px; z-index: 999;}
-        .logo {display: block; width: 150px; height: 56px; background-image: url(./img/ci/logo.png); background-repeat: no-repeat; background-position: center -57px; float: left; margin-top: 50px;}
-        .gnb {clear: both; width: 1000px; background-color: #fff; position: absolute; top: 60px; left: 50%; margin-left: -500px; display: none;}
-        .gnb > ul { width: 960px; height: auto; margin: 0 auto;}
-        .gnb li {float: left; width: 160px; margin: 0 auto;}
-        .gnb li a.main {display: block; line-height: 4em; font-size: 20px; text-align: center;}
-        .gnb li ul.sub { height: 280px;padding-top: 20px; padding-bottom: 20px; border: 1px solid #ddd; box-sizing: border-box;}
-        .gnb .sub li {width: 100px; padding: 10px 30px;}
-        .gnb .sub li a {display: block; line-height: 1.5em; font-size: 16px; }
-        .gnb li:hover a.main {font-weight: bold;}
-        .gnb .sub li:hover a {border-bottom: 1px solid #ccc;}
-        .btn_box {float: right; margin-top: 55px; }
-        .btn_box li {float: left; border: 1px solid #fff; }
-        .btn_box li a {display: block; font-size: 14px; padding: 0px 10px; line-height: 25px; color: #fff;}
-        .btn_box li.lang a {float: left; }
-        .btn_box li.lang a.on {background-color: #fff; color: #333;}
-        .btn_box li.re {margin-left: 15px;}
-        .btn_box li.gnb_btn { width: 35px; height: 35px; margin-top: -3px; border: 0; margin-left: 40px;}
-        .btn_box li.gnb_btn i {display: block; width: 35px; height: 3px; background-color: #fff; margin-bottom:10px;}
+        strong {
+            font-weight: 600;  
+        }
         
+        .clrfx:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
         
-        .vs {clear: both; width: 100vw; height: 100vh; overflow: hidden;}
-        .vs_box {width: 400%;}
-        .vs_box li { width: 25%; position: relative;}
-        .tit_box { clear: both; position: absolute; left: 50%; margin-left: -175px;top: 50%; margin-top: -150px; }
-        .vs_box li:first-child .tit_box {width: 510px; left: 50%; margin-left: -250px;}
-        .vs_box li:first-child .tit_box img {margin: 10px auto;}
-        .vs_tit {color: #fff; font-size: 60px; font-weight: bold; line-height: 100px;}
+        .wrap {
+            width: 100%;
+            clear: both;
+        }
+
+        .hd {
+            width: 100%;
+            height: 150px;
+            clear: both;
+            position: fixed;
+            z-index: 999;
+            background-color: rgba(0,0,0,0.5)
+        }
         
-        #pg1 {width: 100%; height: 900px; position: relative;}
-        .cate_tit {display: block;  width: 100%; height: 120px; text-align: center; line-height: 120px; font-size: 30px;}
-        .cate_img {display: none;}
-        #pg1 ul li {float: left; width: 33.3333%; height: 150px; text-align: center; line-height: 150px; background-repeat: no-repeat; background-position: center; background-size: cover; position: absolute;}
-        #pg1 ul li.cate1 {background-image: url(./img/main/img/pg1_cate1.jpg);}
-        #pg1 ul li.cate2 {background-image: url(./img/main/img/pg1_cate2.jpg);}
-        #pg1 ul li.cate3 {background-image: url(./img/main/img/pg1_cate3.jpg);}
-        #pg1 ul li.cate4 {background-image: url(./img/main/img/pg1_cate4.jpg);}
-        #pg1 ul li.cate5 {background-image: url(./img/main/img/pg1_cate5.jpg);}
-        #pg1 ul li.cate6 {background-image: url(./img/main/img/pg1_cate6.jpg);}
-        #pg1 ul li.cate7 {background-image: url(./img/main/img/pg1_cate7.jpg);}
-        #pg1 ul li.cate8 {background-image: url(./img/main/img/pg1_cate8.jpg);}
-        #pg1 ul li.cate9 {background-image: url(./img/main/img/pg1_cate9.jpg);}
-        #pg1 ul li.cate10 {background-image: url(./img/main/img/pg1_cate10.jpg);}
-        #pg1 ul li.cate11 {background-image: url(./img/main/img/pg1_cate11.jpg);}
-        #pg1 ul li.cate12 {background-image: url(./img/main/img/pg1_cate12.jpg);}
-        #pg1 ul li.cate1, #pg1 ul li.cate2, #pg1 ul li.cate3 {top: 120px;}
-        #pg1 ul li.cate4, #pg1 ul li.cate5, #pg1 ul li.cate6 {top: 270px;}
-        #pg1 ul li.cate7, #pg1 ul li.cate8, #pg1 ul li.cate9 {top: 420px;}
-        #pg1 ul li.cate10, #pg1 ul li.cate11, #pg1 ul li.cate12 {top: 570px;}
-        #pg1 ul li.cate1, #pg1 ul li.cate4, #pg1 ul li.cate7, #pg1 ul li.cate10 {left: 0;}
-        #pg1 ul li.cate2, #pg1 ul li.cate5, #pg1 ul li.cate8, #pg1 ul li.cate11 {left: 33.3333%;}
-        #pg1 ul li.cate3, #pg1 ul li.cate6, #pg1 ul li.cate9, #pg1 ul li.cate12 {left: 66.6666%;}
+        .hd_wrap {
+            width: 1700px;
+            margin: 0 auto;
+            z-index: 50;
+        }
+
+        .logo {
+            display: block;
+            width: 150px;
+            height: 56px;
+            background-image: url(./img/ci/logo.png);
+            background-repeat: no-repeat;
+            background-position: center -57px;
+            float: left;
+            margin-top: 50px;
+        }
+
+        .gnb:before, .gnb:after {
+            content: " ";
+            display: block;
+            clear: both;
+            width: 50%;
+            height: 390px;
+            position: absolute;
+            background-color: #fff;
+            z-index: 20;
+            top: 0px;
+        }
+        .gnb:before {
+            left: -500px;
+        }
+        .gnb:after {
+            left: 1000px;
+        }
+        
+        .gnb {
+            clear: both;
+            width: 1000px;
+            position: absolute;
+            height: 390px;
+            left: 50%;
+            margin-left: -500px;
+            background-color: #fff;
+            z-index: 300;
+            display: none;
+        }
+        
+
+        .gnb>ul {
+            width: 960px;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .gnb li {
+            float: left;
+            width: 160px;
+            margin: 0 auto;
+        }
+
+        .gnb li a.main {
+            display: block;
+            line-height: 4em;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .gnb li ul.sub {
+            height: 280px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        .gnb .sub li {
+            width: 100px;
+            padding: 10px 30px;
+        }
+
+        .gnb .sub li a {
+            display: block;
+            line-height: 1.5em;
+            font-size: 16px;
+        }
+
+        .gnb li:hover a.main {
+            font-weight: bold;
+            color: darkorange;
+        }
+
+        .gnb .sub li:hover a {
+            border-bottom: 1px solid darkorange;
+            font-weight: 600;
+        }
+
+        .btn_box {
+            float: right;
+            margin-top: 55px;
+        }
+
+        .btn_box li {
+            float: left;
+            border: 1px solid #fff;
+        }
+
+        .btn_box li a {
+            display: block;
+            font-size: 14px;
+            padding: 0px 10px;
+            line-height: 25px;
+            color: #fff;
+        }
+
+        .btn_box li.lang a {
+            float: left;
+        }
+
+        .btn_box li.lang a.on {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .btn_box li.re {
+            margin-left: 15px;
+        }
+
+        .btn_box li.gnb_btn {
+            width: 35px;
+            height: 35px;
+            margin-top: -3px;
+            border: 0;
+            margin-left: 40px;
+        }
+
+        .btn_box li.gnb_btn i {
+            display: block;
+            width: 35px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+
+
+        .vs {
+            clear: both;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .vs_box {
+            width: 400%;
+        }
+
+        .vs_box li {
+            float: left;
+            width: 25%;
+            position: relative;
+        }
+
+        .tit_box {
+            clear: both;
+            position: absolute;
+            left: 50%;
+            margin-left: -175px;
+            top: 50%;
+            margin-top: -150px;
+        }
+        .vs_orange_tit {
+            background-color: darkorange;
+            width: auto;
+            padding: 5px;
+            padding-left: 15px;
+            color: #fff;
+            font-weight: 600;
+        }
+/*
+        .vs_box li:first-child .tit_box {
+            width: 510px;
+            left: 50%;
+            margin-left: -250px;
+        }
+
+        .vs_box li:first-child .tit_box img {
+            margin: 10px auto;
+        }
+*/
+
+        .vs_tit {
+            color: #fff;
+            font-size: 60px;
+            font-weight: bold;
+            line-height: 100px;
+        }
+        
+        .vs_desc {
+            color: #fff;
+            line-height: 1.5em;
+            padding: 15px 5px;
+            height: 6em;
+        }
+        
+        #pg1 {
+            width: 100%;
+            height: 800px;
+            position: relative;
+        }
+
+        .cate_tit {
+            display: block;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+            font-weight: 600;
+            position: relative;
+        }
+        .cate_tit_b {
+            color: #000;
+        }
+        .cate_tit_w {
+            color: #fff;
+            text-shadow: 2px 2px 3px #333;
+        }
+        .cate_tit img {
+            cursor: pointer;
+            position: absolute;
+            top: 44%;
+            left: 58.5%;
+        }
+        .cate_img {
+            display: none;
+        }
+
+        #pg1 ul li {
+            float: left;
+            width: 25%;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            box-sizing: border-box;
+            border: 1px solid #999
+        }
+        #pg1 ul li a {
+            display: block;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #fff;
+            text-shadow: 2px 2px 3px #333;
+        }
+        #pg1 ul li.cate1 {
+            background-image: url(./img/main/img/pg1_cate1.jpg);
+        }
+
+        #pg1 ul li.cate2 {
+            background-image: url(./img/main/img/pg1_cate2.jpg);
+        }
+
+        #pg1 ul li.cate3 {
+            background-image: url(./img/main/img/pg1_cate3.jpg);
+        }
+
+        #pg1 ul li.cate4 {
+            background-image: url(./img/main/img/pg1_cate4.jpg);
+        }
+
+        #pg1 ul li.cate5 {
+            background-image: url(./img/main/img/pg1_cate5.jpg);
+        }
+
+        #pg1 ul li.cate6 {
+            background-image: url(./img/main/img/pg1_cate6.jpg);
+        }
+
+        #pg1 ul li.cate7 {
+            background-image: url(./img/main/img/pg1_cate7.jpg);
+        }
+
+        #pg1 ul li.cate8 {
+            background-image: url(./img/main/img/pg1_cate8.jpg);
+        }
+
+        #pg1 ul li.cate9 {
+            background-image: url(./img/main/img/pg1_cate9.jpg);
+        }
+
+        #pg1 ul li.cate10 {
+            background-image: url(./img/main/img/pg1_cate10.jpg);
+        }
+
+        #pg1 ul li.cate11 {
+            background-image: url(./img/main/img/pg1_cate11.jpg);
+        }
+
+        #pg1 ul li.cate12 {
+            background-image: url(./img/main/img/pg1_cate12.jpg);
+        }
+        #pg1 ul li.cate13 {
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            transition: 0.4s;
+            background-image: url(./img/main/img/pg1_cate1.jpg);
+        }
+        #pg1 ul li.cate1:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate1.jpg);
+        }
+        #pg1 ul li.cate2:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate2.jpg);
+        }
+        #pg1 ul li.cate3:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate3.jpg);
+        }
+        #pg1 ul li.cate4:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate4.jpg);
+        }
+        #pg1 ul li.cate5:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate5.jpg);
+        }
+        #pg1 ul li.cate6:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate6.jpg);
+        }
+        #pg1 ul li.cate7:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate7.jpg);
+        }
+        #pg1 ul li.cate8:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate8.jpg);
+        }
+        #pg1 ul li.cate9:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate9.jpg);
+        }
+        #pg1 ul li.cate10:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate10.jpg);
+        }
+        #pg1 ul li.cate11:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate11.jpg);
+        }
+        #pg1 ul li.cate12:hover ~ .cate13 {
+            background-image: url(./img/main/img/pg1_cate12.jpg);
+        }
+        #pg1 ul li.cate1,
+        #pg1 ul li.cate2,
+        #pg1 ul li.cate3,
+        #pg1 ul li.cate4 {
+            top: 200px;
+        }
+
+        
+        #pg1 ul li.cate5,
+        #pg1 ul li.cate6,
+        #pg1 ul li.cate7,
+        #pg1 ul li.cate8 {
+            top: 350px;
+        }
+
+        #pg1 ul li.cate9,
+        #pg1 ul li.cate10,
+        #pg1 ul li.cate11,
+        #pg1 ul li.cate12 {
+            top: 500px;
+        }
+
+        #pg1 ul li.cate1,
+        #pg1 ul li.cate5,
+        #pg1 ul li.cate9 {
+            left: 0;
+        }
+
+        #pg1 ul li.cate2,
+        #pg1 ul li.cate6,
+        #pg1 ul li.cate10 {
+            left: 25%;
+        }
+
+        #pg1 ul li.cate3,
+        #pg1 ul li.cate7,
+        #pg1 ul li.cate11 {
+            left: 50%;
+        }
+        
+        #pg1 ul li.cate4,
+        #pg1 ul li.cate8,
+        #pg1 ul li.cate12 {
+            left: 75%;
+        }
+        
+        #pg2 {
+            width: 100%;
+            height: 800px;
+        }
+        
+        .card_news {
+            width: 80%;
+            height: 460px;
+            margin: 0 auto;
+            overflow: hidden
+        }
+        .card_news ul {
+            width: 166.6666%;
+        }
+        .card_news ul li {
+            float: left;
+            width: 20%;
+            position: relative;
+        }
+        .card_com {
+            width: 70%;
+            position: absolute;
+            background-color: #fff;
+            top: 80%;
+            left: 15%;
+            height: 60%;
+            border: 1px solid #ddd;
+        }
+        
     </style>
 </head>
+
 <body>
     <div class="wrap">
         <header class="hd">
-            <a href="index.html" class="logo"></a>
-            <nav class="gnb">
-                <ul class="clrfx">
-                    <li>
-                        <a href="sub01.html" class="main">기업소개</a>
-                        <ul class="sub">
-                            <li><a href="sub01.html#p1">&#40;주&#41;한화소개</a></li>
-                            <li><a href="sub01.html#p2">연혁</a></li>
-                            <li><a href="sub01.html#p3">주요계열사</a></li>
-                            <li><a href="sub01.html#p4">글로벌한화</a></li>
-                        </ul>
+            <div class="hd_wrap">
+                <a href="index.html" class="logo"></a>
+                <nav class="gnb">
+                    <ul class="clrfx">
+                        <li>
+                            <a href="sub01.html" class="main">기업소개</a>
+                            <ul class="sub">
+                                <li><a href="sub01.html#p1">㈜한화소개</a></li>
+                                <li><a href="sub01.html#p2">연혁</a></li>
+                                <li><a href="sub01.html#p3">주요계열사</a></li>
+                                <li><a href="sub01.html#p4">글로벌한화</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="sub02.html" class="main">사업영역</a>
+                            <ul class="sub">
+                                <li><a href="sub02.html#p1">화약</a></li>
+                                <li><a href="sub02.html#p2">방산</a></li>
+                                <li><a href="sub02.html#p3">무역</a></li>
+                                <li><a href="sub02.html#p4">기계</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="sub03.html" class="main">지속가능경영</a>
+                            <ul class="sub">
+                                <li><a href="sub03.html#p1">준법통제</a></li>
+                                <li><a href="sub03.html#p2">상생협력</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="sub04.html" class="main">투자정보</a>
+                            <ul class="sub">
+                                <li><a href="sub04.html#p1">주식정보</a></li>
+                                <li><a href="sub04.html#p2">IR자료실</a></li>
+                                <li><a href="sub04.html#p3">재무정보</a></li>
+                                <li><a href="sub04.html#p4">공시정보</a></li>
+                                <li><a href="sub04.html#p5">기업지배구조</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="sub05.html" class="main">인재경영</a>
+                            <ul class="sub">
+                                <li><a href="sub05.html#p1">인재상</a></li>
+                                <li><a href="sub05.html#p2">채용전형</a></li>
+                                <li><a href="sub05.html#p3">인사제도</a></li>
+                                <li><a href="sub05.html#p4">직무소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="sub06.html" class="main">미디어센터</a>
+                            <ul class="sub">
+                                <li><a href="sub06.html#p1">보도자료</a></li>
+                                <li><a href="sub06.html#p2">영상뉴스</a></li>
+                                <li><a href="sub06.html#p3">사회공헌</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="btn_box">
+                    <li class="lang">
+                        <a href="index.html" class="ko on">KOR</a>
+                        <a href="" class="en">ENG</a>
                     </li>
-                    <li>
-                        <a href="sub02.html" class="main">사업영역</a>
-                        <ul class="sub">
-                            <li><a href="sub02.html#p1">화약</a></li>
-                            <li><a href="sub02.html#p2">방산</a></li>
-                            <li><a href="sub02.html#p3">무역</a></li>
-                            <li><a href="sub02.html#p4">기계</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="sub03.html" class="main">지속가능경영</a>
-                        <ul class="sub">
-                            <li><a href="sub03.html#p1">준법통제</a></li>
-                            <li><a href="sub03.html#p2">상생협력</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="sub04.html" class="main">투자정보</a>
-                        <ul class="sub">
-                            <li><a href="sub04.html#p1">주식정보</a></li>
-                            <li><a href="sub04.html#p2">IR자료실</a></li>
-                            <li><a href="sub04.html#p3">재무정보</a></li>
-                            <li><a href="sub04.html#p4">공시정보</a></li>
-                            <li><a href="sub04.html#p5">기업지배구조</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="sub05.html" class="main">인재경영</a>
-                        <ul class="sub">
-                            <li><a href="sub05.html#p1">인재상</a></li>
-                            <li><a href="sub05.html#p2">채용전형</a></li>
-                            <li><a href="sub05.html#p3">인사제도</a></li>
-                            <li><a href="sub05.html#p4">직무소개</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="sub06.html" class="main">미디어센터</a>
-                        <ul class="sub">
-                            <li><a href="sub06.html#p1">보도자료</a></li>
-                            <li><a href="sub06.html#p2">영상뉴스</a></li>
-                            <li><a href="sub06.html#p3">사회공헌</a></li>
-                        </ul>
+                    <li class="re"><a href="">신고센터</a></li>
+                    <li class="gnb_btn">
+                        <span class="ani_btn">
+                            <i class="bar"></i>
+                            <i class="bar"></i>
+                            <i class="bar"></i>
+                        </span>
                     </li>
                 </ul>
-            </nav>
-            <ul class="btn_box">
-                <li class="lang">
-                    <a href="index.html" class="ko on">KOR</a>
-                    <a href="" class="en">ENG</a>
-                </li>
-                <li class="re"><a href="">신고센터</a></li>
-                <li class="gnb_btn"><span class="ani_btn">
-                    <i class="bar"></i>
-                    <i class="bar"></i>
-                    <i class="bar"></i>
-                </span></li>
-            </ul>
+            </div>
         </header>
         <figure class="vs">
             <ul class="vs_box">
+<!--
                 <li>
-                    <img src="./img/main/img/bg11.jpg" alt="(주)한화">
+                    <img src="./img/main/img/bg11.jpg" alt="㈜한화">
                     <div class="tit_box">
-                        <img class="vs_subtit" src="./img/main/img/bg_main_subtitle.png" alt="글로벌 일류 한화로의 꿈을 향하여">
+                        <h4 class="vs_orange_tit">글로벌 일류 한화로의 꿈을 향하여</h4>
                         <img class="tit" src="./img/main/img/bg_main_tit.png" alt="hanwha corporation">
-                        <img class="vs_desc" src="./img/main/img/bg_main_desc.png" alt="한화그룹의 뿌리 (주)한화">
+                        <p class="vs_desc"><strong>한화그룹</strong>의 뿌리인 <strong>㈜한화</strong>는 국가와 사회에 기여한다는 창업 정신으로 설립된 후<br>화약, 방산, 무역, 기계 부문으로 사업을 재편하여 인류의 발전과 삶의 가치를 향상시키는<br>글로벌 기업을 향해 나아가고 있습니다.</p>
                         <a href="" class="more">ENTER</a>
                     </div>
                 </li>
+-->
                 <li>
-                    <img src="./img/main/img/bg_explosive1.jpg" alt="(주)한화/화약">
+                    <img src="./img/main/img/bg_explosive1.jpg" alt="㈜한화/화약">
                     <div class="tit_box">
-                        <img src="./img/main/img/bg_explosive_subtitle.jpg" alt="한화그룹의 뿌리, (주)한화/화약">
+                        <h4 class="vs_orange_tit">한화그룹의 뿌리, ㈜한화/글로벌</h4>
                         <h2 class="vs_tit">EXPLOSIVES</h2>
-                        <img src="./img/main/img/bg_explosives_desc.png" alt="산업용 화약분야의 글로벌 리더 (주)한화/화약">
+                        <p class="vs_desc">과거와 현재, 미래의 경계를 허물고 뛰어난 기술력과 전문화된<br>사업조직으로 해외신규시장 개척, 응용사업 확대, 신규사업<br>발굴을 통해 산업용 화약분야의 글로벌 리더가 되겠습니다.</p>
                         <a href="" class="more">ENTER</a>
                     </div>
                 </li>
                 <li>
-                    <img src="./img/main/img/bg_defense1.jpg" alt="(주)한화/방산">
+                    <img src="./img/main/img/bg_defense1.jpg" alt="㈜한화/방산">
                     <div class="tit_box">
-                        <img src="./img/main/img/bg_defense_subtitle.png" alt="최첨단 방위산업, (주)한화/방산">
+                        <h4 class="vs_orange_tit">최첨단 방위산업, ㈜한화/방산</h4>
                         <h2 class="vs_tit">DEFENSE</h2>
-                        <img src="./img/main/img/bg_defense_desc.png" alt="대한민국 안보에 힘이 되어 온 (주)한화/방산">
+                        <p class="vs_desc">40년 이상 쌓아온 노하우와 기술력으로 대한문국 안보에<br>힘이 되어 온 <strong>㈜한화/방산</strong>, 혁신적인 Defense Solution을<br>제공하는 신뢰받는 글로벌 파트너로 거듭나겠습니다.</p>
                         <a href="" class="more">ENTER</a>
                     </div>
                 </li>
                 <li>
-                    <img src="./img/main/img/bg_trade1.jpg" alt="(주)한화/무역">
+                    <img src="./img/main/img/bg_trade1.jpg" alt="㈜한화/무역">
                     <div class="tit_box">
-                        <img src="./img/main/img/bg_trade_subtitle.png" alt="We Make the Value in Everywhere, (주)한화/무역">
+                        <h4 class="vs_orange_tit">We Make the Value in Everywhere ㈜한화/무역</h4>
                         <h2 class="vs_tit">TRADE</h2>
-                        <img src="./img/main/img/bg_trade_desc.png" alt="창조와 도전으로 가치를 창출하는 (주)한화/무역">
+                        <p class="vs_desc"><strong>㈜한화</strong> 무역부문은 창조와 도전으로 어느 분야에서나<br>가치를 창출하는 회사를 지향합니다.</p>
                         <a href="" class="more">ENTER</a>
                     </div>
                 </li>
                 <li>
-                    <img src="./img/main/img/bg_machinery1.jpg" alt="(주)한화/기계">
+                    <img src="./img/main/img/bg_machinery1.jpg" alt="㈜한화/기계">
                     <div class="tit_box">
-                        <img src="./img/main/img/bg_machinery_subtitle.png" alt="Total Engineering Solution, (주)한화/기계">
+                        <h4 class="vs_orange_tit">Total Engineering Solution, ㈜한화/기계</h4>
                         <h2 class="vs_tit">MACHINERY</h2>
-                        <img src="./img/main/img/bg_machinery_desc.png" alt="인류사회 발전을 위한 (주)한화/기계">
+                        <p class="vs_desc"><strong>㈜한화/기계</strong>는 반세기가 넘게 축적한 노하우와 기술력을<br>바탕으로 글러벌 기계설비 산업을 이끌고 있습니다.<br>끊임없는 연구개발과 혁신으로 고객의 삶 속에 편안함을<br>제공하겠습니다.</p>
                         <a href="" class="more">ENTER</a>
                     </div>
-                </li>       
+                </li>
             </ul>
         </figure>
         <div class="contents">
             <div class="cate" id="pg1">
-                <span class="cate_tit">Hanwha Corporation<img src="./img/main/icon/arrow_btn.png" alt="버튼"></span>
+                <span class="cate_tit cate_tit_w">Hanwha Corporation<img src="./img/main/icon/arrow_btn.png" alt="버튼"></span>
                 <img src="./img/main/img/pg1bg.jpg" alt="자체사업분야" class="cate_img">
                 <ul>
                     <li class="cate1"><a href="">화약원료</a></li>
@@ -221,58 +621,58 @@
                 </ul>
             </div>
             <div class="news" id="pg2">
-                <h2 class="news_tit">Hanwha News</h2>
+                <h2 class="cate_tit cate_tit_b">Hanwha News</h2>
                 <button class="left"></button>
                 <button class="right"></button>
                 <div class="card_news">
                     <ul>
                         <li>
                             <a href="">
-                                <img src="" alt="">
+                                <img src="./img/main/img/news_1.jpg" alt="">
                                 <div class="card_com">
-                                    <h5 class="n_type"></h5>
-                                    <h3 class="n_tit"></h3>
+                                    <h5 class="n_type">보도자료</h5>
+                                    <h3 class="n_tit">㈜한화, ESG 경영 강화와 지배구조 선진화 나선다</h3>
+                                    <p class="n_date">2021-03-29</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/main/img/news_2.jpg" alt="">
+                                <div class="card_com">
+                                    <h5 class="n_type">보도자료</h5>
+                                    <h3 class="n_tit">㈜한화, 수익성 개선으로 ‘20년 영업이익·당기순이익 대폭 증가</h3>
+                                    <p class="n_date">2021-02-26</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/main/img/news_3.jpg" alt="그린뉴딜">
+                                <div class="card_com">
+                                    <h5 class="n_type">보도자료</h5>
+                                    <h3 class="n_tit">㈜한화, ‘그린뉴딜’에 힘 싣는다. 한화솔루션 유상증자에 4,000억원 참여</h3>
                                     <p class="n_date"></p>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="" alt="">
+                                <img src="./img/main/img/news_4.jpg" alt="협동로봇 신제품 출시">
                                 <div class="card_com">
-                                    <h5 class="n_type"></h5>
-                                    <h3 class="n_tit"></h3>
-                                    <p class="n_date"></p>
+                                    <h5 class="n_type">보도자료</h5>
+                                    <h3 class="n_tit">㈜한화, 협동로봇 신제품 출시로 시장 공략 강화</h3>
+                                    <p class="n_date">2021-01-11</p>
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <img src="" alt="">
+                                <img src="./img/main/img/news_5.jpg" alt="">
                                 <div class="card_com">
-                                    <h5 class="n_type"></h5>
-                                    <h3 class="n_tit"></h3>
-                                    <p class="n_date"></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="" alt="">
-                                <div class="card_com">
-                                    <h5 class="n_type"></h5>
-                                    <h3 class="n_tit"></h3>
-                                    <p class="n_date"></p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <img src="" alt="">
-                                <div class="card_com">
-                                    <h5 class="n_type"></h5>
-                                    <h3 class="n_tit"></h3>
-                                    <p class="n_date"></p>
+                                    <h5 class="n_type">보도자료</h5>
+                                    <h3 class="n_tit">㈜한화, 충청도 지역주민들을 위한 봉사활동 진행</h3>
+                                    <p class="n_date">2020-11-10</p>
                                 </div>
                             </a>
                         </li>
@@ -280,8 +680,8 @@
                 </div>
             </div>
             <div class="recruit" id="pg3">
-                <h2 class="recruit_tit"></h2>
-                <p class="recruit_com"></p>
+                <h2 class="recruit_tit">인재경영</h2>
+                <p class="recruit_com">능력과 직무 중심 채용으로 글로벌 시장을 이끌어 갈 창조적 인재를 키워 나갑니다.</p>
                 <ul>
                     <li>
                         <a href="">
@@ -373,4 +773,5 @@
         </footer>
     </div>
 </body>
+
 </html>
