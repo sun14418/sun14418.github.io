@@ -515,6 +515,11 @@
     padding-top: 80px;
 }
 
+.swiper-pagination {
+    bottom: 20px;
+    margin: 0 auto;
+}
+
 .news_list {
     border-top: 4px solid #2fb19e;
 }
