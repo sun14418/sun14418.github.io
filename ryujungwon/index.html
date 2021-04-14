@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ryu Jung won Portfolio</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            clear: both;
+            width: 100%;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .crlfx:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .wrap {
+            width: 100vw;
+            background: #ff9626;
+        }
+        .hd {
+            width: 100vw;
+            height: 10vh;
+        }
+        .hd_wrap {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .logo {
+            display: block;
+            width: 100px;
+            height: auto;
+            background-repeat: no-repeat;
+            background-position: center center;
+            float: left;
+            line-height: 10vh;
+            text-align: center;
+            font-size: 3em;
+            font-weight: 600;
+            color: black
+        }
+        .menu {
+            float: right;
+            width: 40%;
+            height: auto;
+            padding-top: 2%;
+        }
+        .menu_list {
+            width: 100%;
+        }
+        .menu_list .menu_item {
+            float: left;
+            padding-left: 15%;
+        }
+        .menu_list .menu_item a {
+            display: block;
+            font-size: 1.4em;
+            color: #333;
+            font-weight: 600;
+        }
+        .menu_list .menu_item a:hover {
+            color: #fff;
+            animation: 
+        }
+        section {
+            width: 60vw;
+            margin: 0 auto;
+            height: 70vh;
+        }
+        .hello {
+            margin-left: 35vw;
+            padding-top: 20%;
+            font-size: 2.5em;
+            line-height: 2em;
+        }
+        .section_tit {
+            font-size: 2em;
+            color: rgba(255,255,255,0.9);
+            position: relative;
+        }
+        .section_tit:after {
+            content: "";
+            display: block;
+            width: 90%;
+            height: 1px;
+            border-bottom: 2px solid rgba(255,255,255,0.9);
+            position: absolute;
+            left: 10%;
+            top: 80%;
+        }
+        .i_am > * {
+            float: left;
+        }
+        .ryu {
+            width: 40%;
+            margin-top: 7%;
+            background-color: #ffffff;
+            border-radius: 50%;
+        }
+        .introduce {
+            width: 50%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+        .i_can > * {
+            float: left;
+        }
+        .skill_name_box {
+            background-color: #fff;
+            height: 50%;
+            width: 35%;
+            height: 45vh;
+            float: left;
+            margin: 5%;
+        }
+        .skill_box_tit {
+            height: 28%;
+            line-height: 3em;
+            font-size: 2em;
+            padding-left: 10%;
+        }
+        .skill_list {
+            height: 70%;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            position: relative;
+        }
+        .skill_item {
+            width: 90%;
+            height: 15%;
+            padding-left: 10%;
+            line-height: 2.5em;
+            color: #aaa;
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: absolute;
+            left: 0;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        .skill_item:before {
+            content: "";
+            display: block;
+            width: 2px;
+            height: 2px;
+            background-color: #aaa;
+            position: absolute;
+            top: 45%;
+            left: 8%;
+            opacity: 0;
+            transition: 0.4s;
+        }
+        .skill_item:first-child {
+            top: 0;
+        }
+        .skill_item:nth-child(2) {
+            top: 16%;
+        }
+        .skill_item:nth-child(3) {
+            top: 32%;
+        }
+        .skill_item:nth-child(4) {
+            top: 48%;
+        }
+        .skill_item:nth-child(5) {
+            top: 64%;
+        }
+        .skill_item:last-child {
+            top: 80%;
+        }
+        .skill_item:hover {
+            color: #000;
+            font-weight: 600;
+            width: 100%;
+            height: 18%;
+            padding-left: 15%;
+            margin-left: -7.5%;
+            margin-top: -1.5%;
+            line-height: 3.5em;
+            box-shadow: 3px 3px 2px rgba(0,0,0,0.2), -3px 3px 2px rgba(0,0,0,0.2), 3px -1px 2px rgba(0,0,0,0.3);
+            z-index: 30;
+        }
+        .skill_item:hover::before {
+            opacity: 1;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff7b00;
+        }
+        .skill_com_box {
+            width: 45%;
+            margin: 15% 4%;
+        }
+        .skill_num {
+            font-weight: 600;
+            position: relative;
+            width: 10%;
+            height: 5%;
+        }
+        .counter:before {
+            content: "";
+            display: block;
+            width: 40%;
+            height: 2px;
+            background-color: #000;
+            position: absolute;
+            left: -20%;
+            transform: rotate(-40deg);
+        }
+        .counter_num {
+            position: absolute;
+            top: -100%;
+            left: -25%;
+        }
+        .skill_com {
+            width: 92%;
+            margin-left: 5%;
+        }
+        .skill_com h4 {
+            color: #eee;
+            line-height: 3em;
+            font-size: 1.2em;
+        }
+        .skill_com p {
+            line-height: 1.6em;
+            margin-left: 1%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header class="hd">
+            <!-- 스크롤시 배경 블러처리 -->
+            <div class="hd_wrap">
+                <a href="index.html" class="logo">RYU.</a>
+                <nav class="menu">
+                    <ul class="menu_list">
+                        <li class="menu_item"><a href="">About</a></li>
+                        <li class="menu_item"><a href="">Project</a></li>
+                        <li class="menu_item"><a href="">Contect</a></li>
+                        <!-- hover할 때 시소처럼 짧게 흔들리기 -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class="section0">
+            <h1 class="hello">
+                <span class="hello1">안녕하세요</span><br>
+                <span class="hello2">도전정신과 열정이 가득한</span><br>
+                <span class="hello3">웹퍼블리셔, 류정원입니다!</span>
+            </h1>
+        </section>
+        <section class="section1">
+            <h2 class="section_tit">About</h2>
+            <div class="i_am clrfx">
+                <img src="./img/self_Caricature.png" alt="류정원 캐리커쳐" class="ryu">
+                <div class="introduce">
+                    <h2 class="my_name">류정원</h2>
+                    <p class="about_me">인사말</p>
+                </div>
+            </div>
+        </section>
+        <section class="section2">
+            <h2 class="section_tit hidden">Skills</h2>
+            <div class="i_can">
+                <div class="skill_name_box">
+                    <h3 class="skill_box_tit">What can I do</h3>
+                    <ul class="skill_list clrfx">
+                        <li class="skill_item">HTML5 / CSS3</li>
+                        <li class="skill_item">javascript / jQuery</li>
+                        <li class="skill_item">Code Editor</li>
+                        <li class="skill_item">Photoshop</li>
+                        <li class="skill_item">Illustration</li>
+                        <li class="skill_item">Prototype Tool</li>
+                    </ul>
+                </div>
+                <div class="skill_com_box">
+                    <!-- skill_item 클릭시 counter_num, skill_com 바뀌게 -->
+                    <div class="skill_num">
+                        <span class="counter">
+                            <span class="counter_num">1</span>
+                            6
+                        </span>
+                    </div>
+                    <div class="skill_com">
+                        <h4>HTML5 / CSS3</h4>
+                        <p>데스크탑(기업형, 블랜드형), 태블릿, 모바일, 반응형(그리드, 미디어쿼리, 셀), 부트스트랩, 포트폴리오형, 소셜커머스형 레이아웃 등</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
