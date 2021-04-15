@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ryu Jung won Portfolio</title>
+    <title>Ryu Jung won Portfolio-P</title>
     
     <style>
         * {
@@ -66,13 +66,22 @@
         .menu_list .menu_item a {
             display: block;
             font-size: 1.4em;
-            color: #333;
+            color: #000;
             font-weight: 600;
         }
         .menu_list .menu_item a:hover {
             color: #fff;
-            animation: 
+            animation-name: menu_ani;
+            animation: menu_ani 0.3s ease-in 0s 1 ;
         }
+
+        @keyframes menu_ani {
+            0% { transform: rotate(0deg); }
+            30% { transform: rotate(10deg); }
+            70% { transform: rotate(-10deg); }
+            100% { transform: rotate(0deg); }
+        }
+
         section {
             width: 60vw;
             margin: 0 auto;
@@ -113,6 +122,9 @@
             margin-left: 10%;
             margin-top: 10%;
         }
+        .section2 {
+            height: 100vh;
+        }
         .i_can > * {
             float: left;
         }
@@ -123,6 +135,7 @@
             height: 45vh;
             float: left;
             margin: 5%;
+            box-shadow: 4px 5px 3px rgba(0,0,0,0.1), -4px -1px 3px rgba(0,0,0,0.1), -4px 5px 3px rgba(0,0,0,0.1), 4px 1px 3px rgba(0,0,0,0.1);
         }
         .skill_box_tit {
             height: 28%;
@@ -136,6 +149,7 @@
             border-top: 1px solid #ddd;
             position: relative;
         }
+        
         .skill_item {
             width: 90%;
             height: 15%;
@@ -179,7 +193,7 @@
         .skill_item:last-child {
             top: 80%;
         }
-        .skill_item:hover {
+        .skill_item:hover, .skill_item.active {
             color: #000;
             font-weight: 600;
             width: 100%;
@@ -188,20 +202,69 @@
             margin-left: -7.5%;
             margin-top: -1.5%;
             line-height: 3.5em;
-            box-shadow: 3px 3px 2px rgba(0,0,0,0.2), -3px 3px 2px rgba(0,0,0,0.2), 3px -1px 2px rgba(0,0,0,0.3);
+            box-shadow: 4px 5px 3px rgba(0,0,0,0.1), -4px -1px 3px rgba(0,0,0,0.1), -4px 5px 3px rgba(0,0,0,0.1), 4px 1px 3px rgba(0,0,0,0.1);
             z-index: 30;
         }
-        .skill_item:hover::before {
+        .skill_item:hover::before, .skill_item.active:before {
             opacity: 1;
             width: 10px;
             height: 10px;
             border-radius: 50%;
             background-color: #ff7b00;
         }
+        .stats_box {
+            width: 55%;
+            height: 40%;
+            border: 1px solid #ccc;
+            float: right;
+            margin-top: 3%;
+            margin-right: 5%;
+            position: relative;
+        }
+        .stats_box .stats {
+            position: relative;
+            height: 100%;
+            background-color: #ccc;
+            line-height: 100%;
+            text-align: right;
+            animation: stats 1s ease-in-out;
+        }
+        .skill_item:hover .stats_box .stats, .skill_item.active .stats_box .stats {
+            background-color: #ff9626;
+        }
+        .skill_item:first-child .stats_box .stats{
+            width: 90%;
+        }
+        .skill_item:nth-child(2) .stats_box .stats{
+            width: 80%;
+        }
+        .skill_item:nth-child(3) .stats_box .stats{
+            width: 92%;
+        }
+        .skill_item:nth-child(4) .stats_box .stats{
+            width: 95%;
+        }
+        .skill_item:nth-child(5) .stats_box .stats{
+            width: 90%;
+        }
+        .skill_item:last-child .stats_box .stats{
+            width: 92%;
+        }
+
+        @keyframes stats {
+            from { width: 0;}
+            80% { width: 100%; }
+            to { }
+        }
+
         .skill_com_box {
             width: 45%;
+            height: 20vh;
             margin-top: 18%;
-            margin-left: 3%;
+            margin-left: 1%;
+            padding: 2%;
+            overflow: hidden;
+            position: relative;
         }
         .skill_num {
             font-weight: 600;
@@ -221,13 +284,27 @@
         }
         .counter_num {
             position: absolute;
-            top: -100%;
-            left: -25%;
+            top: -50%;
+            left: -100%;
+            transition: 0.4s;
+        }
+        .counter_num.active {
+            position: absolute;
+            top: -200%;
+            left: -30%;
         }
         .skill_com {
-            width: 92%;
-            margin-left: 5%;
+            width: 85%;
+            height: 100%;
+            position: absolute;
+            top: 20%;
+            left: -100%;
+            transition: 0.4s;
         }
+        .skill_com.active {
+            left: 8%;
+        }
+        
         .skill_com h4 {
             color: #eee;
             line-height: 3em;
@@ -237,7 +314,55 @@
             line-height: 1.6em;
             margin-left: 1%;
         }
+        .skill_icon {
+            width: 60%;
+            height: 20%;
+            margin-left: 20%;
+            float: left;
+            text-align: center;
+            color: #555;
+            line-height: 16em;         
+        }
+        .skill_icon ul {
+            width: 100%;
+            height: 100%;
+        }
+        .skill_icon ul li {
+            width: 25%; 
+            height: 70%;
+            float: left;
+            margin-top: 5%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+        }
+        .skill_icon ul .skill_icon1 {
+            background-image: url("./img/html_icon.png");
+        }
+        .skill_icon ul .skill_icon2 {
+            background-image: url("./img/css_icon.png");
+        }
+        .skill_icon ul .skill_icon3 {
+            background-image: url("./img/javascript_icon.png");
+        }
+        .skill_icon ul .skill_icon4 {
+            background-image: url("./img/jquery_icon.png");
+        }
+        .skill_icon ul .skill_icon5 {
+            background-image: url("./img/photoshop_icon.png");
+        }
+        .skill_icon ul .skill_icon6 {
+            background-image: url("./img/illustrator_icon.png");
+        }
+        .skill_icon ul .skill_icon7 {
+            background-image: url("./img/bracket_icon.png");
+        }
+        .skill_icon ul .skill_icon8 {
+            background-image: url("./img/visual-studio-code_icon.png");
+        }
     </style>
+    <script type="text/javascript" src="./js/jquery-latest.js"></script>
+    
 </head>
 <body>
     <div class="wrap">
@@ -278,12 +403,36 @@
                 <div class="skill_name_box">
                     <h3 class="skill_box_tit">What can I do</h3>
                     <ul class="skill_list clrfx">
-                        <li class="skill_item" >HTML5 / CSS3</li>
-                        <li class="skill_item">javascript / jQuery</li>
-                        <li class="skill_item">Code Editor</li>
-                        <li class="skill_item">Photoshop</li>
-                        <li class="skill_item">Illustration</li>
-                        <li class="skill_item">Prototype Tool</li>
+                        <li class="skill_item active" >HTML5 / CSS3
+                            <ul class="stats_box">
+                                <li class="stats">&blacktriangleright;</li>
+                            </ul>
+                        </li>
+                        <li class="skill_item">javascript / jQuery
+                            <ul class="stats_box">
+                                <li class="stats">&blacktriangleright;</li>
+                            </ul>
+                        </li>
+                        <li class="skill_item">Code Editor
+                            <ul class="stats_box">
+                                <li class="stats">&blacktriangleright;</li>
+                            </ul>
+                        </li>
+                        <li class="skill_item">Photoshop
+                            <ul class="stats_box">
+                                <li class="stats">&blacktriangleright;</li>
+                            </ul>
+                        </li>
+                        <li class="skill_item">Illustration
+                            <ul class="stats_box">
+                                <li class="stats">&blacktriangleright;</li>
+                            </ul>
+                        </li>
+                        <li class="skill_item">Prototype Tool
+                            <ul class="stats_box">
+                                <li class="stats">&blacktriangleright;</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="skill_com_box">
@@ -299,13 +448,53 @@
                             6
                         </span>
                     </div>
-                    <div class="skill_com">
+                    <div class="skill_com active">
                         <h4>HTML5 / CSS3</h4>
+                        <p>데스크탑(기업형, 블랜드형), 태블릿, 모바일, 반응형(그리드, 미디어쿼리, 셀), 부트스트랩, 포트폴리오형, 소셜커머스형 레이아웃 등</p>
+                    </div>
+                    <div class="skill_com">
+                        <h4>javascript / jQuery</h4>
+                        <p>데스크탑(기업형, 블랜드형), 태블릿, 모바일, 반응형(그리드, 미디어쿼리, 셀), 부트스트랩, 포트폴리오형, 소셜커머스형 레이아웃 등</p>
+                    </div>
+                    <div class="skill_com">
+                        <h4>Code Editor</h4>
+                        <p>데스크탑(기업형, 블랜드형), 태블릿, 모바일, 반응형(그리드, 미디어쿼리, 셀), 부트스트랩, 포트폴리오형, 소셜커머스형 레이아웃 등</p>
+                    </div>
+                    <div class="skill_com">
+                        <h4>Photoshop</h4>
+                        <p>데스크탑(기업형, 블랜드형), 태블릿, 모바일, 반응형(그리드, 미디어쿼리, 셀), 부트스트랩, 포트폴리오형, 소셜커머스형 레이아웃 등</p>
+                    </div>
+                    <div class="skill_com">
+                        <h4>Illustration</h4>
+                        <p>데스크탑(기업형, 블랜드형), 태블릿, 모바일, 반응형(그리드, 미디어쿼리, 셀), 부트스트랩, 포트폴리오형, 소셜커머스형 레이아웃 등</p>
+                    </div>
+                    <div class="skill_com">
+                        <h4>Prototype Tool</h4>
                         <p>데스크탑(기업형, 블랜드형), 태블릿, 모바일, 반응형(그리드, 미디어쿼리, 셀), 부트스트랩, 포트폴리오형, 소셜커머스형 레이아웃 등</p>
                     </div>
                 </div>
             </div>
+            <div class="skill_icon">
+                <ul>
+                    <li class="skill_icon1">HTML5</li>
+                    <li class="skill_icon2">CSS3</li>
+                    <li class="skill_icon3">JavaScript</li>
+                    <li class="skill_icon4">jQuery</li>
+                    <li class="skill_icon5">Adobe Photoshop</li>
+                    <li class="skill_icon6">Adobe Illustrator</li>
+                    <li class="skill_icon7">Bracket</li>
+                    <li class="skill_icon8">Visual Studio Code</li>
+                </ul>
+            </div>
         </section>
     </div>
+    <script type="text/javascript">
+        $(".skill_item").click(function() {
+            $(".skill_item").removeClass("active");
+            $(this).addClass("active");
+            $(".counter_num").removeClass("active");
+            $(".counter_num").addClass("active");
+        });
+    </script>
 </body>
 </html>
