@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ryu Jung won Portfolio</title>
+    <title>Ryu Jung won Portfolio-About</title>
     
     <style>
         * {
@@ -27,11 +27,12 @@
         
         .wrap {
             width: 100vw;
-            background: #ff9626;
+            background-color: #176c00; 
         }
         .hd {
             width: 100vw;
             height: 10vh;
+            background: #ff9626;
         }
         .hd_wrap {
             width: 80%;
@@ -72,7 +73,7 @@
         .menu_list .menu_item a:hover {
             color: #fff;
             animation-name: menu_ani;
-            animation: menu_ani 0.3s ease-in 0s 1 ;
+            animation: menu_ani 0.3s ease-in;
         }
 
         @keyframes menu_ani {
@@ -82,11 +83,17 @@
             100% { transform: rotate(0deg); }
         }
 
+        .section_wrap {
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+            background: #ff9626;
+        }
+
         section {
             width: 60vw;
             margin: 0 auto;
             height: 70vh;
         }
+        
         .hello {
             margin-left: 35vw;
             padding-top: 20%;
@@ -123,7 +130,7 @@
             margin-top: 10%;
         }
         .section2 {
-            height: 100vh;
+            height: 120vh;
         }
         .i_can > * {
             float: left;
@@ -337,8 +344,84 @@
         }
 
         .ft {
-            width: 90%;
-            height: 70vh;
+            width: 100%;
+            height: 50vh;
+        }
+        .page_button {
+            width: 80%;
+            height: 20%;
+            margin: 0 auto;
+            padding-top: 8%;
+        }
+        .page_button a {
+            float: left;
+            display: block;
+            height: 100%;
+            font-size: 3em;
+            color: #bbccb8;
+            position: relative;
+            line-height: 2em;
+        }
+        .page_button a.right_page {
+            float: right;
+        }
+        .page_button a i {
+            content: "";
+            display: block;
+            width: 5px;
+            height: 50%;
+            background-color: #bbccb8;
+            position: absolute;
+        }
+        .page_button a.left_page .i1 {
+            transform: rotate(-40deg);
+            left: -30%;
+            top: 30%;
+        }
+        .page_button a.left_page .i2 {
+            transform: rotate(40deg);
+            left: -30%;
+            top: -5%;
+        }
+        .page_button a.right_page .i1 {
+            transform: rotate(40deg);
+            right: -30%;
+            top: 30%;
+        }
+        .page_button a.right_page .i2 {
+            transform: rotate(-40deg);
+            right: -30%;
+            top: -5%;
+        }
+
+        .page_button a:hover {
+            color: #fff;
+            animation : page_button 0.7s ease-in-out;
+        }
+        .page_button a:hover i {
+            background-color: #fff;
+        }
+
+        @keyframes page_button {
+            from { transform: translateX(0%); }
+            33.3333% { transform: translateX(10%); }
+            66.6666% { transform: translateX(-10%); }
+            to { transform: translateX(0%); }
+        }
+
+        .copy {
+            width: 80%;
+            padding-left: 20%;
+            margin: 5% auto;
+            color: #bbccb8;
+            line-height: 1.6em;
+        }
+        .copy a {
+            display: block;
+            color: #bbccb8;
+        }
+        .copy a:hover {
+            color: #fff;
         }
     </style>
     <script type="text/javascript" src="./js/jquery-latest.js"></script>
@@ -360,115 +443,133 @@
                 </nav>
             </div>
         </header>
-        <section class="section0">
-            <h1 class="hello">
-                <span class="hello1">안녕하세요</span><br>
-                <span class="hello2">도전정신과 열정이 가득한</span><br>
-                <span class="hello3">웹퍼블리셔, 류정원입니다!</span>
-            </h1>
-        </section>
-        <section class="section1">
-            <h2 class="section_tit">About</h2>
-            <div class="i_am clrfx">
-                <img src="./img/self_Caricature.png" alt="류정원 캐리커쳐" class="ryu">
-                <div class="introduce">
-                    <h2 class="my_name">류정원</h2>
-                    <p class="about_me">인사말</p>
-                </div>
-            </div>
-        </section>
-        <section class="section2">
-            <h2 class="section_tit hidden">Skills</h2>
-            <div class="i_can">
-                <div class="skill_name_box">
-                    <h3 class="skill_box_tit">What can I do</h3>
-                    <ul class="skill_list clrfx">
-                        <li class="skill_item active" >HTML5 / CSS3
-                            <ul class="stats_box">
-                                <li class="stats">&blacktriangleright;</li>
-                            </ul>
-                        </li>
-                        <li class="skill_item">javascript / jQuery
-                            <ul class="stats_box">
-                                <li class="stats">&blacktriangleright;</li>
-                            </ul>
-                        </li>
-                        <li class="skill_item">Code Editor
-                            <ul class="stats_box">
-                                <li class="stats">&blacktriangleright;</li>
-                            </ul>
-                        </li>
-                        <li class="skill_item">Photoshop
-                            <ul class="stats_box">
-                                <li class="stats">&blacktriangleright;</li>
-                            </ul>
-                        </li>
-                        <li class="skill_item">Illustration
-                            <ul class="stats_box">
-                                <li class="stats">&blacktriangleright;</li>
-                            </ul>
-                        </li>
-                        <li class="skill_item">Prototype Tool
-                            <ul class="stats_box">
-                                <li class="stats">&blacktriangleright;</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="skill_com_box">
-                    <!-- skill_item 클릭시 counter_num, skill_com 바뀌게 -->
-                    <div class="skill_num">
-                        <span class="counter">
-                            <span class="counter_num active">1</span>
-                            <span class="counter_num">2</span>
-                            <span class="counter_num">3</span>
-                            <span class="counter_num">4</span>
-                            <span class="counter_num">5</span>
-                            <span class="counter_num">6</span>
-                            6
-                        </span>
-                    </div>
-                    <div class="skill_com active">
-                        <h4>HTML5 / CSS3</h4>
-                        <p>데스크탑(기업형, 블랜드형), 태블릿, 모바일, 반응형(그리드, 미디어쿼리, 셀), 부트스트랩, 포트폴리오형, 소셜커머스형 레이아웃 등</p>
-                    </div>
-                    <div class="skill_com">
-                        <h4>javascript / jQuery</h4>
-                        <p>스크롤링 위젯, 비주얼 슬라이드 위젯, 네임 앵커 위젯, 토글 위젯, 부분 애니메이션, 상품배치 및 슬라이더 위젯, 텍스트 애니메이션, 이미지 애니메이션, 팝업/모달 애니메이션, 패럴럭스 스크롤링, 페이지내이션, 이미지 줌 애니메이션, 캐릭터 애니메이션 등</p>
-                    </div>
-                    <div class="skill_com">
-                        <h4>Code Editor</h4>
-                        <p>Brackets / Edit Plus / Visual Studio Code 등<br>html5 css3 코딩, 멀티미디어 이미지 링크, 네임 앵커, 이미지맵 사용, 이벤트 페이지 멀티 링크</p>
-                    </div>
-                    <div class="skill_com">
-                        <h4>Photoshop</h4>
-                        <p>제품 디자인 시안, 웹 사이트 시안 템플릿, 그래픽(글자,이미지)합성, 타이포그래피, 아이콘 스키마, 그래픽 패턴, 제품 누끼, 인물보정, 컬러보정, 비주얼 배너 제작 가능</p>
-                    </div>
-                    <div class="skill_com">
-                        <h4>Illustration</h4>
-                        <p>벡터(Vector)캐릭터, 배경, 일반 아이콘, 로고, 패턴, 심볼, 그래픽 명함 제작, CI/BI 일러스트레이션, 뉴스레터</p>
-                    </div>
-                    <div class="skill_com">
-                        <h4>Prototype Tool</h4>
-                        <p>Balsamiq Mockups 3, Oven 등을 이용한 프로토타입 제작 가능</p>
+        <div class="section_wrap">
+            <section class="section0">
+                <h1 class="hello">
+                    <span class="hello1">안녕하세요</span><br>
+                    <span class="hello2">도전정신과 열정이 가득한</span><br>
+                    <span class="hello3">웹퍼블리셔, 류정원입니다!</span>
+                </h1>
+            </section>
+            <section class="section1">
+                <h2 class="section_tit">About</h2>
+                <div class="i_am clrfx">
+                    <img src="./img/self_Caricature.png" alt="류정원 캐리커쳐" class="ryu">
+                    <div class="introduce">
+                        <h2 class="my_name">류정원</h2>
+                        <div class="about_me">인사말</div>
                     </div>
                 </div>
-                <div class="skill_icon">
-                    <ul>
-                        <li class="skill_icon1"><img src="./img/html_icon.png" alt="">HTML5</li>
-                        <li class="skill_icon2"><img src="./img/css_icon.png" alt="">CSS3</li>
-                        <li class="skill_icon3"><img src="./img/javascript_icon.png" alt="">JavaScript</li>
-                        <li class="skill_icon4"><img src="./img/jquery_icon.png" alt="">jQuery</li>
-                        <li class="skill_icon5"><img src="./img/photoshop_icon.png" alt="">Adobe Photoshop</li>
-                        <li class="skill_icon6"><img src="./img/illustrator_icon.png" alt="">Adobe Illustrator</li>
-                        <li class="skill_icon7"><img src="./img/bracket_icon.png" alt="">Bracket</li>
-                        <li class="skill_icon8"><img src="./img/visual-studio-code_icon.png" alt="">Visual Studio Code</li>
-                    </ul>
+            </section>
+            <section class="section2">
+                <h2 class="section_tit hidden">Skills</h2>
+                <div class="i_can">
+                    <div class="skill_name_box">
+                        <h3 class="skill_box_tit">What can I do</h3>
+                        <ul class="skill_list clrfx">
+                            <li class="skill_item active" >HTML5 / CSS3
+                                <ul class="stats_box">
+                                    <li class="stats">&blacktriangleright;</li>
+                                </ul>
+                            </li>
+                            <li class="skill_item">javascript / jQuery
+                                <ul class="stats_box">
+                                    <li class="stats">&blacktriangleright;</li>
+                                </ul>
+                            </li>
+                            <li class="skill_item">Code Editor
+                                <ul class="stats_box">
+                                    <li class="stats">&blacktriangleright;</li>
+                                </ul>
+                            </li>
+                            <li class="skill_item">Photoshop
+                                <ul class="stats_box">
+                                    <li class="stats">&blacktriangleright;</li>
+                                </ul>
+                            </li>
+                            <li class="skill_item">Illustration
+                                <ul class="stats_box">
+                                    <li class="stats">&blacktriangleright;</li>
+                                </ul>
+                            </li>
+                            <li class="skill_item">Prototype Tool
+                                <ul class="stats_box">
+                                    <li class="stats">&blacktriangleright;</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skill_com_box">
+                        <!-- skill_item 클릭시 counter_num, skill_com 바뀌게 -->
+                        <div class="skill_num">
+                            <span class="counter">
+                                <span class="counter_num active">1</span>
+                                <span class="counter_num">2</span>
+                                <span class="counter_num">3</span>
+                                <span class="counter_num">4</span>
+                                <span class="counter_num">5</span>
+                                <span class="counter_num">6</span>
+                                6
+                            </span>
+                        </div>
+                        <div class="skill_com active">
+                            <h4>HTML5 / CSS3</h4>
+                            <p>데스크탑(기업형, 블랜드형), 태블릿, 모바일, 반응형(그리드, 미디어쿼리, 셀), 부트스트랩, 포트폴리오형, 소셜커머스형 레이아웃 등</p>
+                        </div>
+                        <div class="skill_com">
+                            <h4>javascript / jQuery</h4>
+                            <p>스크롤링 위젯, 비주얼 슬라이드 위젯, 네임 앵커 위젯, 토글 위젯, 부분 애니메이션, 상품배치 및 슬라이더 위젯, 텍스트 애니메이션, 이미지 애니메이션, 팝업/모달 애니메이션, 패럴럭스 스크롤링, 페이지내이션, 이미지 줌 애니메이션, 캐릭터 애니메이션 등</p>
+                        </div>
+                        <div class="skill_com">
+                            <h4>Code Editor</h4>
+                            <p>Brackets / Edit Plus / Visual Studio Code 등<br>html5 css3 코딩, 멀티미디어 이미지 링크, 네임 앵커, 이미지맵 사용, 이벤트 페이지 멀티 링크</p>
+                        </div>
+                        <div class="skill_com">
+                            <h4>Photoshop</h4>
+                            <p>제품 디자인 시안, 웹 사이트 시안 템플릿, 그래픽(글자,이미지)합성, 타이포그래피, 아이콘 스키마, 그래픽 패턴, 제품 누끼, 인물보정, 컬러보정, 비주얼 배너 제작 가능</p>
+                        </div>
+                        <div class="skill_com">
+                            <h4>Illustration</h4>
+                            <p>벡터(Vector)캐릭터, 배경, 일반 아이콘, 로고, 패턴, 심볼, 그래픽 명함 제작, CI/BI 일러스트레이션, 뉴스레터</p>
+                        </div>
+                        <div class="skill_com">
+                            <h4>Prototype Tool</h4>
+                            <p>Balsamiq Mockups 3, Oven 등을 이용한 프로토타입 제작 가능</p>
+                        </div>
+                    </div>
+                    <div class="skill_icon">
+                        <ul>
+                            <li class="skill_icon1"><img src="./img/html_icon.png" alt="">HTML5</li>
+                            <li class="skill_icon2"><img src="./img/css_icon.png" alt="">CSS3</li>
+                            <li class="skill_icon3"><img src="./img/javascript_icon.png" alt="">JavaScript</li>
+                            <li class="skill_icon4"><img src="./img/jquery_icon.png" alt="">jQuery</li>
+                            <li class="skill_icon5"><img src="./img/photoshop_icon.png" alt="">Adobe Photoshop</li>
+                            <li class="skill_icon6"><img src="./img/illustrator_icon.png" alt="">Adobe Illustrator</li>
+                            <li class="skill_icon7"><img src="./img/bracket_icon.png" alt="">Bracket</li>
+                            <li class="skill_icon8"><img src="./img/visual-studio-code_icon.png" alt="">Visual Studio Code</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <footer class="ft">
-
+            <div class="page_button">
+                <a href="contact.html" class="left_page to_contact">
+                    Contact
+                    <i class="i1"></i>
+                    <i class="i2"></i>
+                </a>
+                <a href="" class="right_page to_project">
+                    <i class="i1"></i>
+                    <i class="i2"></i>
+                    Project
+                </a>
+            </div>
+            <div class="copy">
+                <p class="copy_name">류정원&nbsp;&#47;&nbsp;웹퍼블리셔&#44;웹디자이너</p>
+                <a class="call" href="tel:010-9650-1998">010&#45;9650&#45;1998</a>
+                <a href="mailto:sun14418@naver.com" class="mail">sun14418&#64;naver.com</a>
+            </div>
         </footer>
     </div>
     <script type="text/javascript">
