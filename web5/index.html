@@ -302,6 +302,11 @@
             font-weight: 600;
             color: #fff;
             text-shadow: 2px 2px 3px #333;
+            background-color: rgba(0,0,0,0.6);
+            transition: 0.4s;
+        }
+        #pg1 ul li:hover a {
+            background-color: transparent;
         }
         #pg1 ul li.cate1 {
             background-image: url(./img/main/img/pg1_cate1.jpg);
@@ -357,6 +362,12 @@
             top: 0;
             transition: 0.4s;
             background-image: url(./img/main/img/pg1_cate1.jpg);
+        }
+        #pg1 ul li.cate13 span {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.3);
         }
         #pg1 ul li.cate1:hover ~ .cate13 {
             background-image: url(./img/main/img/pg1_cate1.jpg);
@@ -440,15 +451,17 @@
             left: 75%;
         }
         
-        #pg2 {
+        #pg2, #pg3 {
             width: 100%;
             height: 800px;
         }
-        
+        .news > * {
+            float: left;
+        }
         .card_news {
             width: 80%;
             height: 460px;
-            margin: 0 auto;
+            margin-left: 4%;
             overflow: hidden
         }
         .card_news ul {
@@ -468,7 +481,147 @@
             height: 60%;
             border: 1px solid #ddd;
         }
-        
+        .n_type {
+            background-color: #333;
+            color: #fff;
+            width: 20%;
+            padding: 1%;
+            text-align: center;
+            margin: 5%;
+        }
+        .n_tit {
+            width: 90%;
+            margin: 0 auto;
+            font-size: 1.1em;
+            line-height: 1.6em;
+        }
+        .n_date {
+            float: right;
+            margin: 5% 10%;
+        }
+        .news button {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 0;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            background-image: url(./img/sub/icon/arrow_top.png);
+            margin-top: 10%;
+        }
+        .news .left {
+            margin-left: 5%;
+            transform: rotate(-90deg);
+        }
+        .news .right {
+            margin-left: 2%;
+            transform: rotate(90deg);
+        }
+        #pg3 {
+            background-color: #111
+        }
+        .recruit_com {
+            width: 100%;
+            text-align: center;
+            color: #eee;
+            font-size: 1em;
+        }
+        .recruit_list {
+            width: 70%;
+            height: 50%;
+            margin: 4% auto;
+        }
+        .recruit_list li {
+            width: 25%;
+            height: 100%;
+            float: left;
+            border: 1px solid #333;
+            box-sizing: border-box;            
+        }
+        .re_cate {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+            transition: 0.4s;
+        }
+        .recruit_list li:first-child .re_cate:hover {
+            background-image: url(./img/main/img/recruit1.jpg);
+        }
+        .recruit_list li:nth-child(2) .re_cate:hover {
+            background-image: url(./img/main/img/recruit2.jpg);
+        }
+        .recruit_list li:nth-child(3) .re_cate:hover {
+            background-image: url(./img/main/img/recruit3.jpg);
+        }
+        .recruit_list li:last-child .re_cate:hover {
+            background-image: url(./img/main/img/recruit4.jpg);
+        }
+        .re_cate span {
+            position: absolute;
+            width: 40%;
+            left: 30%;
+            text-align: center;
+            font-size: 2em;
+            transition: 0.4s;
+            line-height: 1.6em;
+        }
+        .re_cate1 {
+            top: 42%;
+        }
+        .re_cate2 {
+            top: 55%;
+            opacity: 0;
+            border-bottom: 2px solid #fff
+        }
+        .re_cate:hover .re_cate1 {
+            opacity: 0;
+        }
+        .re_cate:hover .re_cate2 {
+            opacity: 1;
+            top: 42%;
+            color: #fff;
+        }
+        #pg4 {
+            width: 100%;
+            height: 300px;
+        }
+        #pg4 .contact_lis {
+            width: 100%;
+            height: 100%;
+        }
+        #pg4 .contact_lis li {
+            width: 100%;
+            height: 100%;
+            float: left;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transition: 0.5s;
+        }
+        #pg4 ul li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            font-size: 2em;
+            text-align: center;
+            line-height: 10em;
+            color: #fff;
+        }
+        #pg4 ul li:first-child {
+            background-image: url(./img/main/img/pg4_1.jpg);
+        }
+        #pg4 ul li:nth-child(2) {
+            background-image: url(./img/main/img/pg4_2.jpg);
+        }
+        #pg4 ul li:last-child {
+            background-image: url(./img/main/img/pg4_3.jpg);
+        }
     </style>
 </head>
 
@@ -617,13 +770,14 @@
                     <li class="cate10"><a href="">반도체&#46;디스플레이</a></li>
                     <li class="cate11"><a href="">신재생에너지</a></li>
                     <li class="cate12"><a href="">로보틱스</a></li>
-                    <li class="cate13"></li>
+                    <li class="cate13">
+                        <span></span>
+                    </li>
                 </ul>
             </div>
             <div class="news" id="pg2">
                 <h2 class="cate_tit cate_tit_b">Hanwha News</h2>
                 <button class="left"></button>
-                <button class="right"></button>
                 <div class="card_news">
                     <ul>
                         <li>
@@ -678,31 +832,32 @@
                         </li>
                     </ul>
                 </div>
+                <button class="right"></button>
             </div>
             <div class="recruit" id="pg3">
-                <h2 class="recruit_tit">인재경영</h2>
+                <h2 class="recruit_tit cate_tit cate_tit_w">인재경영</h2>
                 <p class="recruit_com">능력과 직무 중심 채용으로 글로벌 시장을 이끌어 갈 창조적 인재를 키워 나갑니다.</p>
-                <ul>
+                <ul class="recruit_list">
                     <li>
-                        <a href="">
+                        <a class="re_cate" href="">
                             <span class="re_cate1">인재상</span>
                             <span class="re_cate2">인재상</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="re_cate" href="">
                             <span class="re_cate1">채용전형</span>
                             <span class="re_cate2">채용전형</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="re_cate" href="">
                             <span class="re_cate1">인사제도</span>
                             <span class="re_cate2">인사제도</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="re_cate" href="">
                             <span class="re_cate1">직무소개</span>
                             <span class="re_cate2">직무소개</span>
                         </a>
@@ -710,12 +865,24 @@
                 </ul>
             </div>
             <div class="contact" id="pg4">
-                <ul>
-                    <li><a href="">영상뉴스<img src="" alt=""></a></li>
-                    <li><a href="">공지사항<img src="" alt=""></a></li>
-                    <li><a href="">문의하기<img src="" alt=""></a></li>
+                <ul class="contact_lis">
+                    <li><a href="">영상뉴스</a></li>
+                    <li><a href="">공지사항</a></li>
+                    <li><a href="">문의하기</a></li>
                 </ul>
             </div>
+            <script>
+                $(document).ready(function(){
+                    var tr_th = parseInt($(".contact_lis li").width());
+                    $(".contact_lis li").mouseenter(function(){ 
+                        $(this).width(tr_th*0.44);
+                        $(this).siblings().width(tr_th*0.28);
+                    });
+                    $(".contact_lis li").mouseleave(function(){ 
+                        $(".contact_lis li").width(tr_th*0.3333333);
+                    });
+                });
+            </script>
         </div>
         <footer class="ft">
             <div class="ft_wrap">
