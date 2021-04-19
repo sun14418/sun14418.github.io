@@ -6,14 +6,14 @@
     <link rel="shortcut icon" href="./img/favicon-16.png" type="image/x-icon">
     <link rel="shortcut icon" href="./img/favicon-32.png" type="image/x-icon">
     <link rel="shortcut icon" href="./img/favicon-96.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="./img/favicon-144.png"type="image/x-icon">
+    <link rel="apple-touch-icon" href="./img/favicon-144.png" type="image/x-icon">
     <meta property="og:title" content="류정원 포트폴리오">
     <meta property="og:type" content="article">
     <meta property="og:description" content="류정원 웹퍼블리셔,웹디자이너 포트폴리오">
     <meta property="og:image" content="./img/self_Caricature.png">
     <meta property="og:url" content="sun14418.github.io/ryujungwon/">
     <meta property="og:site_name" content="Ryu Jung won Web Portfolio">
-
+    
     <link rel="stylesheet" href="./css/common.css">
     <style>
         .section_wrap {
@@ -22,9 +22,11 @@
         }
 
         section {
+            clear: both;
             width: 60vw;
             margin: 0 auto;
             height: 70vh;
+            padding-top: 10vh;
         }
         
         .hello {
@@ -32,6 +34,16 @@
             padding-top: 20%;
             font-size: 2.5em;
             line-height: 2em;
+            word-break: break-word;
+            letter-spacing: -.04rm;
+            transition-delay: 1s;
+            transition: transform 1.5s, opacity 1.7s;
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        .page.on .hello {
+            transform: translateY(0);
+            opacity: 1;
         }
         .section_tit {
             font-size: 2em;
@@ -48,6 +60,18 @@
             left: 10%;
             top: 80%;
         }
+        .i_am {
+            width: 100%;
+            height: 100%;
+            transition-delay: 1s;
+            transition: transform 0.4s;
+            transform: translateY(200px);
+            opacity: 0;
+        }
+        .page.on .i_am {
+            transform: translateY(0px);
+            opacity: 1;
+        }
         .i_am > * {
             float: left;
         }
@@ -58,9 +82,65 @@
             border-radius: 50%;
         }
         .introduce {
-            width: 50%;
+            width: 49%;
             margin-left: 10%;
             margin-top: 10%;
+            border: 1px solid #555;
+        }
+        .about_me {
+            width: 70%;
+            height: 36.5vh;
+            margin: 1%;
+            padding: 4% 14%;
+            background-color: #fff
+        }
+        .about_me span {
+            line-height: 1.5em;
+        }
+        .me_icon {
+            padding-left: 1.5vw;
+            margin: 4% 0 2% 0;
+            background-repeat: no-repeat;
+            background-position: center left;
+            background-size: contain;
+            
+        }
+        .me_icon1 {
+            margin-top: 1%;
+            background-image: url(./img/diploma.png);
+        }
+        .me_icon2 {
+            background-image: url(./img/id-card-4.png);
+        }
+        .me_icon3 {
+            background-image: url(./img/like-1.png);
+        }
+        .h {
+            display: block;
+            width: 20%;
+            height: 10vh;
+            float: left;
+            text-align: center;
+            margin-right: 5%;
+        }
+        .h:before {
+            content: "";
+            display: block;
+            width: 85%;
+            height: 10vh;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin-left: 10%;            
+        }
+        .h1:before {
+            background-image: url(./img/021-chisel.png);
+        }
+        .h2:before {
+            background-image: url(./img/033-canvas.png);
+        }
+        .h3:before {
+            background-image: url(./img/037-sculpt.png);
         }
         .section2 {
             height: 120vh;
@@ -162,32 +242,36 @@
             position: relative;
         }
         .stats_box .stats {
+            opacity: 0;
+        }
+        .page.on .stats_box .stats {
+            opacity: 1;
             position: relative;
             height: 100%;
             background-color: #ccc;
             line-height: 100%;
             text-align: right;
-            animation: stats 1s ease-in-out;
+            animation: stats 1s ease-in-out 0.5s;
         }
-        .skill_item:hover .stats_box .stats, .skill_item.active .stats_box .stats {
+        .page.on .skill_item.active .stats_box .stats {
             background-color: #ff9626;
         }
-        .skill_item:first-child .stats_box .stats{
+        .page.on .skill_item:first-child .stats_box .stats{
             width: 90%;
         }
-        .skill_item:nth-child(2) .stats_box .stats{
+        .page.on .skill_item:nth-child(2) .stats_box .stats{
             width: 80%;
         }
-        .skill_item:nth-child(3) .stats_box .stats{
+        .page.on .skill_item:nth-child(3) .stats_box .stats{
             width: 92%;
         }
-        .skill_item:nth-child(4) .stats_box .stats{
+        .page.on .skill_item:nth-child(4) .stats_box .stats{
             width: 95%;
         }
-        .skill_item:nth-child(5) .stats_box .stats{
+        .page.on .skill_item:nth-child(5) .stats_box .stats{
             width: 90%;
         }
-        .skill_item:last-child .stats_box .stats{
+        .page.on .skill_item:last-child .stats_box .stats{
             width: 92%;
         }
 
@@ -278,6 +362,64 @@
 
     </style>
     <script type="text/javascript" src="./js/jquery-latest.js"></script>
+    <script>
+         window.onload = function () {
+            $(".page").eq(0).addClass("on");
+            $(".page").each(function (index) {
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 120;
+                        if (window.opera) {
+                            delta = -delta;
+                        }
+                    } else if (event.detail) {
+                        delta = -event.detail / 3;
+                    }
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(".page").eq(index);
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                    $("body, html").stop().not("animated").animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 850, complete: function () {
+
+                        }
+                    });
+//                    if(moveTop >= $(".page").eq(0).offset().top){
+//                        $(".page").eq(0).addClass("on");
+//                    }
+                    if(moveTop >= $(".page").eq(1).offset().top){
+                        $(".page").eq(1).addClass("on");
+                    }
+                    if(moveTop >= $(".page").eq(2).offset().top){
+                        $(".page").eq(2).addClass("on");
+                    }
+                });
+            });
+            
+//            $(".page").mouseenter(function(){
+//                $(this).addClass("on");    
+//            });
+//            $(".page").mouseleave(function(){
+//                $(this).removeClass("on");    
+//            });
+        }
+    </script>
     
 </head>
 <body>
@@ -298,26 +440,34 @@
             <span class="blur_bg"></span>
         </header>
         <div class="section_wrap">
-            <section class="section0">
+            <section class="section0 page clrfx">
                 <h1 class="hello">
                     <span class="hello1">안녕하세요</span><br>
                     <span class="hello2">도전정신과 열정이 가득한</span><br>
                     <span class="hello3">웹퍼블리셔, 류정원입니다!</span>
                 </h1>
             </section>
-            <section class="section1">
+            <section class="section1 page clrfx">
                 <h2 class="section_tit">About</h2>
                 <div class="i_am clrfx">
                     <img src="./img/self_Caricature.png" alt="류정원 캐리커쳐" class="ryu">
                     <div class="introduce">
-                        <h2 class="my_name">류정원</h2>
                         <div class="about_me">
-                            
+                            <h4 class="me_icon me_icon1">학력</h4>
+                            <span>2017 홍익대학교 조소과 석사졸업</span><br>
+                            <span>2015 충남대학교 조소과 학사졸업</span>
+                            <h4 class="me_icon me_icon2">자격증</h4>
+                            <span>GTQ 포토샵 1급</span><br>
+                            <span>운전면허 1종 보통</span>
+                            <h4 class="me_icon me_icon3">취미</h4>
+                            <span class="h h1">조각</span>
+                            <span class="h h2">그림</span>
+                            <span class="h h3">전시관람</span>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="section2">
+            <section class="section2 page clrfx">
                 <h2 class="section_tit hidden">Skills</h2>
                 <div class="i_can">
                     <div class="skill_name_box">
@@ -408,14 +558,14 @@
                 </div>
             </section>
         </div>
-        <footer class="ft">
+        <footer class="ft page clrfx">
             <div class="page_button">
                 <a href="contact.html" class="left_page to_contact">
                     Contact
                     <i class="i1"></i>
                     <i class="i2"></i>
                 </a>
-                <a href="" class="right_page to_project">
+                <a href="project.html" class="right_page to_project">
                     <i class="i1"></i>
                     <i class="i2"></i>
                     Project

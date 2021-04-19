@@ -22,263 +22,116 @@
         }
 
         section {
+            clear: both;
             width: 60vw;
             margin: 0 auto;
-            height: 70vh;
-        }
-        
-        .hello {
-            margin-left: 35vw;
-            padding-top: 20%;
-            font-size: 2.5em;
-            line-height: 2em;
+            height: auto;
+            padding-top: 15vh;
+            padding-bottom: 10vh;
         }
         .section_tit {
             font-size: 2em;
             color: rgba(255,255,255,0.9);
             position: relative;
-        }
-        .section_tit:after {
-            content: "";
-            display: block;
-            width: 90%;
-            height: 1px;
-            border-bottom: 2px solid rgba(255,255,255,0.9);
-            position: absolute;
-            left: 10%;
-            top: 80%;
-        }
-        .i_am > * {
-            float: left;
-        }
-        .ryu {
-            width: 40%;
-            margin-top: 7%;
-            background-color: #ffffff;
-            border-radius: 50%;
-        }
-        .introduce {
-            width: 50%;
-            margin-left: 10%;
-            margin-top: 10%;
-        }
-        .section2 {
-            height: 120vh;
-        }
-        .i_can > * {
-            float: left;
-        }
-        .skill_name_box {
-            background-color: #fff;
-            height: 50%;
-            width: 40%;
-            height: 45vh;
-            float: left;
-            margin: 5% 7% 0% 2%;
-            box-shadow: 4px 5px 3px rgba(0,0,0,0.1), -4px -1px 3px rgba(0,0,0,0.1), -4px 5px 3px rgba(0,0,0,0.1), 4px 1px 3px rgba(0,0,0,0.1);
-        }
-        .skill_box_tit {
-            height: 28%;
+            text-align: center;
             line-height: 3em;
-            font-size: 2em;
-            padding-left: 10%;
         }
-        .skill_list {
-            height: 70%;
+        .project_list {
             width: 100%;
-            border-top: 1px solid #ddd;
-            position: relative;
+            height: auto;
+            margin-top: 5vh;
         }
-        
-        .skill_item {
-            width: 90%;
-            height: 15%;
-            padding-left: 10%;
-            line-height: 2.5em;
-            color: #aaa;
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
-            position: absolute;
-            left: 0;
-            transition: 0.4s;
-            cursor: pointer;
+        .project_btn {
+            margin-left: 41%;
         }
-        .skill_item:before {
-            content: "";
+        .project_btn li {
+            float: left;
+            width: 3.5vw;
+            text-align: center;
+            padding: 2px;
+        }
+        .project_btn li button {
             display: block;
-            width: 2px;
-            height: 2px;
-            background-color: #aaa;
-            position: absolute;
-            top: 45%;
-            left: 8%;
-            opacity: 0;
-            transition: 0.4s;
-        }
-        .skill_item:first-child {
-            top: 0;
-        }
-        .skill_item:nth-child(2) {
-            top: 16%;
-        }
-        .skill_item:nth-child(3) {
-            top: 32%;
-        }
-        .skill_item:nth-child(4) {
-            top: 48%;
-        }
-        .skill_item:nth-child(5) {
-            top: 64%;
-        }
-        .skill_item:last-child {
-            top: 80%;
-        }
-        .skill_item:hover, .skill_item.active {
-            color: #000;
-            font-weight: 600;
-            width: 100%;
-            height: 18%;
-            padding-left: 15%;
-            margin-left: -7.5%;
-            margin-top: -1.5%;
-            line-height: 3.5em;
-            box-shadow: 4px 5px 3px rgba(0,0,0,0.1), -4px -1px 3px rgba(0,0,0,0.1), -4px 5px 3px rgba(0,0,0,0.1), 4px 1px 3px rgba(0,0,0,0.1);
-        }
-        .skill_item:hover::before, .skill_item.active:before {
-            opacity: 1;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #ff7b00;
-            z-index: 5;
-        }
-        .stats_box {
-            width: 55%;
-            height: 40%;
+            background-color: #fff;
             border: 1px solid #ccc;
-            float: right;
-            margin-top: 3%;
-            margin-right: 5%;
-            position: relative;
+            width: 100%;
+            padding: 2px;
         }
-        .stats_box .stats {
-            position: relative;
-            height: 100%;
-            background-color: #ccc;
-            line-height: 100%;
-            text-align: right;
-            animation: stats 1s ease-in-out;
-        }
-        .skill_item:hover .stats_box .stats, .skill_item.active .stats_box .stats {
-            background-color: #ff9626;
-        }
-        .skill_item:first-child .stats_box .stats{
-            width: 90%;
-        }
-        .skill_item:nth-child(2) .stats_box .stats{
-            width: 80%;
-        }
-        .skill_item:nth-child(3) .stats_box .stats{
-            width: 92%;
-        }
-        .skill_item:nth-child(4) .stats_box .stats{
-            width: 95%;
-        }
-        .skill_item:nth-child(5) .stats_box .stats{
-            width: 90%;
-        }
-        .skill_item:last-child .stats_box .stats{
-            width: 92%;
-        }
-
-        @keyframes stats {
-            from { width: 0;}
-            80% { width: 100%; }
-            to { }
-        }
-
-        .skill_com_box {
-            width: 45%;
-            height: 20vh;
-            margin-top: 18%;
-            margin-left: 1%;
-            padding: 2%;
-            overflow: hidden;
-            position: relative;
-        }
-        .skill_num {
-            font-weight: 600;
-            position: relative;
-            width: 10%;
-            height: 5%;
-        }
-        .counter:before {
-            content: "";
-            display: block;
-            width: 50%;
-            height: 2px;
-            background-color: #000;
-            position: absolute;
-            left: -25%;
-            transform: rotate(-40deg);
-        }
-        .counter_num {
-            position: absolute;
-            top: -50%;
-            left: -100%;
-            transition: 0.4s;
-        }
-        .counter_num.active {
-            position: absolute;
-            top: -200%;
-            left: -30%;
-        }
-        .skill_com {
-            width: 85%;
-            height: 100%;
-            position: absolute;
-            top: 20%;
-            left: -100%;
-            opacity: 0;
-            transition: 0.6s;
-        }
-        .skill_com.active {
-            left: 8%;
-            opacity: 1;
-        }
-        
-        .skill_com h4 {
+        .project_btn li button:hover {
+            background-color: #333;
+            border: 1px solid #ccc;
             color: #fff;
+        }
+        .project_data {
+            clear: both;
+            width: 100%;
+            height: auto;
+            padding-top: 5vh;
+        }
+        .project_item {
+            width: 32%;
+            margin-right: 1.5%;
+            margin-bottom: 2%;
+            float: left;
+            border: 1px solid #115527;
+            background-color: #fff;
+        }
+        .project_item:nth-child(3n) {
+            margin-right: 0;
+        }
+        .project_box {
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 3px 5px #693600;
+        }
+        .project_item:hover {
+            transform: translateY(-20px);
+            transition: 0.3s;
+            background-color: transparent;
+        }
+        .project_box a {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .project_img {
+            width: 100%;
+        }
+        .data_type_label {
+            width: 25%;
+            padding: 1px;
+            margin-left: 37.5%;
+            margin-top: 2%;
+            text-align: center;
+            color: #fff;
+            background-color: #555;
+        }
+        .project_name {
             line-height: 3em;
+            text-align: center;
+            color: #115527;
             font-size: 1.2em;
         }
-        .skill_com p {
-            line-height: 1.6em;
-            margin-left: 1%;
+        .content {
+            display: none;
         }
-        .skill_icon {
-            width: 60%;
-            height: 20vh;
-            margin-top: 5%;
-            margin-left: 20%;
-            float: left;
-            text-align: center;
-            color: #fff;         
+        .content:target {
+            display: block;
         }
-        .skill_icon ul {
-            width: 100%;
-            height: 100%;
+        .pop {
+            width: 60vw;
+            background-color: #fff;
+            margin: 0 auto;
         }
-        .skill_icon ul li {
-            width: 25%; 
-            height: 100%;
-            float: left;
-            margin-top: 5%;
+        .pop table{
+            width: 50%;
+            margin: 0 auto;
         }
-
     </style>
     <script type="text/javascript" src="./js/jquery-latest.js"></script>
-    
+    <script>
+
+    </script>
 </head>
 <body>
     <div class="wrap">
@@ -298,18 +151,81 @@
             <span class="blur_bg"></span>
         </header>
         <div class="section_wrap">
-            <section class="section0">
-               
+            <section class="section0 page">
+                <h1 class="section_tit">Project</h1>
+                <div class="project_list">
+                    <ul class="project_btn clrfx">
+                        <li><button data-type="desk">데스크탑</button></li>
+                        <li><button data-type="mob">모바일</button></li>
+                        <li><button data-type="flex">반응형</button></li>
+                    </ul>
+                    <ul class="project_data clrfx">
+                        <li class="project_item web">
+                            <div class="project_box">
+                                <a href="project.html#project1" class="thumb_box">
+                                    <img src="./img/project_web1.png" alt="대구트립로드프로젝트" class="project_img">
+                                    <p class="data_type_label">데스크탑</p>
+                                    <h4 class="project_name">대구트립로드</h4>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="project_item">
+                            <div class="project_box web">
+                                <a href="" class="thumb_box">
+                                    <img src="./img/project_web2.png" alt="고신대학교복음병원프로젝트" class="project_img">
+                                    <p class="data_type_label">데스크탑</p>
+                                    <h4 class="project_name">고신대학교복음병원</h4>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="project_item">
+                            <div class="project_box web">
+                                <a href="" class="thumb_box">
+                                    <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
+                                    <p class="data_type_label">데스크탑</p>
+                                    <h4 class="project_name">아모레퍼시픽</h4>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="project_item">
+                            <div class="project_box mob">
+                                <a href="" class="thumb_box">
+                                    <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
+                                    <p class="data_type_label">데스크탑</p>
+                                    <h4 class="project_name">프로젝트4</h4>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="project_item">
+                            <div class="project_box mob">
+                                <a href="" class="thumb_box">
+                                    <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
+                                    <p class="data_type_label">데스크탑</p>
+                                    <h4 class="project_name">프로젝트5</h4>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="project_item">
+                            <div class="project_box flex">
+                                <a href="" class="thumb_box">
+                                    <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
+                                    <p class="data_type_label">데스크탑</p>
+                                    <h4 class="project_name">프로젝트6</h4>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </div>
-        <footer class="ft">
+        <footer class="ft page clrfx">
             <div class="page_button">
-                <a href="contact.html" class="left_page to_contact">
+                <a href="index.html" class="left_page to_contact">
                     About
                     <i class="i1"></i>
                     <i class="i2"></i>
                 </a>
-                <a href="" class="right_page to_project">
+                <a href="contact.html" class="right_page to_project">
                     <i class="i1"></i>
                     <i class="i2"></i>
                     contact
@@ -322,15 +238,39 @@
             </div>
         </footer>
     </div>
+    <div class="content" id=project1>
+        <div class="pop">
+            <div class="pop_wrap">
+                <span class="pop_num">project1</span>
+                <h3 class="pop_tit">데구트립로드 홈페이지 리뉴얼</h3>
+                <p class="pop_com">한 화면안에 모든 내용이 꽉 차있던 기존의 페이지에서 그리드시스템과 배경일러스트를 추가하여 대구의 전경과 분위기가 잘 느껴지도록 변화를 주었습니다. “Colorful DAEGU”에서 차용한 다섯 색깔 중에서 녹색과 파란색을 주색으로 사용하여 대구의 분위기가 느껴지도록 하였습니다.메인페이지의 구성은 관광코스와 놀거리, 여행도우미 세 가지의 카테고로 나누어 메인페이지에서도 사용자가 원하는 정보가 어디에 있는지 쉽게 유추하고 찾을 수 있도록 디자인하였습니다.</p>
+                <div class="pop_table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colspan="2">요약내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>url</th>
+                                <th><a href="https://sun14418.github.io/web1/">https://sun14418.github.io/web1/</a></th>
+                            </tr>
+                            <tr>
+                                <th>페이지유형</th>
+                                <th>html5 / css3 / jQuery</th>
+                            </tr>
+                            <tr>
+                                <th>매체유형</th>
+                                <th>데스크탑</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript">
-        $(".skill_item").click(function() {
-            var i = $(this).index();
-            $(".skill_item, .counter_num, .skill_com").removeClass("active");
-            $(this).addClass("active")
-            $(this).find(".stats").css("animation","stats 1s ease-in-out 1");
-            $(".counter_num").eq(i).addClass("active");
-            $(".skill_com").eq(i).addClass("active");
-        });
     </script>
 </body>
 </html>

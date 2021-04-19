@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ryu Jung won Portfolio-Contact</title>
+    <title>Ryu Jung won Portfolio-Project</title>
     <link rel="shortcut icon" href="./img/favicon-16.png" type="image/x-icon">
     <link rel="shortcut icon" href="./img/favicon-32.png" type="image/x-icon">
     <link rel="shortcut icon" href="./img/favicon-96.png" type="image/x-icon">
@@ -22,263 +22,63 @@
         }
 
         section {
+            clear: both;
             width: 60vw;
             margin: 0 auto;
-            height: 70vh;
-        }
-        
-        .hello {
-            margin-left: 35vw;
-            padding-top: 20%;
-            font-size: 2.5em;
-            line-height: 2em;
+            height: auto;
+            padding-top: 15vh;
+            padding-bottom: 10vh;
         }
         .section_tit {
             font-size: 2em;
             color: rgba(255,255,255,0.9);
             position: relative;
-        }
-        .section_tit:after {
-            content: "";
-            display: block;
-            width: 90%;
-            height: 1px;
-            border-bottom: 2px solid rgba(255,255,255,0.9);
-            position: absolute;
-            left: 10%;
-            top: 80%;
-        }
-        .i_am > * {
-            float: left;
-        }
-        .ryu {
-            width: 40%;
-            margin-top: 7%;
-            background-color: #ffffff;
-            border-radius: 50%;
-        }
-        .introduce {
-            width: 50%;
-            margin-left: 10%;
-            margin-top: 10%;
-        }
-        .section2 {
-            height: 120vh;
-        }
-        .i_can > * {
-            float: left;
-        }
-        .skill_name_box {
-            background-color: #fff;
-            height: 50%;
-            width: 40%;
-            height: 45vh;
-            float: left;
-            margin: 5% 7% 0% 2%;
-            box-shadow: 4px 5px 3px rgba(0,0,0,0.1), -4px -1px 3px rgba(0,0,0,0.1), -4px 5px 3px rgba(0,0,0,0.1), 4px 1px 3px rgba(0,0,0,0.1);
-        }
-        .skill_box_tit {
-            height: 28%;
-            line-height: 3em;
-            font-size: 2em;
-            padding-left: 10%;
-        }
-        .skill_list {
-            height: 70%;
-            width: 100%;
-            border-top: 1px solid #ddd;
-            position: relative;
-        }
-        
-        .skill_item {
-            width: 90%;
-            height: 15%;
-            padding-left: 10%;
-            line-height: 2.5em;
-            color: #aaa;
-            background-color: #fff;
-            border-bottom: 1px solid #eee;
-            position: absolute;
-            left: 0;
-            transition: 0.4s;
-            cursor: pointer;
-        }
-        .skill_item:before {
-            content: "";
-            display: block;
-            width: 2px;
-            height: 2px;
-            background-color: #aaa;
-            position: absolute;
-            top: 45%;
-            left: 8%;
-            opacity: 0;
-            transition: 0.4s;
-        }
-        .skill_item:first-child {
-            top: 0;
-        }
-        .skill_item:nth-child(2) {
-            top: 16%;
-        }
-        .skill_item:nth-child(3) {
-            top: 32%;
-        }
-        .skill_item:nth-child(4) {
-            top: 48%;
-        }
-        .skill_item:nth-child(5) {
-            top: 64%;
-        }
-        .skill_item:last-child {
-            top: 80%;
-        }
-        .skill_item:hover, .skill_item.active {
-            color: #000;
-            font-weight: 600;
-            width: 100%;
-            height: 18%;
-            padding-left: 15%;
-            margin-left: -7.5%;
-            margin-top: -1.5%;
-            line-height: 3.5em;
-            box-shadow: 4px 5px 3px rgba(0,0,0,0.1), -4px -1px 3px rgba(0,0,0,0.1), -4px 5px 3px rgba(0,0,0,0.1), 4px 1px 3px rgba(0,0,0,0.1);
-        }
-        .skill_item:hover::before, .skill_item.active:before {
-            opacity: 1;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #ff7b00;
-            z-index: 5;
-        }
-        .stats_box {
-            width: 55%;
-            height: 40%;
-            border: 1px solid #ccc;
-            float: right;
-            margin-top: 3%;
-            margin-right: 5%;
-            position: relative;
-        }
-        .stats_box .stats {
-            position: relative;
-            height: 100%;
-            background-color: #ccc;
-            line-height: 100%;
-            text-align: right;
-            animation: stats 1s ease-in-out;
-        }
-        .skill_item:hover .stats_box .stats, .skill_item.active .stats_box .stats {
-            background-color: #ff9626;
-        }
-        .skill_item:first-child .stats_box .stats{
-            width: 90%;
-        }
-        .skill_item:nth-child(2) .stats_box .stats{
-            width: 80%;
-        }
-        .skill_item:nth-child(3) .stats_box .stats{
-            width: 92%;
-        }
-        .skill_item:nth-child(4) .stats_box .stats{
-            width: 95%;
-        }
-        .skill_item:nth-child(5) .stats_box .stats{
-            width: 90%;
-        }
-        .skill_item:last-child .stats_box .stats{
-            width: 92%;
-        }
-
-        @keyframes stats {
-            from { width: 0;}
-            80% { width: 100%; }
-            to { }
-        }
-
-        .skill_com_box {
-            width: 45%;
-            height: 20vh;
-            margin-top: 18%;
-            margin-left: 1%;
-            padding: 2%;
-            overflow: hidden;
-            position: relative;
-        }
-        .skill_num {
-            font-weight: 600;
-            position: relative;
-            width: 10%;
-            height: 5%;
-        }
-        .counter:before {
-            content: "";
-            display: block;
-            width: 50%;
-            height: 2px;
-            background-color: #000;
-            position: absolute;
-            left: -25%;
-            transform: rotate(-40deg);
-        }
-        .counter_num {
-            position: absolute;
-            top: -50%;
-            left: -100%;
-            transition: 0.4s;
-        }
-        .counter_num.active {
-            position: absolute;
-            top: -200%;
-            left: -30%;
-        }
-        .skill_com {
-            width: 85%;
-            height: 100%;
-            position: absolute;
-            top: 20%;
-            left: -100%;
-            opacity: 0;
-            transition: 0.6s;
-        }
-        .skill_com.active {
-            left: 8%;
-            opacity: 1;
-        }
-        
-        .skill_com h4 {
-            color: #fff;
-            line-height: 3em;
-            font-size: 1.2em;
-        }
-        .skill_com p {
-            line-height: 1.6em;
-            margin-left: 1%;
-        }
-        .skill_icon {
-            width: 60%;
-            height: 20vh;
-            margin-top: 5%;
-            margin-left: 20%;
-            float: left;
             text-align: center;
-            color: #fff;         
+            line-height: 3em;
         }
-        .skill_icon ul {
+        .contact_post {
             width: 100%;
-            height: 100%;
+            height: auto;
+            margin-top: 5vh;
+            background-repeat: no-repeat;
+            background-image: url(./img/self_character.png);
+            background-position: center right;
+            background-size: contain;
         }
-        .skill_icon ul li {
-            width: 25%; 
-            height: 100%;
-            float: left;
-            margin-top: 5%;
+        .contact_post fieldset {
+            width: 45%;
+            height: auto;
+            background-color: beige;
+            border: 1px solid #555;
+            box-shadow: 2px 2px 2px #115527;
+            padding-bottom: 2vh;
         }
-
+        .contact_post fieldset > legend, label, input, textarea {
+            margin: 1vh;
+            margin-left: 2vw;
+        }
+        .form_tit {
+            background-color: beige;
+            padding: 5px;
+            border: 1px solid #555;
+        }
+        .label_tit {
+            display: block;
+            width: 3vw;
+        }
+        #name, #email1, #email2 {
+            width: 10vw;
+            height: 2vh;
+        }
+        #memo {
+            width: 85%;
+            height: 20vh;
+        }
     </style>
     <script type="text/javascript" src="./js/jquery-latest.js"></script>
-    
+    <script>
+
+    </script>
 </head>
 <body>
     <div class="wrap">
@@ -290,7 +90,7 @@
                     <ul class="menu_list">
                         <li class="menu_item"><a href="index.html">About</a></li>
                         <li class="menu_item"><a href="project.html">Project</a></li>
-                        <li class="menu_item" id="here"><a href="contact.html">Contact</a></li>
+                        <li class="menu_item" id="here"><a href="contact.html">Contect</a></li>
                         <!-- hover할 때 시소처럼 짧게 흔들리기 -->
                     </ul>
                 </nav>
@@ -298,21 +98,40 @@
             <span class="blur_bg"></span>
         </header>
         <div class="section_wrap">
-            <section class="section0">
-                
+            <section class="section0 page">
+                <h1 class="section_tit">Contact</h1>
+                <form action="" method="POST" class="contact_post">
+                    <fieldset>
+                        <legend class="form_tit">메일보내기</legend>
+                        <label for="name" class="label_tit">이름</label>
+                        <input type="text" name="name" id="name" placeholder="이름입력">
+                        <br>
+                        <label for="email" class="label_tit">이메일</label>
+                        <input type="text" name="email1" id="email1">
+                        <span>@</span>
+                        <select name="email2" id="email2">
+                            <option value="naver.com">naver.com</option>
+                            <option value="hanmail.net">hanmail.net</option>
+                            <option value="gmail.com">gmail.com</option>
+                        </select>
+                        <br>
+                        <label for="memo" class="label_tit">내용</label>
+                        <textarea name="memo" id="memo" cols="30" rows="10"></textarea>
+                    </fieldset>
+                </form>
             </section>
         </div>
-        <footer class="ft">
+        <footer class="ft page clrfx">
             <div class="page_button">
-                <a href="contact.html" class="left_page to_contact">
-                    Project
+                <a href="index.html" class="left_page to_contact">
+                    About
                     <i class="i1"></i>
                     <i class="i2"></i>
                 </a>
-                <a href="" class="right_page to_project">
+                <a href="contact.html" class="right_page to_project">
                     <i class="i1"></i>
                     <i class="i2"></i>
-                    About
+                    contact
                 </a>
             </div>
             <div class="copy">
