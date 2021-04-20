@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'nanumSquareR';
+    src: local('※'), url('../fonts/nanumSquareR.woff2') format('woff2'), 
+    url('../fonts/nanumSquareR') format('woff'), 
+    url('../fonts/nanumSquareR.ttf') format('truetype'),
+    url('../fonts/nanumSquareR.otf') format('opentype'), 
+    url('../fonts/nanumSquareR.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'nanumSquareL';
+    src: local('※'), url('../fonts/nanumSquareL.woff2') format('woff2'), 
+    url('../fonts/nanumSquareL') format('woff'), 
+    url('../fonts/nanumSquareL.ttf') format('truetype'),
+    url('../fonts/nanumSquareL.otf') format('opentype'), 
+    url('../fonts/nanumSquareL.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'nanumSquareB';
+    src: local('※'), url('../fonts/nanumSquareB.woff2') format('woff2'), 
+    url('../fonts/nanumSquareB') format('woff'), 
+    url('../fonts/nanumSquareB.ttf') format('truetype'),
+    url('../fonts/nanumSquareB.otf') format('opentype'), 
+    url('../fonts/nanumSquareB.eot') format('embedded-opentype');        
+}
+@font-face {
+    font-family: 'nanumSquareEB';
+    src: local('※'), url('../fonts/nanumSquareEB.woff2') format('woff2'), 
+    url('../fonts/nanumSquareEB') format('woff'), 
+    url('../fonts/nanumSquareEB.ttf') format('truetype'),
+    url('../fonts/nanumSquareEB.otf') format('opentype'), 
+    url('../fonts/nanumSquareEB.eot') format('embedded-opentype');        
+}
