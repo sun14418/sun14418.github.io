@@ -1,0 +1,58 @@
+.section_wrap {
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    background: #ff9626;
+}
+
+section {
+    clear: both;
+    width: 60vw;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+}
+.section_tit {
+    font-size: 2em;
+    color: rgba(255,255,255,0.9);
+    position: relative;
+    text-align: center;
+    line-height: 3em;
+}
+.contact_post {
+    width: 100%;
+    height: auto;
+    margin-top: 5vh;
+    background-repeat: no-repeat;
+    background-image: url(../img/self_character.png);
+    background-position: center right;
+    background-size: contain;
+}
+.contact_post fieldset {
+    width: 45%;
+    height: auto;
+    background-color: beige;
+    border: 1px solid #555;
+    box-shadow: 2px 2px 2px #115527;
+    padding-bottom: 2vh;
+}
+.contact_post fieldset > legend, label, input, textarea {
+    margin: 1vh;
+    margin-left: 2vw;
+}
+.form_tit {
+    background-color: beige;
+    padding: 5px;
+    border: 1px solid #555;
+}
+.label_tit {
+    display: block;
+    width: 3vw;
+}
+#name, #email1, #email2 {
+    width: 10vw;
+    height: 2vh;
+}
+#memo {
+    width: 85%;
+    height: 20vh;
+}
