@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="./img/favicon-16.png" type="image/x-icon">
     <link rel="shortcut icon" href="./img/favicon-32.png" type="image/x-icon">
     <link rel="shortcut icon" href="./img/favicon-96.png" type="image/x-icon">
-    <link rel="apple-touch-icon" href="./img/favicon-144.png"type="image/x-icon">
+    <link rel="apple-touch-icon" href="./img/favicon-144.png" type="image/x-icon">
     <meta property="og:title" content="류정원 포트폴리오">
     <meta property="og:type" content="article">
     <meta property="og:description" content="류정원 웹퍼블리셔,웹디자이너 포트폴리오">
@@ -112,25 +112,106 @@
             color: #115527;
             font-size: 1.2em;
         }
-        .content {
+        #project1, #project2, #project3 {
             display: none;
         }
-        .content:target {
+        #project1:target, #project2:target, #project3:target {
             display: block;
         }
-        .pop {
+        .detail_num {
+            display: block;
+            text-align: center;
+            color: #fff;
+        }
+        .project_detail {
             width: 60vw;
             background-color: #fff;
-            margin: 0 auto;
+            margin: 2vh auto;
+            padding-bottom: 5vh;
         }
-        .pop table{
-            width: 50%;
+        .back {
+            display: block;
+            width: 5%;
+            padding: 2px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.05em;
+            border: 2px solid #fff;
+            margin-left: 92%;
+        }
+        .back:hover {
+            color: #333;
+            background-color: #fff;
+        }
+        .detail_com {
+            width: 80%;
             margin: 0 auto;
+            padding-top: 5vh;
+            font-size: 1.05em;
+            line-height: 1.6em;
+        }
+        .detail_table{
+            width: 35%;
+            margin: 2% auto;
+            border: 1px solid #115527;
+        }
+        .detail_table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .detail_table tr {
+            height: 4vh;
+        }
+        .detail_table th {
+            width: 30%;
+            border-right: 1px solid #115527;
+            border-top: 1px solid #115527;
+            background-color: beige;
+        }
+        .detail_table thead th {
+            border: 0;
+            background-color: #115527;
+            color: #eee;
+        }
+        .detail_table td {
+            width: 70%;
+            padding-left: 4%;
+            border-top: 1px solid #115527;
+        }
+        .project_img {
+            width: 50%;
+            margin: 3% 25%;
+            border: 1px solid #115527;
+        }
+        .more {
+            display: block;
+            width: 9%;
+            padding: 3px;
+            text-align: center;
+            color: #333;
+            font-size: 1.5em;
+            font-weight: 600;
+            border: 2px solid #333;
+            margin-left: 45%;
+        }
+        .more:hover {
+            background-color: #ff9626;
+            color: #fff;
+            text-shadow: 1px -1px 1px #333, 1px 0px 1px #333, 0px -1px 1px #333;
         }
     </style>
     <script type="text/javascript" src="./js/jquery-latest.js"></script>
     <script>
-
+        $(document).ready(function(){
+            $(".project_btn li button").click(function(){
+               var dataFilter = $(this).attr("data-type");
+               $(".project_data li.project_item").css("display", "none");
+               $(".project_data li.project_item").filter("."+dataFilter).css("display","block");
+           }); 
+           $(".project_btn li button[data-type='all']").click(function(){
+               $(".project_data li.project_item").css("display","block");
+           }); 
+        });
     </script>
 </head>
 <body>
@@ -150,17 +231,18 @@
             </div>
             <span class="blur_bg"></span>
         </header>
-        <div class="section_wrap">
+        <div class="section_wrap" id="main">
             <section class="section0 page">
                 <h1 class="section_tit">Project</h1>
                 <div class="project_list">
                     <ul class="project_btn clrfx">
+                        <li><button data-type="all">전체</button></li>
                         <li><button data-type="desk">데스크탑</button></li>
                         <li><button data-type="mob">모바일</button></li>
                         <li><button data-type="flex">반응형</button></li>
                     </ul>
                     <ul class="project_data clrfx">
-                        <li class="project_item web">
+                        <li class="project_item desk">
                             <div class="project_box">
                                 <a href="project.html#project1" class="thumb_box">
                                     <img src="./img/project_web1.png" alt="대구트립로드프로젝트" class="project_img">
@@ -169,53 +251,163 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="project_item">
-                            <div class="project_box web">
-                                <a href="" class="thumb_box">
+                        <li class="project_item desk">
+                            <div class="project_box">
+                                <a href="project.html#project2" class="thumb_box">
                                     <img src="./img/project_web2.png" alt="고신대학교복음병원프로젝트" class="project_img">
                                     <p class="data_type_label">데스크탑</p>
                                     <h4 class="project_name">고신대학교복음병원</h4>
                                 </a>
                             </div>
                         </li>
-                        <li class="project_item">
-                            <div class="project_box web">
-                                <a href="" class="thumb_box">
+                        <li class="project_item desk">
+                            <div class="project_box">
+                                <a href="project.html#project3" class="thumb_box">
                                     <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
                                     <p class="data_type_label">데스크탑</p>
                                     <h4 class="project_name">아모레퍼시픽</h4>
                                 </a>
                             </div>
                         </li>
-                        <li class="project_item">
-                            <div class="project_box mob">
+                        <li class="project_item mob">
+                            <div class="project_box">
                                 <a href="" class="thumb_box">
                                     <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
-                                    <p class="data_type_label">데스크탑</p>
+                                    <p class="data_type_label">모바일</p>
                                     <h4 class="project_name">프로젝트4</h4>
                                 </a>
                             </div>
                         </li>
-                        <li class="project_item">
-                            <div class="project_box mob">
+                        <li class="project_item mob">
+                            <div class="project_box">
                                 <a href="" class="thumb_box">
                                     <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
-                                    <p class="data_type_label">데스크탑</p>
+                                    <p class="data_type_label">모바일</p>
                                     <h4 class="project_name">프로젝트5</h4>
                                 </a>
                             </div>
                         </li>
-                        <li class="project_item">
-                            <div class="project_box flex">
+                        <li class="project_item flex">
+                            <div class="project_box">
                                 <a href="" class="thumb_box">
                                     <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
-                                    <p class="data_type_label">데스크탑</p>
+                                    <p class="data_type_label">반응형</p>
                                     <h4 class="project_name">프로젝트6</h4>
                                 </a>
                             </div>
                         </li>
                     </ul>
                 </div>
+            </section>
+        </div>
+        <div class="section_wrap" id="project1">
+            <section class="section0 page clrfx">
+                <span class="detail_num">project1</span>
+                <h1 class="section_tit">대구트립로드 웹페이지 리뉴얼</h1>
+                <a href="./project.html" class="back">BACK</a>
+                <div class="project_detail clrfx">
+                    <p class="detail_com">한 화면안에 모든 내용이 꽉 차있던 기존의 페이지에서 그리드시스템과 배경일러스트를 추가하여 대구의 전경과 분위기가 잘 느껴지도록 변화를 주었습니다. “Colorful DAEGU”에서 차용한 다섯 색깔 중에서 녹색과 파란색을 주색으로 사용하여 대구의 분위기가 느껴지도록 하였습니다.메인페이지의 구성은 관광코스와 놀거리, 여행도우미 세 가지의 카테고로 나누어 메인페이지에서도 사용자가 원하는 정보가 어디에 있는지 쉽게 유추하고 찾을 수 있도록 디자인하였습니다.</p>
+                    <div class="detail_table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">요약내용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>url</th>
+                                    <td><a href="https://sun14418.github.io/web1/">https://sun14418.github.io/web1/</a></td>
+                                </tr>
+                                <tr>
+                                    <th>페이지유형</th>
+                                    <td>html5 / css3 / jQuery</td>
+                                </tr>
+                                <tr>
+                                    <th>매체유형</th>
+                                    <td>데스크탑</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <img class="project_img" src="./img/web1.jpg" alt="메인화면">
+                    <a href="https://sun14418.github.io/web1/" class="more">MORE</a>
+                </div>
+                <a href="./project.html" class="back">BACK</a>
+            </section>
+        </div>
+        <div class="section_wrap" id="project2">
+            <section class="section0 page clrfx">
+                <span class="detail_num">project2</span>
+                <h1 class="section_tit">고신대학교복음병원 웹페이지 리뉴얼</h1>
+                <a href="./project.html" class="back">BACK</a>
+                <div class="project_detail clrfx">
+                    <p class="detail_com">그리드레이아웃으로 한 화면 안에 모든 배너와 안내가 이루어지던 기존의 메인화면을 리뉴얼해보았습니다.
+                    화면을 꽉 채우는 비주얼배너로 고신대학복음병원의 신념과 중요 안내를 할 수 있는 공간을 구성하고
+                    주요의료진들을 소개하는 공간을 통해 사용자들이 원하는 진료과와 의료진의 정보를 쉽게 찾을 수 있도록 하였습니다. 의료진들의 성과를 홍보하는 공간, sns로 연결되는 공간, 공지사항과 주요안내가 이루어지는 공간들을 통해 고신대학복음병원에 대한 정보도 쉽게 얻을 수 있습니다.</p>
+                    <div class="detail_table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">요약내용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>url</th>
+                                    <td><a href="https://sun14418.github.io/web2/">https://sun14418.github.io/web2/</a></td>
+                                </tr>
+                                <tr>
+                                    <th>페이지유형</th>
+                                    <td>html5 / css3 / jQuery</td>
+                                </tr>
+                                <tr>
+                                    <th>매체유형</th>
+                                    <td>데스크탑</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <img class="project_img" src="./img/web2.jpg" alt="메인화면">
+                    <a href="https://sun14418.github.io/web1/" class="more">MORE</a>
+                </div>
+                <a href="./project.html" class="back">BACK</a>
+            </section>
+        </div>
+        <div class="section_wrap" id="project3">
+            <section class="section0 page clrfx">
+                <span class="detail_num">project3</span>
+                <h1 class="section_tit">아모레퍼시픽 홈페이지 리뉴얼</h1>
+                <a href="./project.html" class="back">BACK</a>
+                <div class="project_detail clrfx">
+                    <p class="detail_com">상품안내만 보여지던 기존의 웹페이지에 홍보영상과 주력상품라인에 대한 소개와 라인별 상품이미지를 볼 수 있게 하여 사용자들이 메인페이지에서도 쉽게 아모레퍼시픽의 컨셉과 상품들을 알 수 있도록 하였습니다.</p>
+                    <div class="detail_table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">요약내용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>url</th>
+                                    <td><a href="https://sun14418.github.io/web4/">https://sun14418.github.io/web4/</a></td>
+                                </tr>
+                                <tr>
+                                    <th>페이지유형</th>
+                                    <td>html5 / css3 / jQuery</td>
+                                </tr>
+                                <tr>
+                                    <th>매체유형</th>
+                                    <td>데스크탑</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <img class="project_img" src="./img/web4.jpg" alt="메인화면">
+                    <a href="https://sun14418.github.io/web1/" class="more">MORE</a>
+                </div>
+                <a href="./project.html" class="back">BACK</a>
             </section>
         </div>
         <footer class="ft page clrfx">
@@ -238,39 +430,13 @@
             </div>
         </footer>
     </div>
-    <div class="content" id=project1>
-        <div class="pop">
-            <div class="pop_wrap">
-                <span class="pop_num">project1</span>
-                <h3 class="pop_tit">데구트립로드 홈페이지 리뉴얼</h3>
-                <p class="pop_com">한 화면안에 모든 내용이 꽉 차있던 기존의 페이지에서 그리드시스템과 배경일러스트를 추가하여 대구의 전경과 분위기가 잘 느껴지도록 변화를 주었습니다. “Colorful DAEGU”에서 차용한 다섯 색깔 중에서 녹색과 파란색을 주색으로 사용하여 대구의 분위기가 느껴지도록 하였습니다.메인페이지의 구성은 관광코스와 놀거리, 여행도우미 세 가지의 카테고로 나누어 메인페이지에서도 사용자가 원하는 정보가 어디에 있는지 쉽게 유추하고 찾을 수 있도록 디자인하였습니다.</p>
-                <div class="pop_table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colspan="2">요약내용</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>url</th>
-                                <th><a href="https://sun14418.github.io/web1/">https://sun14418.github.io/web1/</a></th>
-                            </tr>
-                            <tr>
-                                <th>페이지유형</th>
-                                <th>html5 / css3 / jQuery</th>
-                            </tr>
-                            <tr>
-                                <th>매체유형</th>
-                                <th>데스크탑</th>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
     <script type="text/javascript">
+        $(document).ready(function(){
+            $("#main").css("display","block");
+            $("#main .page .project_data .project_item").click(function(){
+               $("#main").css("display","none"); 
+            });
+        }); 
     </script>
 </body>
 </html>
