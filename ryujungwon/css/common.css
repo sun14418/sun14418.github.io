@@ -18,12 +18,12 @@ a {
     display: block;
     clear: both;
 }
-
-/* header */
 .wrap {
     width: 100vw;
     background-color: #2d6b42; 
 }
+
+/* header */
 .hd {
     width: 100vw;
     height: 10vh;
@@ -103,6 +103,7 @@ a {
 .ft {
     width: 100%;
     height: 50vh;
+    background-color: #2d6b42;
 }
 .page_button {
     width: 80%;
