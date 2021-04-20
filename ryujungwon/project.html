@@ -112,10 +112,10 @@
             color: #115527;
             font-size: 1.2em;
         }
-        #project1, #project2, #project3 {
+        #project1, #project2, #project3, #project4 {
             display: none;
         }
-        #project1:target, #project2:target, #project3:target {
+        #project1:target, #project2:target, #project3:target, #project4:target {
             display: block;
         }
         .detail_num {
@@ -178,10 +178,27 @@
             padding-left: 4%;
             border-top: 1px solid #115527;
         }
-        .project_img {
+        .project_detail_img {
             width: 50%;
             margin: 3% 25%;
             border: 1px solid #115527;
+        }
+        .project_detail_img_mobile.main {
+            width: 360px;
+            margin-left: 25%;
+            margin-top: 3vh;
+            margin-bottom: 3vh;
+        }
+        .sub {
+            float: right;
+            width: 200px;
+            margin-right: 25%;
+            margin-top: 5vh;
+        }
+        .sub .project_detail_img_mobile {
+            width: 200px;
+            padding: 2%;
+            clear: both;
         }
         .more {
             display: block;
@@ -271,17 +288,17 @@
                         </li>
                         <li class="project_item mob">
                             <div class="project_box">
-                                <a href="" class="thumb_box">
-                                    <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
+                                <a href="project.html#project4" class="thumb_box">
+                                    <img src="./img/project_mob2.png" alt="대전경찰청" class="project_img">
                                     <p class="data_type_label">모바일</p>
-                                    <h4 class="project_name">프로젝트4</h4>
+                                    <h4 class="project_name">대전경찰청</h4>
                                 </a>
                             </div>
                         </li>
-                        <li class="project_item mob">
+                        <!-- <li class="project_item mob">
                             <div class="project_box">
                                 <a href="" class="thumb_box">
-                                    <img src="./img/project_web4.png" alt="아모레퍼시픽프로젝트" class="project_img">
+                                    <img src="./img/project_web4.png" alt="대전경찰청" class="project_img">
                                     <p class="data_type_label">모바일</p>
                                     <h4 class="project_name">프로젝트5</h4>
                                 </a>
@@ -295,7 +312,7 @@
                                     <h4 class="project_name">프로젝트6</h4>
                                 </a>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </section>
@@ -330,7 +347,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <img class="project_img" src="./img/web1.jpg" alt="메인화면">
+                    <img class="project_detail_img" src="./img/web1.jpg" alt="메인화면">
                     <a href="https://sun14418.github.io/web1/" class="more">MORE</a>
                 </div>
                 <a href="./project.html" class="back">BACK</a>
@@ -368,7 +385,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <img class="project_img" src="./img/web2.jpg" alt="메인화면">
+                    <img class="project_detail_img" src="./img/web2.jpg" alt="메인화면">
                     <a href="https://sun14418.github.io/web2/" class="more">MORE</a>
                 </div>
                 <a href="./project.html" class="back">BACK</a>
@@ -404,8 +421,48 @@
                             </tbody>
                         </table>
                     </div>
-                    <img class="project_img" src="./img/web4.jpg" alt="메인화면">
+                    <img class="project_detail_img" src="./img/web4.jpg" alt="메인화면">
                     <a href="https://sun14418.github.io/web4/" class="more">MORE</a>
+                </div>
+                <a href="./project.html" class="back">BACK</a>
+            </section>
+        </div>
+        <div class="section_wrap" id="project4">
+            <section class="section0 page clrfx">
+                <span class="detail_num">project4</span>
+                <h1 class="section_tit">대전경찰청 모바일페이지 리뉴얼</h1>
+                <a href="./project.html" class="back">BACK</a>
+                <div class="project_detail clrfx">
+                    <p class="detail_com">메인페이지에 있는 주요메뉴 외에는 찾기 어려운 기존의 모바일페이지에서 GNB메뉴와 검색기능을 추가하고 자주 찾는 서비스를 더해 사용자들이 서비스를 사용하는 데에 제약이 없도록 하였습니다.</p>
+                    <div class="detail_table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">요약내용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>url</th>
+                                    <td><a href="https://sun14418.github.io/web4/">https://sun14418.github.io/mob2/</a></td>
+                                </tr>
+                                <tr>
+                                    <th>페이지유형</th>
+                                    <td>html5 / css3 / jQuery</td>
+                                </tr>
+                                <tr>
+                                    <th>매체유형</th>
+                                    <td>모바일/스마트폰(Galaxy S5 기준)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <img class="project_detail_img_mobile main" src="./img/mob2.jpg" alt="메인화면">
+                    <div class="sub">
+                        <img class="project_detail_img_mobile" src="./img/mob2-menu.jpg" alt="메인화면">
+                        <img class="project_detail_img_mobile" src="./img/mob2-search.jpg" alt="메인화면">
+                    </div>
+                    <a href="https://sun14418.github.io/mob2/" class="more">MORE</a>
                 </div>
                 <a href="./project.html" class="back">BACK</a>
             </section>
@@ -420,7 +477,7 @@
                 <a href="contact.html" class="right_page to_project">
                     <i class="i1"></i>
                     <i class="i2"></i>
-                    contact
+                    Contact
                 </a>
             </div>
             <div class="copy">
